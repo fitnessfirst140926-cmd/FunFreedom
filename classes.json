@@ -125,8 +125,8 @@
 "end": "7:45am",
 "instructor": "Benji",
 "capacity": 10,
-"booked": 9,
-"spacesLeft": 1,
+"booked": 8,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -385,8 +385,8 @@
 "end": "9:45am",
 "instructor": "Karel",
 "capacity": 30,
-"booked": 17,
-"spacesLeft": 13,
+"booked": 16,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -411,8 +411,8 @@
 "end": "10:00am",
 "instructor": "Bhas",
 "capacity": 34,
-"booked": 15,
-"spacesLeft": 19,
+"booked": 14,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -580,8 +580,8 @@
 "end": "10:45am",
 "instructor": "Karel",
 "capacity": 25,
-"booked": 12,
-"spacesLeft": 13,
+"booked": 11,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -684,8 +684,8 @@
 "end": "12:00pm",
 "instructor": "Natalie",
 "capacity": 27,
-"booked": 25,
-"spacesLeft": 2,
+"booked": 24,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -723,8 +723,8 @@
 "end": "12:00pm",
 "instructor": "Angie Tion",
 "capacity": 24,
-"booked": 5,
-"spacesLeft": 19,
+"booked": 4,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -842,7 +842,7 @@
 "capacity": 32,
 "booked": 32,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 5
 },
 {
 "outlet": "One Raffles Quay",
@@ -855,7 +855,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 5
 },
 {
 "outlet": "One Raffles Quay",
@@ -1100,8 +1100,8 @@
 "end": "1:15pm",
 "instructor": "Benjamin Lai",
 "capacity": 34,
-"booked": 30,
-"spacesLeft": 4,
+"booked": 29,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -1230,8 +1230,8 @@
 "end": "1:45pm",
 "instructor": "Jo Tan",
 "capacity": 38,
-"booked": 14,
-"spacesLeft": 24,
+"booked": 13,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -1529,8 +1529,8 @@
 "end": "6:05pm",
 "instructor": "Vivi Woon",
 "capacity": 12,
-"booked": 1,
-"spacesLeft": 11,
+"booked": 0,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -1581,8 +1581,8 @@
 "end": "6:15pm",
 "instructor": "Jasper Mak",
 "capacity": 40,
-"booked": 10,
-"spacesLeft": 30,
+"booked": 9,
+"spacesLeft": 31,
 "waiting": 0
 },
 {
@@ -1620,8 +1620,8 @@
 "end": "6:15pm",
 "instructor": "Julian",
 "capacity": 27,
-"booked": 20,
-"spacesLeft": 7,
+"booked": 21,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -1713,7 +1713,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "Fusionopolis",
@@ -2140,8 +2140,8 @@
 "end": "7:45pm",
 "instructor": "Lennart",
 "capacity": 23,
-"booked": 3,
-"spacesLeft": 20,
+"booked": 4,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -2166,8 +2166,8 @@
 "end": "8:10pm",
 "instructor": "Yvonne Seow",
 "capacity": 20,
-"booked": 15,
-"spacesLeft": 5,
+"booked": 16,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -2207,7 +2207,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 15
 },
 {
 "outlet": "George Street",
@@ -2233,7 +2233,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 2
 },
 {
 "outlet": "Fusionopolis",
@@ -2337,7 +2337,7 @@
 "capacity": 27,
 "booked": 27,
 "spacesLeft": 0,
-"waiting": 15
+"waiting": 14
 },
 {
 "outlet": "Paragon",
@@ -6820,8 +6820,8 @@
 "end": "2:45pm",
 "instructor": "Jacky Tan",
 "capacity": 44,
-"booked": 16,
-"spacesLeft": 28,
+"booked": 17,
+"spacesLeft": 27,
 "waiting": 0
 },
 {
@@ -7184,8 +7184,8 @@
 "end": "3:50pm",
 "instructor": "Natalie",
 "capacity": 44,
-"booked": 4,
-"spacesLeft": 40,
+"booked": 5,
+"spacesLeft": 39,
 "waiting": 0
 },
 {
@@ -7407,7 +7407,7 @@
 "capacity": 34,
 "booked": 34,
 "spacesLeft": 0,
-"waiting": 0
+"waiting": 1
 },
 {
 "outlet": "Paragon",
@@ -8263,8 +8263,8 @@
 "end": "12:15pm",
 "instructor": "Kenny Lye",
 "capacity": 38,
-"booked": 31,
-"spacesLeft": 7,
+"booked": 32,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -8562,8 +8562,8 @@
 "end": "1:30pm",
 "instructor": "Angelina",
 "capacity": 38,
-"booked": 3,
-"spacesLeft": 35,
+"booked": 4,
+"spacesLeft": 34,
 "waiting": 0
 },
 {
@@ -9186,8 +9186,8 @@
 "end": "4:15pm",
 "instructor": "Alwin",
 "capacity": 30,
-"booked": 14,
-"spacesLeft": 16,
+"booked": 15,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -9901,8 +9901,8 @@
 "end": "11:45am",
 "instructor": "George",
 "capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
+"booked": 10,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -9914,8 +9914,8 @@
 "end": "12:00pm",
 "instructor": "Nicky",
 "capacity": 27,
-"booked": 20,
-"spacesLeft": 7,
+"booked": 19,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -10020,7 +10020,7 @@
 "capacity": 16,
 "booked": 16,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 2
 },
 {
 "outlet": "Capital Tower",
@@ -10148,8 +10148,8 @@
 "end": "12:45pm",
 "instructor": "von",
 "capacity": 23,
-"booked": 1,
-"spacesLeft": 22,
+"booked": 2,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -10278,8 +10278,8 @@
 "end": "1:15pm",
 "instructor": "Faye",
 "capacity": 23,
-"booked": 4,
-"spacesLeft": 19,
+"booked": 5,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -10447,8 +10447,8 @@
 "end": "1:45pm",
 "instructor": "Yvonne Seow",
 "capacity": 20,
-"booked": 4,
-"spacesLeft": 16,
+"booked": 5,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -10564,8 +10564,8 @@
 "end": "1:55pm",
 "instructor": "Jasmine Liew",
 "capacity": 28,
-"booked": 4,
-"spacesLeft": 24,
+"booked": 3,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -10982,7 +10982,7 @@
 "capacity": 16,
 "booked": 16,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 7
 },
 {
 "outlet": "Paragon",
@@ -11136,8 +11136,8 @@
 "end": "7:00pm",
 "instructor": "Bryan Wong",
 "capacity": 22,
-"booked": 6,
-"spacesLeft": 16,
+"booked": 7,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -11916,8 +11916,8 @@
 "end": "8:15am",
 "instructor": "Priscilla",
 "capacity": 33,
-"booked": 0,
-"spacesLeft": 33,
+"booked": 1,
+"spacesLeft": 32,
 "waiting": 0
 },
 {
@@ -12124,8 +12124,8 @@
 "end": "10:15am",
 "instructor": "Josephine Lim",
 "capacity": 40,
-"booked": 5,
-"spacesLeft": 35,
+"booked": 6,
+"spacesLeft": 34,
 "waiting": 0
 },
 {
@@ -12371,8 +12371,8 @@
 "end": "11:45am",
 "instructor": "Benji",
 "capacity": 30,
-"booked": 22,
-"spacesLeft": 8,
+"booked": 23,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -12527,8 +12527,8 @@
 "end": "12:45pm",
 "instructor": "Royston",
 "capacity": 38,
-"booked": 7,
-"spacesLeft": 31,
+"booked": 8,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -12566,8 +12566,8 @@
 "end": "12:45pm",
 "instructor": "Christine Tan",
 "capacity": 20,
-"booked": 10,
-"spacesLeft": 10,
+"booked": 11,
+"spacesLeft": 9,
 "waiting": 0
 },
 {
@@ -12592,8 +12592,8 @@
 "end": "12:45pm",
 "instructor": "Eddie Tan",
 "capacity": 10,
-"booked": 3,
-"spacesLeft": 7,
+"booked": 4,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -12878,8 +12878,8 @@
 "end": "1:45pm",
 "instructor": "Royston",
 "capacity": 32,
-"booked": 4,
-"spacesLeft": 28,
+"booked": 5,
+"spacesLeft": 27,
 "waiting": 0
 },
 {
@@ -13439,7 +13439,7 @@
 "capacity": 22,
 "booked": 22,
 "spacesLeft": 0,
-"waiting": 9
+"waiting": 8
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -13530,7 +13530,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 11
+"waiting": 12
 },
 {
 "outlet": "Fusionopolis",
@@ -13998,7 +13998,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 11
+"waiting": 12
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -14139,8 +14139,8 @@
 "end": "8:45pm",
 "instructor": "Shu Ting",
 "capacity": 23,
-"booked": 8,
-"spacesLeft": 15,
+"booked": 9,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
