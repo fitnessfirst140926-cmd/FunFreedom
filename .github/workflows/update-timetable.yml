@@ -3,8 +3,7 @@ name: Update Fitness First timetable
 on:
   schedule:
     - cron: '30 0 * * *'   # 8:30am SGT daily
-  workflow_dispatch:        # optional: lets you trigger it manually too
-
+  workflow_dispatch:        # lets you trigger it manually too
 
 permissions:
   contents: write
@@ -25,6 +24,9 @@ jobs:
         run: pip install requests
 
       - name: Scrape timetable
+        env:
+          FF_EMAIL: ${{ secrets.FF_EMAIL }}
+          FF_PASSWORD: ${{ secrets.FF_PASSWORD }}
         run: python3 scrape_timetable.py
 
       - name: Rebuild app
@@ -36,4 +38,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add classes.json classes_min.json docs/index.html
           git diff --quiet --cached || git commit -m "Weekly timetable refresh $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
