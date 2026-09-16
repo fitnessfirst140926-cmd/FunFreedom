@@ -232,6 +232,31 @@ html = r"""<!DOCTYPE html>
     color: var(--muted);
     margin-top: 4px;
   }
+  .avail-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+  .avail-ok {
+    background: rgba(52, 211, 153, 0.15);
+    color: var(--accent2);
+  }
+  .avail-low {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+  }
+  .avail-wait {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+  }
+  .avail-full {
+    background: rgba(138, 145, 163, 0.15);
+    color: var(--muted);
+  }
   .empty-state {
     text-align: center;
     color: var(--muted);
@@ -821,6 +846,20 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function availabilityBadge(d) {
+  if (typeof d.spacesLeft !== 'number' || typeof d.capacity !== 'number') return '';
+  if (d.spacesLeft > 3) {
+    return `<span class="avail-badge avail-ok">${d.spacesLeft} left</span>`;
+  }
+  if (d.spacesLeft > 0) {
+    return `<span class="avail-badge avail-low">${d.spacesLeft} left</span>`;
+  }
+  if (d.waiting > 0) {
+    return `<span class="avail-badge avail-wait">Waitlist: ${d.waiting}</span>`;
+  }
+  return `<span class="avail-badge avail-full">Full</span>`;
+}
+
 function sortResults(arr) {
   if (state.sort === 'time') {
     arr.sort((a,b) => (a._startMin ?? 9999) - (b._startMin ?? 9999));
@@ -841,7 +880,7 @@ function buildClassCard(d) {
         <div class="class-name">${escapeHtml(d.class)}</div>
         <div class="class-time">${d.start ? d.start + ' - ' + d.end : ''}</div>
       </div>
-      <div class="class-meta">${escapeHtml(d.outlet)}${d.instructor ? ' · ' + escapeHtml(d.instructor) : ''}</div>
+      <div class="class-meta">${escapeHtml(d.outlet)}${d.instructor ? ' · ' + escapeHtml(d.instructor) : ''}${availabilityBadge(d)}</div>
       <div style="margin-top:8px; display:flex; justify-content:flex-end;">
         <button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓ In plan' : '+ Add to plan'}</button>
       </div>
@@ -887,11 +926,12 @@ function renderListView() {
 }
 
 function renderWeekView() {
-  const dayFilterActive = state.days.size > 0;
-  const columns = dayFilterActive ? DAYS.filter(d => state.days.has(d)) : DAYS;
-  const results = DATA.filter(d => (!dayFilterActive || state.days.has(d.day)) && matchesCommonFilters(d));
+  // Weekly schedule always shows the full week — the "List by day" day
+  // chips are a List-view-only filter and intentionally don't carry over.
+  const columns = DAYS;
+  const results = DATA.filter(d => matchesCommonFilters(d));
 
-  document.getElementById('weekResultsCount').textContent = results.length + (results.length === 1 ? ' class' : ' classes') + (dayFilterActive ? ' across ' + columns.length + (columns.length === 1 ? ' day' : ' days') : ' this week');
+  document.getElementById('weekResultsCount').textContent = results.length + (results.length === 1 ? ' class' : ' classes') + ' this week';
 
   const grid = document.getElementById('weekGrid');
   grid.innerHTML = '';
@@ -957,7 +997,7 @@ function renderWeekView() {
           const slot = document.createElement('div');
           const inPlan = state.plan.has(s.key);
           slot.className = 'week-slot';
-          slot.innerHTML = `<span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}</span>${s.instructor ? '<span class="i">' + escapeHtml(s.instructor) + '</span>' : ''}<button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓' : '+ plan'}</button>`;
+          slot.innerHTML = `<span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}${availabilityBadge(s)}</span>${s.instructor ? '<span class="i">' + escapeHtml(s.instructor) + '</span>' : ''}<button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓' : '+ plan'}</button>`;
           slot.querySelector('.plan-btn').addEventListener('click', () => togglePlan(s.key));
           td.appendChild(slot);
         });
@@ -1008,7 +1048,7 @@ function renderPlanView() {
         row.className = 'plan-session-row';
         row.innerHTML = `
           <div class="plan-session-info">
-            <span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}</span>
+            <span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}${availabilityBadge(s)}</span>
             ${s.instructor ? '<span class="i">' + escapeHtml(s.instructor) + '</span>' : ''}
           </div>
           <div class="plan-remove">✕</div>
