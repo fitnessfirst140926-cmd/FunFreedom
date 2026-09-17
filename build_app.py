@@ -436,11 +436,41 @@ html = r"""<!DOCTYPE html>
     color: #06231a;
     border-color: var(--accent2);
   }
+  .book-btn {
+    flex: 0 0 auto;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #f87171;
+    color: #2a0a0a;
+    font-size: 11.5px;
+    font-weight: 700;
+    border: 1px solid #f87171;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    margin-left: 6px;
+  }
+  .book-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .book-btn.booked {
+    background: var(--accent2);
+    color: #06231a;
+    border-color: var(--accent2);
+    opacity: 1;
+  }
   .week-slot {
     position: relative;
   }
   .week-slot .plan-btn {
     margin-top: 4px;
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  .week-slot .book-btn {
+    margin-top: 4px;
+    margin-left: 4px;
     padding: 3px 6px;
     font-size: 10px;
   }
@@ -536,7 +566,7 @@ html = r"""<!DOCTYPE html>
 <body>
 
 <h1 class="no-print">Class Finder</h1>
-<div class="subtitle no-print">Find classes, or build a weekly schedule &middot; data as of __BUILD_DATE__</div>
+<div class="subtitle no-print">Find classes, or build a weekly schedule &middot; data as of __BUILD_DATE__ &middot; <a href="membership.html" style="color:var(--accent);">Membership Calculator &rarr;</a></div>
 
 <div class="section no-print">
   <div class="section-title">View</div>
@@ -544,6 +574,7 @@ html = r"""<!DOCTYPE html>
     <div class="chip wide active" id="viewListBtn">List by day</div>
     <div class="chip wide" id="viewWeekBtn">Weekly schedule</div>
     <div class="chip wide" id="viewPlanBtn">My Plan</div>
+    <div class="chip wide" id="viewBookingsBtn">My Bookings</div>
   </div>
 </div>
 
@@ -666,6 +697,14 @@ html = r"""<!DOCTYPE html>
   <div id="planList"></div>
 </div>
 
+<div id="bookingsViewWrap" style="display:none;">
+  <div class="results-header">
+    <div class="results-count" id="bookingsResultsCount">--</div>
+    <span class="clear-link" id="bookingsRefresh">refresh</span>
+  </div>
+  <div id="bookingsList"></div>
+</div>
+
 <script>
 const DATA = __DATA__;
 const CAPACITY_LOOKUP = __CAPACITY_LOOKUP__;
@@ -719,6 +758,15 @@ let state = {
   liveError: null,
   liveUpdatedAt: null,
   liveBusy: false,
+  liveUserId: null,
+  liveUserCenterId: null,
+  bookingBusy: new Set(),
+  bookedThisSession: new Set(),
+  myBookings: [],
+  myBookingsBusy: false,
+  myBookingsError: null,
+  myBookingsFetchedAt: null,
+  cancelBusy: new Set(),
 };
 
 const CENTER_COLORS = ['#f4c542','#38bdf8','#a78bfa','#34d399','#fb923c','#f472b6','#facc15','#4ade80','#60a5fa','#f87171','#c084fc','#2dd4bf','#fbbf24','#94a3b8'];
@@ -727,16 +775,20 @@ const CENTER_COLORS = ['#f4c542','#38bdf8','#a78bfa','#34d399','#fb923c','#f472b
 const viewListBtn = document.getElementById('viewListBtn');
 const viewWeekBtn = document.getElementById('viewWeekBtn');
 const viewPlanBtn = document.getElementById('viewPlanBtn');
+const viewBookingsBtn = document.getElementById('viewBookingsBtn');
 const daySection = document.getElementById('daySection');
 const todSection = document.getElementById('todSection');
 const moreFiltersSection = document.getElementById('moreFiltersSection');
 const listViewWrap = document.getElementById('listViewWrap');
 const weekViewWrap = document.getElementById('weekViewWrap');
 const planViewWrap = document.getElementById('planViewWrap');
+const bookingsViewWrap = document.getElementById('bookingsViewWrap');
 
 viewListBtn.onclick = () => { state.view = 'list'; render(); };
 viewWeekBtn.onclick = () => { state.view = 'week'; render(); };
 viewPlanBtn.onclick = () => { state.view = 'plan'; render(); };
+viewBookingsBtn.onclick = () => { state.view = 'bookings'; render(); fetchMyBookings(); };
+document.getElementById('bookingsRefresh').onclick = (e) => { e.stopPropagation(); fetchMyBookings(); };
 
 // ---- My Plan: add/remove + persistence ----
 // state.plan holds stable composite keys (outlet|day|start|class|instructor),
@@ -1039,9 +1091,11 @@ function buildClassCard(d) {
       <div class="class-meta">${escapeHtml(d.outlet)}${d.instructor ? ' · ' + escapeHtml(d.instructor) : ''}${availabilityBadge(d)}</div>
       <div style="margin-top:8px; display:flex; justify-content:flex-end;">
         <button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓ In plan' : '+ Add to plan'}</button>
+        ${bookButtonHtml(d)}
       </div>
     `;
   card.querySelector('.plan-btn').addEventListener('click', () => togglePlan(d.key));
+  attachBookHandler(card, d);
   return card;
 }
 
@@ -1153,8 +1207,9 @@ function renderWeekView() {
           const slot = document.createElement('div');
           const inPlan = state.plan.has(s.key);
           slot.className = 'week-slot';
-          slot.innerHTML = `<span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}${availabilityBadge(s)}</span>${s.instructor ? '<span class="i">' + escapeHtml(s.instructor) + '</span>' : ''}<button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓' : '+ plan'}</button>`;
+          slot.innerHTML = `<span class="t">${s.start ? s.start + '-' + s.end : ''}</span><span class="c">${escapeHtml(s.class)}${availabilityBadge(s)}</span>${s.instructor ? '<span class="i">' + escapeHtml(s.instructor) + '</span>' : ''}<button class="plan-btn${inPlan ? ' in-plan' : ''}">${inPlan ? '✓' : '+ plan'}</button>${bookButtonHtml(s)}`;
           slot.querySelector('.plan-btn').addEventListener('click', () => togglePlan(s.key));
+          attachBookHandler(slot, s);
           td.appendChild(slot);
         });
       }
@@ -1221,12 +1276,14 @@ function render() {
   viewListBtn.classList.toggle('active', state.view === 'list');
   viewWeekBtn.classList.toggle('active', state.view === 'week');
   viewPlanBtn.classList.toggle('active', state.view === 'plan');
+  viewBookingsBtn.classList.toggle('active', state.view === 'bookings');
   daySection.style.display = state.view === 'list' ? 'block' : 'none';
-  todSection.style.display = state.view === 'plan' ? 'none' : 'block';
-  moreFiltersSection.style.display = state.view === 'plan' ? 'none' : 'block';
+  todSection.style.display = (state.view === 'plan' || state.view === 'bookings') ? 'none' : 'block';
+  moreFiltersSection.style.display = (state.view === 'plan' || state.view === 'bookings') ? 'none' : 'block';
   listViewWrap.style.display = state.view === 'list' ? 'block' : 'none';
   weekViewWrap.style.display = state.view === 'week' ? 'block' : 'none';
   planViewWrap.style.display = state.view === 'plan' ? 'block' : 'none';
+  bookingsViewWrap.style.display = state.view === 'bookings' ? 'block' : 'none';
 
   // day chips active state
   [...dayRow.children].forEach(c => c.classList.toggle('active', state.days.has(c.dataset.day)));
@@ -1254,6 +1311,8 @@ function render() {
     renderListView();
   } else if (state.view === 'week') {
     renderWeekView();
+  } else if (state.view === 'bookings') {
+    renderBookingsView();
   } else {
     renderPlanView();
   }
@@ -1287,9 +1346,13 @@ async function liveLogin(email, password) {
     const data = await resp.json();
     if (!data.token) throw new Error('no token in login response');
     state.liveToken = data.token;
+    state.liveUserId = data.user ? data.user.userId : null;
+    state.liveUserCenterId = data.user ? data.user.centerId : null;
     return true;
   } catch (e) {
     state.liveToken = null;
+    state.liveUserId = null;
+    state.liveUserCenterId = null;
     state.liveError = 'Live login failed: ' + e.message + '. This can also happen if Fitness First blocks browser-based requests to this endpoint — the scraper-based capacity numbers still work either way.';
     return false;
   }
@@ -1340,6 +1403,8 @@ async function fetchLiveAvailability() {
           spacesLeft: Math.max(capacity - booked, 0),
           waiting: b.waitingListCount ?? 0,
           capacity, booked,
+          bookingId: b.id,
+          bookingCenterId: item.centerId,
         };
         const key = classKey(item.centerName || '', b.name || '', dayShort, b.startTime || '');
         newMap[key] = rec;
@@ -1355,6 +1420,221 @@ async function fetchLiveAvailability() {
     state.liveError = 'Some live data failed to refresh (' + anyError.message + '); showing what loaded.';
   }
   render();
+}
+
+// ---- Booking (live login required) ----
+async function bookClass(d) {
+  const key = dataRowKey(d);
+  const live = key ? state.liveMap[key] : null;
+  if (!live || !live.bookingId || !live.bookingCenterId) {
+    alert("Can't book this class right now — no live session data for it. Try Refresh, or it may be outside the next 7 days.");
+    return;
+  }
+  if (!state.liveUserId || !state.liveUserCenterId) {
+    alert('Missing your member ID from login — try logging out and back in.');
+    return;
+  }
+  const confirmMsg = `Book ${d.class} at ${d.outlet}, ${d.day} ${d.start}\u2013${d.end}?\n\nThis submits a real booking on your Fitness First account.`;
+  if (!confirm(confirmMsg)) return;
+
+  state.bookingBusy.add(key);
+  render();
+  try {
+    const resp = await fetch(EXERP_BASE + '/api/booking/create-booking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + state.liveToken,
+      },
+      body: JSON.stringify({
+        selectedUserId: state.liveUserId,
+        selectedUserCenterId: state.liveUserCenterId,
+        bookingCenterId: live.bookingCenterId,
+        bookingId: live.bookingId,
+      }),
+    });
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => '');
+      throw new Error('HTTP ' + resp.status + (text ? ': ' + text.slice(0, 200) : ''));
+    }
+    const result = await resp.json();
+    if (result.state && result.state !== 'BOOKED') {
+      throw new Error('Unexpected response state: ' + result.state);
+    }
+    state.bookedThisSession.add(key);
+    alert(`Booked: ${d.class} at ${d.outlet}, ${d.day} ${d.start}.`);
+    await fetchLiveAvailability();
+  } catch (e) {
+    alert('Booking failed: ' + e.message);
+  } finally {
+    state.bookingBusy.delete(key);
+    render();
+  }
+}
+
+function bookButtonHtml(d) {
+  if (!state.liveToken) return '';
+  const key = dataRowKey(d);
+  if (!key) return '';
+  const live = state.liveMap[key];
+  if (!live || !live.bookingId) return '';
+  if (state.bookedThisSession.has(key)) {
+    return '<button class="book-btn booked" disabled>\u2713 Booked</button>';
+  }
+  if (state.bookingBusy.has(key)) {
+    return '<button class="book-btn" disabled>Booking\u2026</button>';
+  }
+  if (live.spacesLeft <= 0 && live.waiting <= 0) {
+    return '<button class="book-btn" disabled>Full</button>';
+  }
+  const label = live.spacesLeft > 0 ? 'Book' : 'Join waitlist';
+  return `<button class="book-btn" data-key="${escapeHtml(key)}">${label}</button>`;
+}
+
+function attachBookHandler(container, d) {
+  const btn = container.querySelector('.book-btn:not([disabled])');
+  if (btn) btn.addEventListener('click', () => bookClass(d));
+}
+
+// ---- My Bookings (live login required) ----
+function bookingDateTime(b) {
+  return new Date(b.date + 'T' + b.startTime + ':00');
+}
+
+async function fetchMyBookings() {
+  if (!state.liveToken || !state.liveUserId || !state.liveUserCenterId) {
+    state.myBookingsError = 'Log in above to see your bookings.';
+    state.myBookings = [];
+    render();
+    return;
+  }
+  state.myBookingsBusy = true;
+  state.myBookingsError = null;
+  render();
+  try {
+    const resp = await fetch(EXERP_BASE + '/api/dashboard/schedule-by-current-person', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + state.liveToken,
+      },
+      body: JSON.stringify({
+        selectedUserId: state.liveUserId,
+        selectedUserCenterId: state.liveUserCenterId,
+        listOfActivities: [],
+        selectAllMembers: false,
+      }),
+    });
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const items = await resp.json();
+    const now = new Date();
+    const upcoming = items.filter(item => {
+      const b = item.booking;
+      return b && item.state === 'BOOKED' && bookingDateTime(b) >= now;
+    });
+    upcoming.sort((a, b) => bookingDateTime(a.booking) - bookingDateTime(b.booking));
+    state.myBookings = upcoming;
+  } catch (e) {
+    state.myBookingsError = 'Failed to load bookings: ' + e.message;
+  } finally {
+    state.myBookingsBusy = false;
+    state.myBookingsFetchedAt = new Date();
+    render();
+  }
+}
+
+async function cancelBooking(item) {
+  const b = item.booking;
+  const dt = bookingDateTime(b);
+  const hoursUntil = (dt - new Date()) / 3600000;
+  const lateCancelNote = hoursUntil < 2
+    ? '\n\n\u26A0 This is within 2 hours of the class \u2014 cancelling now may count as a late cancel toward your 30-day no-show/late-cancel limit.'
+    : '';
+  const confirmMsg = `Cancel ${b.name} at ${item.centerName}, ${b.date} ${b.startTime}?${lateCancelNote}`;
+  if (!confirm(confirmMsg)) return;
+
+  state.cancelBusy.add(item.id);
+  render();
+  try {
+    const resp = await fetch(EXERP_BASE + '/api/booking/cancel-booking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + state.liveToken,
+      },
+      body: JSON.stringify({
+        selectedUserId: state.liveUserId,
+        selectedUserCenterId: state.liveUserCenterId,
+        participationCenterId: item.centerId,
+        participationId: item.id,
+      }),
+    });
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => '');
+      throw new Error('HTTP ' + resp.status + (text ? ': ' + text.slice(0, 200) : ''));
+    }
+    state.myBookings = state.myBookings.filter(x => x.id !== item.id);
+    await fetchLiveAvailability();
+  } catch (e) {
+    alert('Cancel failed: ' + e.message);
+  } finally {
+    state.cancelBusy.delete(item.id);
+    render();
+  }
+}
+
+function renderBookingsView() {
+  const list = document.getElementById('bookingsList');
+  list.innerHTML = '';
+
+  if (!state.liveToken) {
+    document.getElementById('bookingsResultsCount').textContent = '--';
+    list.innerHTML = '<div class="empty-state"><div class="big">\uD83D\uDD12</div>Log in under "Live availability" above to see your upcoming bookings.</div>';
+    return;
+  }
+
+  if (state.myBookingsBusy && state.myBookings.length === 0) {
+    document.getElementById('bookingsResultsCount').textContent = 'Loading\u2026';
+    return;
+  }
+
+  if (state.myBookingsError) {
+    document.getElementById('bookingsResultsCount').textContent = '--';
+    list.innerHTML = `<div class="empty-state"><div class="big">\u26A0</div>${escapeHtml(state.myBookingsError)}</div>`;
+    return;
+  }
+
+  document.getElementById('bookingsResultsCount').textContent =
+    state.myBookings.length + (state.myBookings.length === 1 ? ' upcoming booking' : ' upcoming bookings');
+
+  if (state.myBookings.length === 0) {
+    list.innerHTML = '<div class="empty-state"><div class="big">\uD83D\uDCC5</div>No upcoming bookings found.</div>';
+    return;
+  }
+
+  state.myBookings.forEach(item => {
+    const b = item.booking;
+    const instructors = (b.instructorNames || []).map(n => n.replace(/\s*\.\s*$/, '')).join(', ');
+    const hoursUntil = (bookingDateTime(b) - new Date()) / 3600000;
+    const row = document.createElement('div');
+    row.className = 'class-card';
+    const busy = state.cancelBusy.has(item.id);
+    row.innerHTML = `
+      <div class="class-top">
+        <div class="class-name">${escapeHtml(b.name)}</div>
+        <div class="class-time">${b.startTime}-${b.endTime}</div>
+      </div>
+      <div class="class-meta">${escapeHtml(item.centerName)} \u00b7 ${escapeHtml(b.date)}${instructors ? ' \u00b7 ' + escapeHtml(instructors) : ''}</div>
+      ${hoursUntil < 2 ? '<div class="live-error" style="display:block; margin-top:6px;">Within 2 hours \u2014 cancelling now may count as a late cancel.</div>' : ''}
+      <div style="margin-top:8px; display:flex; justify-content:flex-end;">
+        <button class="book-btn" ${busy ? 'disabled' : ''}>${busy ? 'Cancelling\u2026' : 'Cancel'}</button>
+      </div>
+    `;
+    if (!busy) {
+      row.querySelector('.book-btn').addEventListener('click', () => cancelBooking(item));
+    }
+    list.appendChild(row);
+  });
 }
 
 function renderLiveStatus() {
@@ -1417,6 +1697,12 @@ document.getElementById('liveLogoutBtn').onclick = () => {
   state.liveMap = {};
   state.liveError = null;
   state.liveUpdatedAt = null;
+  state.liveUserId = null;
+  state.liveUserCenterId = null;
+  state.bookedThisSession = new Set();
+  state.myBookings = [];
+  state.myBookingsError = null;
+  state.myBookingsFetchedAt = null;
   clearLiveCreds();
   document.getElementById('liveEmail').value = '';
   document.getElementById('livePassword').value = '';
