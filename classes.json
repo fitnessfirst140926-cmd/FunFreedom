@@ -1,330 +1,5 @@
 [
 {
-"outlet": "George Street",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "HYROX ENGINE",
-"start": "6:30am",
-"end": "7:15am",
-"instructor": "Boon Kee",
-"capacity": 8,
-"booked": 3,
-"spacesLeft": 5,
-"waiting": 0
-},
-{
-"outlet": "George Street",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYCOMBAT\u00ae",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Miu",
-"capacity": 38,
-"booked": 2,
-"spacesLeft": 36,
-"waiting": 0
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "RPM\u2122",
-"start": "7:00am",
-"end": "7:45am",
-"instructor": "Yin Shi",
-"capacity": 26,
-"booked": 3,
-"spacesLeft": 23,
-"waiting": 0
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "CORE CONDITIONING",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Christopher Lim",
-"capacity": 20,
-"booked": 20,
-"spacesLeft": 0,
-"waiting": 3
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYCOMBAT\u00ae",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Edwin Chiam",
-"capacity": 38,
-"booked": 7,
-"spacesLeft": 31,
-"waiting": 0
-},
-{
-"outlet": "AMK Hub",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYCOMBAT\u00ae",
-"start": "7:00am",
-"end": "7:45am",
-"instructor": "Royston",
-"capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
-"waiting": 0
-},
-{
-"outlet": "AMK Hub",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "SOUND FLOW YOGA PLUS",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Desmond Ong",
-"capacity": 18,
-"booked": 9,
-"spacesLeft": 9,
-"waiting": 0
-},
-{
-"outlet": "Fusionopolis",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "RPM\u2122",
-"start": "7:00am",
-"end": "7:45am",
-"instructor": "Lilian",
-"capacity": 23,
-"booked": 4,
-"spacesLeft": 19,
-"waiting": 0
-},
-{
-"outlet": "Westgate",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "DYNAMIC FLOW YOGA",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "George",
-"capacity": 30,
-"booked": 5,
-"spacesLeft": 25,
-"waiting": 0
-},
-{
-"outlet": "The Metropolis",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "SUSPENSION EXERCISE CLASS",
-"start": "7:00am",
-"end": "7:45am",
-"instructor": "Benji",
-"capacity": 10,
-"booked": 8,
-"spacesLeft": 2,
-"waiting": 0
-},
-{
-"outlet": "Bugis Junction",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYPUMP\u00ae",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Leonard Ong",
-"capacity": 37,
-"booked": 11,
-"spacesLeft": 26,
-"waiting": 0
-},
-{
-"outlet": "Paya Lebar",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYPUMP\u00ae",
-"start": "7:00am",
-"end": "8:00am",
-"instructor": "Adeline Goh",
-"capacity": 25,
-"booked": 16,
-"spacesLeft": 9,
-"waiting": 0
-},
-{
-"outlet": "Capital Tower",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "HYROX ENGINE",
-"start": "7:15am",
-"end": "8:00am",
-"instructor": "Simon Wan",
-"capacity": 16,
-"booked": 16,
-"spacesLeft": 0,
-"waiting": 1
-},
-{
-"outlet": "Paragon",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "LES MILLS TONE\u2122",
-"start": "7:15am",
-"end": "8:00am",
-"instructor": "Mervyn Lau",
-"capacity": 34,
-"booked": 10,
-"spacesLeft": 24,
-"waiting": 0
-},
-{
-"outlet": "Paragon",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYCOMBAT\u00ae",
-"start": "7:15am",
-"end": "8:15am",
-"instructor": "Zac",
-"capacity": 27,
-"booked": 3,
-"spacesLeft": 24,
-"waiting": 0
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "RESTORATIVE YOGA",
-"start": "7:15am",
-"end": "8:15am",
-"instructor": "Yvonne Seow",
-"capacity": 18,
-"booked": 3,
-"spacesLeft": 15,
-"waiting": 0
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
-"start": "7:15am",
-"end": "8:00am",
-"instructor": "Vivi Woon",
-"capacity": 27,
-"booked": 5,
-"spacesLeft": 22,
-"waiting": 0
-},
-{
-"outlet": "Capital Tower",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "RPM\u2122",
-"start": "7:30am",
-"end": "8:15am",
-"instructor": "Monica",
-"capacity": 12,
-"booked": 2,
-"spacesLeft": 10,
-"waiting": 0
-},
-{
-"outlet": "AMK Hub",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYPUMP\u00ae",
-"start": "8:00am",
-"end": "9:00am",
-"instructor": "Royston",
-"capacity": 34,
-"booked": 34,
-"spacesLeft": 0,
-"waiting": 7
-},
-{
-"outlet": "AMK Hub",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "Les Mills PILATES\u2122",
-"start": "8:15am",
-"end": "9:00am",
-"instructor": "Jeffrey Chua",
-"capacity": 18,
-"booked": 13,
-"spacesLeft": 5,
-"waiting": 0
-},
-{
-"outlet": "Westgate",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "CIRCUIT",
-"start": "8:15am",
-"end": "9:00am",
-"instructor": "George",
-"capacity": 30,
-"booked": 8,
-"spacesLeft": 22,
-"waiting": 0
-},
-{
-"outlet": "Fusionopolis",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "BODYSTEP\u00ae",
-"start": "8:20am",
-"end": "9:20am",
-"instructor": "Benji",
-"capacity": 30,
-"booked": 4,
-"spacesLeft": 26,
-"waiting": 0
-},
-{
-"outlet": "Paragon",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "PILATES",
-"start": "8:30am",
-"end": "9:30am",
-"instructor": "Alvan Chan",
-"capacity": 23,
-"booked": 15,
-"spacesLeft": 8,
-"waiting": 0
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "YIN YOGA",
-"start": "8:30am",
-"end": "9:30am",
-"instructor": "Joanna",
-"capacity": 24,
-"booked": 8,
-"spacesLeft": 16,
-"waiting": 0
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Thu",
-"date": "2026-09-17",
-"class": "CIRCUIT",
-"start": "8:30am",
-"end": "9:15am",
-"instructor": "Renu",
-"capacity": 31,
-"booked": 10,
-"spacesLeft": 21,
-"waiting": 0
-},
-{
 "outlet": "Paragon",
 "day": "Thu",
 "date": "2026-09-17",
@@ -335,7 +10,7 @@
 "capacity": 34,
 "booked": 34,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 0
 },
 {
 "outlet": "Bugis Junction",
@@ -346,8 +21,8 @@
 "end": "10:00am",
 "instructor": "Fang",
 "capacity": 8,
-"booked": 1,
-"spacesLeft": 7,
+"booked": 0,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -359,8 +34,8 @@
 "end": "9:45am",
 "instructor": "Caroline",
 "capacity": 31,
-"booked": 6,
-"spacesLeft": 25,
+"booked": 12,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -372,8 +47,8 @@
 "end": "9:45am",
 "instructor": "Robyn",
 "capacity": 23,
-"booked": 3,
-"spacesLeft": 20,
+"booked": 5,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -385,8 +60,8 @@
 "end": "9:45am",
 "instructor": "Karel",
 "capacity": 30,
-"booked": 16,
-"spacesLeft": 14,
+"booked": 22,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -400,7 +75,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 3
 },
 {
 "outlet": "AMK Hub",
@@ -411,8 +86,8 @@
 "end": "10:00am",
 "instructor": "Bhas",
 "capacity": 34,
-"booked": 14,
-"spacesLeft": 20,
+"booked": 18,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -437,8 +112,8 @@
 "end": "10:30am",
 "instructor": "Jasmine Liew",
 "capacity": 30,
-"booked": 13,
-"spacesLeft": 17,
+"booked": 16,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -465,7 +140,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Paragon",
@@ -476,9 +151,9 @@
 "end": "10:45am",
 "instructor": "Vivi Kusuma",
 "capacity": 23,
-"booked": 23,
-"spacesLeft": 0,
-"waiting": 1
+"booked": 19,
+"spacesLeft": 4,
+"waiting": 0
 },
 {
 "outlet": "Paragon",
@@ -489,8 +164,8 @@
 "end": "10:30am",
 "instructor": "Yeoh",
 "capacity": 34,
-"booked": 17,
-"spacesLeft": 17,
+"booked": 15,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -502,8 +177,8 @@
 "end": "10:45am",
 "instructor": "Edwin Ko",
 "capacity": 31,
-"booked": 7,
-"spacesLeft": 24,
+"booked": 6,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -528,8 +203,8 @@
 "end": "10:45am",
 "instructor": "Michelle Kang",
 "capacity": 26,
-"booked": 2,
-"spacesLeft": 24,
+"booked": 4,
+"spacesLeft": 22,
 "waiting": 0
 },
 {
@@ -541,8 +216,8 @@
 "end": "10:45am",
 "instructor": "Christina Chin",
 "capacity": 28,
-"booked": 6,
-"spacesLeft": 22,
+"booked": 7,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -556,7 +231,7 @@
 "capacity": 4,
 "booked": 4,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 0
 },
 {
 "outlet": "Junction 10",
@@ -567,8 +242,8 @@
 "end": "10:45am",
 "instructor": "Caroline",
 "capacity": 31,
-"booked": 7,
-"spacesLeft": 24,
+"booked": 12,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -593,8 +268,8 @@
 "end": "10:55am",
 "instructor": "Christine Tan",
 "capacity": 32,
-"booked": 4,
-"spacesLeft": 28,
+"booked": 3,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -619,8 +294,8 @@
 "end": "11:15am",
 "instructor": "von",
 "capacity": 15,
-"booked": 6,
-"spacesLeft": 9,
+"booked": 8,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -634,7 +309,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 4
 },
 {
 "outlet": "AMK Hub",
@@ -645,8 +320,8 @@
 "end": "11:30am",
 "instructor": "Ryan Ong",
 "capacity": 40,
-"booked": 18,
-"spacesLeft": 22,
+"booked": 17,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -684,8 +359,8 @@
 "end": "12:00pm",
 "instructor": "Natalie",
 "capacity": 27,
-"booked": 24,
-"spacesLeft": 3,
+"booked": 21,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -699,7 +374,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 9
+"waiting": 7
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -710,8 +385,8 @@
 "end": "11:45am",
 "instructor": "Edwin Ko",
 "capacity": 31,
-"booked": 15,
-"spacesLeft": 16,
+"booked": 14,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -723,8 +398,8 @@
 "end": "12:00pm",
 "instructor": "Angie Tion",
 "capacity": 24,
-"booked": 4,
-"spacesLeft": 20,
+"booked": 5,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -762,9 +437,9 @@
 "end": "12:45pm",
 "instructor": "Alison",
 "capacity": 17,
-"booked": 17,
-"spacesLeft": 0,
-"waiting": 1
+"booked": 15,
+"spacesLeft": 2,
+"waiting": 0
 },
 {
 "outlet": "AMK Hub",
@@ -788,8 +463,8 @@
 "end": "12:45pm",
 "instructor": "Yvonne Seow",
 "capacity": 12,
-"booked": 1,
-"spacesLeft": 11,
+"booked": 2,
+"spacesLeft": 10,
 "waiting": 0
 },
 {
@@ -801,8 +476,8 @@
 "end": "12:45pm",
 "instructor": "Desiree",
 "capacity": 16,
-"booked": 13,
-"spacesLeft": 3,
+"booked": 12,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -827,9 +502,9 @@
 "end": "12:45pm",
 "instructor": "Yilong",
 "capacity": 8,
-"booked": 8,
-"spacesLeft": 0,
-"waiting": 3
+"booked": 7,
+"spacesLeft": 1,
+"waiting": 0
 },
 {
 "outlet": "George Street",
@@ -842,7 +517,7 @@
 "capacity": 32,
 "booked": 32,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 3
 },
 {
 "outlet": "One Raffles Quay",
@@ -855,7 +530,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 7
 },
 {
 "outlet": "One Raffles Quay",
@@ -868,7 +543,7 @@
 "capacity": 38,
 "booked": 38,
 "spacesLeft": 0,
-"waiting": 8
+"waiting": 3
 },
 {
 "outlet": "One Raffles Quay",
@@ -881,7 +556,7 @@
 "capacity": 20,
 "booked": 20,
 "spacesLeft": 0,
-"waiting": 8
+"waiting": 0
 },
 {
 "outlet": "AMK Hub",
@@ -894,7 +569,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 0
 },
 {
 "outlet": "Fusionopolis",
@@ -905,9 +580,9 @@
 "end": "1:00pm",
 "instructor": "Dawn Tan",
 "capacity": 18,
-"booked": 18,
-"spacesLeft": 0,
-"waiting": 1
+"booked": 17,
+"spacesLeft": 1,
+"waiting": 0
 },
 {
 "outlet": "Fusionopolis",
@@ -957,8 +632,8 @@
 "end": "12:45pm",
 "instructor": "Fang",
 "capacity": 30,
-"booked": 11,
-"spacesLeft": 19,
+"booked": 10,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -970,8 +645,8 @@
 "end": "12:45pm",
 "instructor": "Amy Seow",
 "capacity": 18,
-"booked": 10,
-"spacesLeft": 8,
+"booked": 11,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -983,8 +658,8 @@
 "end": "12:45pm",
 "instructor": "Christopher Lim",
 "capacity": 15,
-"booked": 14,
-"spacesLeft": 1,
+"booked": 12,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -996,8 +671,8 @@
 "end": "12:45pm",
 "instructor": "Kenny Lye",
 "capacity": 26,
-"booked": 18,
-"spacesLeft": 8,
+"booked": 19,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -1050,7 +725,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 4
 },
 {
 "outlet": "Paya Lebar",
@@ -1061,8 +736,8 @@
 "end": "12:45pm",
 "instructor": "Linus Sim",
 "capacity": 10,
-"booked": 2,
-"spacesLeft": 8,
+"booked": 3,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -1076,7 +751,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 4
 },
 {
 "outlet": "Paragon",
@@ -1100,8 +775,8 @@
 "end": "1:15pm",
 "instructor": "Benjamin Lai",
 "capacity": 34,
-"booked": 29,
-"spacesLeft": 5,
+"booked": 28,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -1115,7 +790,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 9
+"waiting": 5
 },
 {
 "outlet": "Alexandra (Mapletree Business City)",
@@ -1154,7 +829,7 @@
 "capacity": 12,
 "booked": 12,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 3
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -1165,8 +840,8 @@
 "end": "1:00pm",
 "instructor": "Marcus Yong Sheng Ong",
 "capacity": 14,
-"booked": 14,
-"spacesLeft": 0,
+"booked": 13,
+"spacesLeft": 1,
 "waiting": 0
 },
 {
@@ -1178,8 +853,8 @@
 "end": "1:00pm",
 "instructor": "Karel",
 "capacity": 37,
-"booked": 26,
-"spacesLeft": 11,
+"booked": 25,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -1191,9 +866,9 @@
 "end": "1:15pm",
 "instructor": "Zen Ong",
 "capacity": 8,
-"booked": 7,
-"spacesLeft": 1,
-"waiting": 0
+"booked": 8,
+"spacesLeft": 0,
+"waiting": 1
 },
 {
 "outlet": "Capital Tower",
@@ -1230,8 +905,8 @@
 "end": "1:45pm",
 "instructor": "Jo Tan",
 "capacity": 38,
-"booked": 13,
-"spacesLeft": 25,
+"booked": 12,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -1243,8 +918,8 @@
 "end": "1:45pm",
 "instructor": "Ming Fei",
 "capacity": 6,
-"booked": 6,
-"spacesLeft": 0,
+"booked": 5,
+"spacesLeft": 1,
 "waiting": 0
 },
 {
@@ -1258,7 +933,7 @@
 "capacity": 20,
 "booked": 20,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 3
 },
 {
 "outlet": "One Raffles Quay",
@@ -1308,8 +983,8 @@
 "end": "1:45pm",
 "instructor": "Fang",
 "capacity": 36,
-"booked": 8,
-"spacesLeft": 28,
+"booked": 6,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -1321,8 +996,8 @@
 "end": "1:45pm",
 "instructor": "Christopher Lim",
 "capacity": 18,
-"booked": 17,
-"spacesLeft": 1,
+"booked": 15,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -1334,8 +1009,8 @@
 "end": "1:45pm",
 "instructor": "Dominique Jun Wei Ng",
 "capacity": 10,
-"booked": 5,
-"spacesLeft": 5,
+"booked": 4,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -1386,8 +1061,8 @@
 "end": "1:55pm",
 "instructor": "Karel",
 "capacity": 44,
-"booked": 10,
-"spacesLeft": 34,
+"booked": 7,
+"spacesLeft": 37,
 "waiting": 0
 },
 {
@@ -1412,8 +1087,8 @@
 "end": "3:00pm",
 "instructor": "Fong Lum",
 "capacity": 16,
-"booked": 2,
-"spacesLeft": 14,
+"booked": 4,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -1425,8 +1100,8 @@
 "end": "4:15pm",
 "instructor": "Ryan Ong",
 "capacity": 30,
-"booked": 3,
-"spacesLeft": 27,
+"booked": 2,
+"spacesLeft": 28,
 "waiting": 0
 },
 {
@@ -1438,8 +1113,8 @@
 "end": "5:45pm",
 "instructor": "Vivi Kusuma",
 "capacity": 32,
-"booked": 5,
-"spacesLeft": 27,
+"booked": 4,
+"spacesLeft": 28,
 "waiting": 0
 },
 {
@@ -1451,8 +1126,8 @@
 "end": "5:45pm",
 "instructor": "Christine Tan",
 "capacity": 20,
-"booked": 2,
-"spacesLeft": 18,
+"booked": 3,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -1464,8 +1139,8 @@
 "end": "5:45pm",
 "instructor": "Yeoh",
 "capacity": 45,
-"booked": 8,
-"spacesLeft": 37,
+"booked": 9,
+"spacesLeft": 36,
 "waiting": 0
 },
 {
@@ -1477,8 +1152,8 @@
 "end": "6:00pm",
 "instructor": "Christina Chin",
 "capacity": 30,
-"booked": 11,
-"spacesLeft": 19,
+"booked": 12,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -1490,8 +1165,8 @@
 "end": "5:45pm",
 "instructor": "Robyn",
 "capacity": 24,
-"booked": 12,
-"spacesLeft": 12,
+"booked": 11,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -1503,8 +1178,8 @@
 "end": "6:15pm",
 "instructor": "Desmond Ong",
 "capacity": 23,
-"booked": 4,
-"spacesLeft": 19,
+"booked": 5,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -1544,7 +1219,7 @@
 "capacity": 12,
 "booked": 12,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Paragon",
@@ -1581,8 +1256,8 @@
 "end": "6:15pm",
 "instructor": "Jasper Mak",
 "capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
+"booked": 11,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -1594,8 +1269,8 @@
 "end": "6:15pm",
 "instructor": "Serena Tan",
 "capacity": 18,
-"booked": 17,
-"spacesLeft": 1,
+"booked": 16,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -1607,8 +1282,8 @@
 "end": "6:15pm",
 "instructor": "Jeffrey Chua",
 "capacity": 18,
-"booked": 13,
-"spacesLeft": 5,
+"booked": 14,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -1620,8 +1295,8 @@
 "end": "6:15pm",
 "instructor": "Julian",
 "capacity": 27,
-"booked": 21,
-"spacesLeft": 6,
+"booked": 19,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -1635,7 +1310,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 0
 },
 {
 "outlet": "One Raffles Quay",
@@ -1646,8 +1321,8 @@
 "end": "7:00pm",
 "instructor": "Samantha Heng",
 "capacity": 20,
-"booked": 20,
-"spacesLeft": 0,
+"booked": 18,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -1659,8 +1334,8 @@
 "end": "6:45pm",
 "instructor": "Yeoh",
 "capacity": 35,
-"booked": 9,
-"spacesLeft": 26,
+"booked": 8,
+"spacesLeft": 27,
 "waiting": 0
 },
 {
@@ -1674,7 +1349,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 12
+"waiting": 10
 },
 {
 "outlet": "George Street",
@@ -1687,7 +1362,7 @@
 "capacity": 38,
 "booked": 38,
 "spacesLeft": 0,
-"waiting": 0
+"waiting": 1
 },
 {
 "outlet": "One Raffles Quay",
@@ -1752,7 +1427,7 @@
 "capacity": 4,
 "booked": 4,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 4
 },
 {
 "outlet": "Westgate",
@@ -1778,7 +1453,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 3
 },
 {
 "outlet": "Junction 10",
@@ -1843,7 +1518,7 @@
 "capacity": 44,
 "booked": 44,
 "spacesLeft": 0,
-"waiting": 12
+"waiting": 10
 },
 {
 "outlet": "Capital Tower",
@@ -1869,7 +1544,7 @@
 "capacity": 16,
 "booked": 16,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 5
 },
 {
 "outlet": "Paragon",
@@ -1880,8 +1555,8 @@
 "end": "7:30pm",
 "instructor": "Glenn",
 "capacity": 34,
-"booked": 29,
-"spacesLeft": 5,
+"booked": 30,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -1893,8 +1568,8 @@
 "end": "7:15pm",
 "instructor": "Yin Shi",
 "capacity": 26,
-"booked": 5,
-"spacesLeft": 21,
+"booked": 6,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -1973,7 +1648,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 2
 },
 {
 "outlet": "Alexandra (Mapletree Business City)",
@@ -1984,8 +1659,8 @@
 "end": "7:30pm",
 "instructor": "Shirley C",
 "capacity": 12,
-"booked": 12,
-"spacesLeft": 0,
+"booked": 11,
+"spacesLeft": 1,
 "waiting": 0
 },
 {
@@ -2025,7 +1700,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 1
 },
 {
 "outlet": "The Metropolis",
@@ -2038,7 +1713,7 @@
 "capacity": 22,
 "booked": 22,
 "spacesLeft": 0,
-"waiting": 11
+"waiting": 10
 },
 {
 "outlet": "AMK Hub",
@@ -2077,7 +1752,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 2
 },
 {
 "outlet": "Bugis Junction",
@@ -2090,7 +1765,7 @@
 "capacity": 12,
 "booked": 12,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 13
 },
 {
 "outlet": "Bugis Junction",
@@ -2116,7 +1791,7 @@
 "capacity": 35,
 "booked": 35,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 12
 },
 {
 "outlet": "Fusionopolis",
@@ -2127,8 +1802,8 @@
 "end": "7:45pm",
 "instructor": "Priscilla",
 "capacity": 10,
-"booked": 10,
-"spacesLeft": 0,
+"booked": 9,
+"spacesLeft": 1,
 "waiting": 0
 },
 {
@@ -2140,8 +1815,8 @@
 "end": "7:45pm",
 "instructor": "Lennart",
 "capacity": 23,
-"booked": 4,
-"spacesLeft": 19,
+"booked": 5,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -2181,7 +1856,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 12
 },
 {
 "outlet": "Junction 10",
@@ -2192,8 +1867,8 @@
 "end": "8:15pm",
 "instructor": "Cheryl",
 "capacity": 50,
-"booked": 29,
-"spacesLeft": 21,
+"booked": 30,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -2207,7 +1882,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 15
+"waiting": 14
 },
 {
 "outlet": "George Street",
@@ -2218,8 +1893,8 @@
 "end": "8:20pm",
 "instructor": "Ben Ning",
 "capacity": 38,
-"booked": 35,
-"spacesLeft": 3,
+"booked": 32,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -2285,7 +1960,7 @@
 "capacity": 37,
 "booked": 37,
 "spacesLeft": 0,
-"waiting": 12
+"waiting": 11
 },
 {
 "outlet": "Fusionopolis",
@@ -2298,7 +1973,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 3
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -2322,8 +1997,8 @@
 "end": "8:35pm",
 "instructor": "Lik Ming",
 "capacity": 33,
-"booked": 25,
-"spacesLeft": 8,
+"booked": 24,
+"spacesLeft": 9,
 "waiting": 0
 },
 {
@@ -2337,7 +2012,7 @@
 "capacity": 27,
 "booked": 27,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 13
 },
 {
 "outlet": "Paragon",
@@ -2348,8 +2023,8 @@
 "end": "8:25pm",
 "instructor": "Alan Tan",
 "capacity": 26,
-"booked": 7,
-"spacesLeft": 19,
+"booked": 6,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -2400,8 +2075,8 @@
 "end": "8:45pm",
 "instructor": "Lock",
 "capacity": 19,
-"booked": 6,
-"spacesLeft": 13,
+"booked": 5,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -2415,7 +2090,7 @@
 "capacity": 34,
 "booked": 34,
 "spacesLeft": 0,
-"waiting": 0
+"waiting": 2
 },
 {
 "outlet": "AMK Hub",
@@ -2454,7 +2129,7 @@
 "capacity": 24,
 "booked": 24,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -2467,7 +2142,7 @@
 "capacity": 31,
 "booked": 31,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 3
 },
 {
 "outlet": "One Raffles Quay",
@@ -2504,8 +2179,8 @@
 "end": "9:30pm",
 "instructor": "Regina Lee",
 "capacity": 32,
-"booked": 13,
-"spacesLeft": 19,
+"booked": 14,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -2517,8 +2192,8 @@
 "end": "9:15pm",
 "instructor": "Mervyn Lau",
 "capacity": 36,
-"booked": 6,
-"spacesLeft": 30,
+"booked": 7,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -2530,8 +2205,8 @@
 "end": "9:15pm",
 "instructor": "Miu",
 "capacity": 25,
-"booked": 9,
-"spacesLeft": 16,
+"booked": 8,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -2556,8 +2231,8 @@
 "end": "9:30pm",
 "instructor": "Wyatt",
 "capacity": 44,
-"booked": 22,
-"spacesLeft": 22,
+"booked": 19,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -2569,8 +2244,8 @@
 "end": "9:45pm",
 "instructor": "George",
 "capacity": 30,
-"booked": 11,
-"spacesLeft": 19,
+"booked": 12,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -2582,8 +2257,8 @@
 "end": "9:40pm",
 "instructor": "Zhengjie",
 "capacity": 40,
-"booked": 16,
-"spacesLeft": 24,
+"booked": 17,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -2649,7 +2324,7 @@
 "capacity": 20,
 "booked": 20,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 4
 },
 {
 "outlet": "AMK Hub",
@@ -2699,8 +2374,8 @@
 "end": "8:00am",
 "instructor": "Lewis",
 "capacity": 22,
-"booked": 9,
-"spacesLeft": 13,
+"booked": 10,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -2764,8 +2439,8 @@
 "end": "8:15am",
 "instructor": "Edwin Chiam",
 "capacity": 27,
-"booked": 11,
-"spacesLeft": 16,
+"booked": 12,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -2907,8 +2582,8 @@
 "end": "9:30am",
 "instructor": "Alan Shin",
 "capacity": 34,
-"booked": 18,
-"spacesLeft": 16,
+"booked": 19,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -2920,8 +2595,8 @@
 "end": "9:30am",
 "instructor": "Sean",
 "capacity": 23,
-"booked": 15,
-"spacesLeft": 8,
+"booked": 16,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -2959,8 +2634,8 @@
 "end": "10:00am",
 "instructor": "Bhas",
 "capacity": 34,
-"booked": 10,
-"spacesLeft": 24,
+"booked": 11,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -3024,8 +2699,8 @@
 "end": "10:40am",
 "instructor": "Mus",
 "capacity": 36,
-"booked": 34,
-"spacesLeft": 2,
+"booked": 35,
+"spacesLeft": 1,
 "waiting": 0
 },
 {
@@ -3154,8 +2829,8 @@
 "end": "10:45am",
 "instructor": "Jasmine Liew",
 "capacity": 25,
-"booked": 17,
-"spacesLeft": 8,
+"booked": 19,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -3167,8 +2842,8 @@
 "end": "11:30am",
 "instructor": "Julian",
 "capacity": 40,
-"booked": 25,
-"spacesLeft": 15,
+"booked": 27,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -3208,7 +2883,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 3
 },
 {
 "outlet": "Westgate",
@@ -3245,8 +2920,8 @@
 "end": "12:00pm",
 "instructor": "Vivi Woon",
 "capacity": 34,
-"booked": 27,
-"spacesLeft": 7,
+"booked": 29,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -3258,8 +2933,8 @@
 "end": "12:00pm",
 "instructor": "Serena Tan",
 "capacity": 23,
-"booked": 22,
-"spacesLeft": 1,
+"booked": 23,
+"spacesLeft": 0,
 "waiting": 0
 },
 {
@@ -3284,8 +2959,8 @@
 "end": "11:45am",
 "instructor": "Glenn",
 "capacity": 30,
-"booked": 15,
-"spacesLeft": 15,
+"booked": 13,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -3325,7 +3000,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 2
 },
 {
 "outlet": "Bugis Junction",
@@ -3362,8 +3037,8 @@
 "end": "11:45am",
 "instructor": "Jasmine Liew",
 "capacity": 24,
-"booked": 11,
-"spacesLeft": 13,
+"booked": 12,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -3375,8 +3050,8 @@
 "end": "12:00pm",
 "instructor": "Ben Tang",
 "capacity": 50,
-"booked": 5,
-"spacesLeft": 45,
+"booked": 6,
+"spacesLeft": 44,
 "waiting": 0
 },
 {
@@ -3518,8 +3193,8 @@
 "end": "12:45pm",
 "instructor": "Andy Seah",
 "capacity": 26,
-"booked": 8,
-"spacesLeft": 18,
+"booked": 10,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -3546,7 +3221,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 2
 },
 {
 "outlet": "Fusionopolis",
@@ -3557,8 +3232,8 @@
 "end": "1:00pm",
 "instructor": "Jo Lim",
 "capacity": 18,
-"booked": 13,
-"spacesLeft": 5,
+"booked": 12,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -3650,7 +3325,7 @@
 "capacity": 10,
 "booked": 10,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "Paya Lebar",
@@ -3663,7 +3338,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 15
 },
 {
 "outlet": "Capital Tower",
@@ -3689,7 +3364,7 @@
 "capacity": 23,
 "booked": 23,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 6
 },
 {
 "outlet": "Paragon",
@@ -3700,8 +3375,8 @@
 "end": "1:15pm",
 "instructor": "Angie Tion",
 "capacity": 40,
-"booked": 8,
-"spacesLeft": 32,
+"booked": 9,
+"spacesLeft": 31,
 "waiting": 0
 },
 {
@@ -3739,8 +3414,8 @@
 "end": "1:15pm",
 "instructor": "George",
 "capacity": 24,
-"booked": 6,
-"spacesLeft": 18,
+"booked": 5,
+"spacesLeft": 19,
 "waiting": 0
 },
 {
@@ -3895,8 +3570,8 @@
 "end": "1:45pm",
 "instructor": "Ming Fei",
 "capacity": 38,
-"booked": 6,
-"spacesLeft": 32,
+"booked": 5,
+"spacesLeft": 33,
 "waiting": 0
 },
 {
@@ -3947,8 +3622,8 @@
 "end": "1:45pm",
 "instructor": "Robyn",
 "capacity": 30,
-"booked": 11,
-"spacesLeft": 19,
+"booked": 10,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -3973,8 +3648,8 @@
 "end": "1:55pm",
 "instructor": "Yeoh",
 "capacity": 18,
-"booked": 9,
-"spacesLeft": 9,
+"booked": 8,
+"spacesLeft": 10,
 "waiting": 0
 },
 {
@@ -3986,8 +3661,8 @@
 "end": "1:55pm",
 "instructor": "Glenn",
 "capacity": 7,
-"booked": 1,
-"spacesLeft": 6,
+"booked": 2,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -4053,7 +3728,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "George Street",
@@ -4079,7 +3754,7 @@
 "capacity": 27,
 "booked": 27,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 7
 },
 {
 "outlet": "George Street",
@@ -4103,8 +3778,8 @@
 "end": "5:45pm",
 "instructor": "Vivi Kusuma",
 "capacity": 20,
-"booked": 2,
-"spacesLeft": 18,
+"booked": 3,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -4129,8 +3804,8 @@
 "end": "6:00pm",
 "instructor": "Lik Ming",
 "capacity": 36,
-"booked": 4,
-"spacesLeft": 32,
+"booked": 5,
+"spacesLeft": 31,
 "waiting": 0
 },
 {
@@ -4144,7 +3819,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 10
+"waiting": 9
 },
 {
 "outlet": "Bugis Junction",
@@ -4157,7 +3832,7 @@
 "capacity": 12,
 "booked": 12,
 "spacesLeft": 0,
-"waiting": 6
+"waiting": 5
 },
 {
 "outlet": "Paragon",
@@ -4235,7 +3910,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 5
 },
 {
 "outlet": "AMK Hub",
@@ -4272,8 +3947,8 @@
 "end": "6:30pm",
 "instructor": "Julian",
 "capacity": 31,
-"booked": 7,
-"spacesLeft": 24,
+"booked": 6,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -4324,8 +3999,8 @@
 "end": "6:55pm",
 "instructor": "Jo Tan",
 "capacity": 32,
-"booked": 5,
-"spacesLeft": 27,
+"booked": 6,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -4469,7 +4144,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 15
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -4495,7 +4170,7 @@
 "capacity": 19,
 "booked": 19,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Capital Tower",
@@ -4506,8 +4181,8 @@
 "end": "7:15pm",
 "instructor": "Monica",
 "capacity": 12,
-"booked": 8,
-"spacesLeft": 4,
+"booked": 7,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -4547,7 +4222,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -4560,7 +4235,7 @@
 "capacity": 24,
 "booked": 24,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 2
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -4571,8 +4246,8 @@
 "end": "7:30pm",
 "instructor": "Louis Quah",
 "capacity": 37,
-"booked": 32,
-"spacesLeft": 5,
+"booked": 33,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -4612,7 +4287,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 10
+"waiting": 7
 },
 {
 "outlet": "Bugis Junction",
@@ -4662,8 +4337,8 @@
 "end": "7:30pm",
 "instructor": "Vivien",
 "capacity": 15,
-"booked": 3,
-"spacesLeft": 12,
+"booked": 4,
+"spacesLeft": 11,
 "waiting": 0
 },
 {
@@ -4701,8 +4376,8 @@
 "end": "7:30pm",
 "instructor": "Yin Shi",
 "capacity": 23,
-"booked": 2,
-"spacesLeft": 21,
+"booked": 3,
+"spacesLeft": 20,
 "waiting": 0
 },
 {
@@ -4742,7 +4417,7 @@
 "capacity": 12,
 "booked": 12,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Junction 10",
@@ -4792,8 +4467,8 @@
 "end": "8:10pm",
 "instructor": "Glenn",
 "capacity": 20,
-"booked": 7,
-"spacesLeft": 13,
+"booked": 6,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -4818,8 +4493,8 @@
 "end": "8:20pm",
 "instructor": "Jo Tan",
 "capacity": 32,
-"booked": 27,
-"spacesLeft": 5,
+"booked": 30,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -4950,7 +4625,7 @@
 "capacity": 40,
 "booked": 40,
 "spacesLeft": 0,
-"waiting": 14
+"waiting": 13
 },
 {
 "outlet": "AMK Hub",
@@ -5000,8 +4675,8 @@
 "end": "8:30pm",
 "instructor": "Joanne Chua",
 "capacity": 37,
-"booked": 7,
-"spacesLeft": 30,
+"booked": 8,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -5039,8 +4714,8 @@
 "end": "9:30pm",
 "instructor": "Jo Tan",
 "capacity": 38,
-"booked": 25,
-"spacesLeft": 13,
+"booked": 27,
+"spacesLeft": 11,
 "waiting": 0
 },
 {
@@ -5143,8 +4818,8 @@
 "end": "9:00am",
 "instructor": "Junwei",
 "capacity": 38,
-"booked": 14,
-"spacesLeft": 24,
+"booked": 15,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -5169,8 +4844,8 @@
 "end": "9:20am",
 "instructor": "Geoffrey",
 "capacity": 30,
-"booked": 25,
-"spacesLeft": 5,
+"booked": 26,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -5195,8 +4870,8 @@
 "end": "9:30am",
 "instructor": "Glenn",
 "capacity": 23,
-"booked": 1,
-"spacesLeft": 22,
+"booked": 2,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -5223,7 +4898,7 @@
 "capacity": 37,
 "booked": 37,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 12
 },
 {
 "outlet": "Westgate",
@@ -5314,7 +4989,7 @@
 "capacity": 36,
 "booked": 36,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 5
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -5325,8 +5000,8 @@
 "end": "10:00am",
 "instructor": "Nicky",
 "capacity": 27,
-"booked": 13,
-"spacesLeft": 14,
+"booked": 14,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -5444,7 +5119,7 @@
 "capacity": 22,
 "booked": 22,
 "spacesLeft": 0,
-"waiting": 12
+"waiting": 11
 },
 {
 "outlet": "George Street",
@@ -5455,8 +5130,8 @@
 "end": "10:30am",
 "instructor": "Marie",
 "capacity": 32,
-"booked": 8,
-"spacesLeft": 24,
+"booked": 16,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -5559,8 +5234,8 @@
 "end": "10:45am",
 "instructor": "Ashley Leong",
 "capacity": 24,
-"booked": 8,
-"spacesLeft": 16,
+"booked": 9,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -5611,8 +5286,8 @@
 "end": "10:45am",
 "instructor": "Edwin Ko",
 "capacity": 34,
-"booked": 12,
-"spacesLeft": 22,
+"booked": 13,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -5728,8 +5403,8 @@
 "end": "11:15am",
 "instructor": "Christine Tan",
 "capacity": 23,
-"booked": 8,
-"spacesLeft": 15,
+"booked": 7,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -5741,8 +5416,8 @@
 "end": "11:15am",
 "instructor": "Timothy Zhuo",
 "capacity": 34,
-"booked": 7,
-"spacesLeft": 27,
+"booked": 6,
+"spacesLeft": 28,
 "waiting": 0
 },
 {
@@ -5756,7 +5431,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 10
+"waiting": 9
 },
 {
 "outlet": "Bugis Junction",
@@ -5793,8 +5468,8 @@
 "end": "11:20am",
 "instructor": "Yeoh",
 "capacity": 35,
-"booked": 28,
-"spacesLeft": 7,
+"booked": 29,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -5886,7 +5561,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 11
 },
 {
 "outlet": "George Street",
@@ -6001,8 +5676,8 @@
 "end": "11:45am",
 "instructor": "Edwin Ko",
 "capacity": 24,
-"booked": 6,
-"spacesLeft": 18,
+"booked": 7,
+"spacesLeft": 17,
 "waiting": 0
 },
 {
@@ -6144,8 +5819,8 @@
 "end": "12:20pm",
 "instructor": "Caroline",
 "capacity": 31,
-"booked": 28,
-"spacesLeft": 3,
+"booked": 29,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -6170,8 +5845,8 @@
 "end": "12:30pm",
 "instructor": "Mus",
 "capacity": 40,
-"booked": 27,
-"spacesLeft": 13,
+"booked": 26,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -6211,7 +5886,7 @@
 "capacity": 35,
 "booked": 35,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "One Raffles Quay",
@@ -6287,8 +5962,8 @@
 "end": "12:20pm",
 "instructor": "Yeoh",
 "capacity": 26,
-"booked": 23,
-"spacesLeft": 3,
+"booked": 24,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -6469,8 +6144,8 @@
 "end": "1:20pm",
 "instructor": "Regina Lee",
 "capacity": 18,
-"booked": 9,
-"spacesLeft": 9,
+"booked": 11,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -6497,7 +6172,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 0
+"waiting": 1
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -6599,8 +6274,8 @@
 "end": "1:45pm",
 "instructor": "Ian Fung",
 "capacity": 23,
-"booked": 6,
-"spacesLeft": 17,
+"booked": 7,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -6638,8 +6313,8 @@
 "end": "1:45pm",
 "instructor": "Avery",
 "capacity": 12,
-"booked": 6,
-"spacesLeft": 6,
+"booked": 7,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -6664,8 +6339,8 @@
 "end": "2:15pm",
 "instructor": "Lucas",
 "capacity": 38,
-"booked": 4,
-"spacesLeft": 34,
+"booked": 5,
+"spacesLeft": 33,
 "waiting": 0
 },
 {
@@ -6742,8 +6417,8 @@
 "end": "2:30pm",
 "instructor": "Jasmin",
 "capacity": 36,
-"booked": 9,
-"spacesLeft": 27,
+"booked": 10,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -6755,8 +6430,8 @@
 "end": "2:30pm",
 "instructor": "Ivan",
 "capacity": 18,
-"booked": 7,
-"spacesLeft": 11,
+"booked": 8,
+"spacesLeft": 10,
 "waiting": 0
 },
 {
@@ -6781,8 +6456,8 @@
 "end": "2:40pm",
 "instructor": "Lennart",
 "capacity": 36,
-"booked": 13,
-"spacesLeft": 23,
+"booked": 14,
+"spacesLeft": 22,
 "waiting": 0
 },
 {
@@ -6820,8 +6495,8 @@
 "end": "2:45pm",
 "instructor": "Jacky Tan",
 "capacity": 44,
-"booked": 17,
-"spacesLeft": 27,
+"booked": 18,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -6898,8 +6573,8 @@
 "end": "2:45pm",
 "instructor": "Pao Pao",
 "capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
+"booked": 8,
+"spacesLeft": 32,
 "waiting": 0
 },
 {
@@ -6952,7 +6627,7 @@
 "capacity": 22,
 "booked": 22,
 "spacesLeft": 0,
-"waiting": 8
+"waiting": 9
 },
 {
 "outlet": "One Raffles Quay",
@@ -7028,8 +6703,8 @@
 "end": "3:40pm",
 "instructor": "Ryan Ong",
 "capacity": 36,
-"booked": 3,
-"spacesLeft": 33,
+"booked": 4,
+"spacesLeft": 32,
 "waiting": 0
 },
 {
@@ -7069,7 +6744,7 @@
 "capacity": 37,
 "booked": 37,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 3
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -7119,8 +6794,8 @@
 "end": "4:00pm",
 "instructor": "Albert Tan",
 "capacity": 18,
-"booked": 12,
-"spacesLeft": 6,
+"booked": 13,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -7184,8 +6859,8 @@
 "end": "3:50pm",
 "instructor": "Natalie",
 "capacity": 44,
-"booked": 5,
-"spacesLeft": 39,
+"booked": 6,
+"spacesLeft": 38,
 "waiting": 0
 },
 {
@@ -7197,8 +6872,8 @@
 "end": "4:00pm",
 "instructor": "Yoke Sun",
 "capacity": 30,
-"booked": 25,
-"spacesLeft": 5,
+"booked": 26,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -7251,7 +6926,7 @@
 "capacity": 40,
 "booked": 40,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 1
 },
 {
 "outlet": "Westgate",
@@ -7262,8 +6937,8 @@
 "end": "4:15pm",
 "instructor": "Enid",
 "capacity": 36,
-"booked": 31,
-"spacesLeft": 5,
+"booked": 32,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -7327,8 +7002,8 @@
 "end": "5:00pm",
 "instructor": "Taufiq",
 "capacity": 44,
-"booked": 18,
-"spacesLeft": 26,
+"booked": 20,
+"spacesLeft": 24,
 "waiting": 0
 },
 {
@@ -7392,8 +7067,8 @@
 "end": "5:15pm",
 "instructor": "Valerie Lai",
 "capacity": 24,
-"booked": 17,
-"spacesLeft": 7,
+"booked": 19,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -7407,7 +7082,7 @@
 "capacity": 34,
 "booked": 34,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 2
 },
 {
 "outlet": "Paragon",
@@ -7470,8 +7145,8 @@
 "end": "6:15pm",
 "instructor": "Ben Chiu",
 "capacity": 15,
-"booked": 9,
-"spacesLeft": 6,
+"booked": 10,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -7563,7 +7238,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 3
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -7574,8 +7249,8 @@
 "end": "9:30am",
 "instructor": "Zaki A",
 "capacity": 37,
-"booked": 11,
-"spacesLeft": 26,
+"booked": 12,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -7641,7 +7316,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 12
 },
 {
 "outlet": "Bugis Junction",
@@ -7704,8 +7379,8 @@
 "end": "10:10am",
 "instructor": "Yvonne Seow",
 "capacity": 23,
-"booked": 6,
-"spacesLeft": 17,
+"booked": 7,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -7821,8 +7496,8 @@
 "end": "10:40am",
 "instructor": "Karel",
 "capacity": 37,
-"booked": 13,
-"spacesLeft": 24,
+"booked": 14,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -7966,7 +7641,7 @@
 "capacity": 10,
 "booked": 10,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 8
 },
 {
 "outlet": "Junction 10",
@@ -8094,8 +7769,8 @@
 "end": "11:15am",
 "instructor": "Yin Shi",
 "capacity": 26,
-"booked": 7,
-"spacesLeft": 19,
+"booked": 8,
+"spacesLeft": 18,
 "waiting": 0
 },
 {
@@ -8109,7 +7784,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 12
 },
 {
 "outlet": "AMK Hub",
@@ -8172,8 +7847,8 @@
 "end": "11:45am",
 "instructor": "Roy",
 "capacity": 8,
-"booked": 5,
-"spacesLeft": 3,
+"booked": 4,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -8263,8 +7938,8 @@
 "end": "12:15pm",
 "instructor": "Kenny Lye",
 "capacity": 38,
-"booked": 32,
-"spacesLeft": 6,
+"booked": 33,
+"spacesLeft": 5,
 "waiting": 0
 },
 {
@@ -8525,7 +8200,7 @@
 "capacity": 37,
 "booked": 37,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 8
 },
 {
 "outlet": "Junction 10",
@@ -8705,8 +8380,8 @@
 "end": "2:00pm",
 "instructor": "Priya",
 "capacity": 27,
-"booked": 20,
-"spacesLeft": 7,
+"booked": 21,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -8783,8 +8458,8 @@
 "end": "2:30pm",
 "instructor": "Lester Low",
 "capacity": 24,
-"booked": 10,
-"spacesLeft": 14,
+"booked": 11,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -8822,8 +8497,8 @@
 "end": "2:30pm",
 "instructor": "Grace Lee",
 "capacity": 38,
-"booked": 5,
-"spacesLeft": 33,
+"booked": 4,
+"spacesLeft": 34,
 "waiting": 0
 },
 {
@@ -8835,8 +8510,8 @@
 "end": "2:30pm",
 "instructor": "Kester",
 "capacity": 27,
-"booked": 27,
-"spacesLeft": 0,
+"booked": 25,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -8900,8 +8575,8 @@
 "end": "3:00pm",
 "instructor": "Zac",
 "capacity": 27,
-"booked": 4,
-"spacesLeft": 23,
+"booked": 5,
+"spacesLeft": 22,
 "waiting": 0
 },
 {
@@ -9071,7 +8746,7 @@
 "capacity": 4,
 "booked": 4,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 6
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -9173,8 +8848,8 @@
 "end": "4:15pm",
 "instructor": "Vivi Woon",
 "capacity": 34,
-"booked": 31,
-"spacesLeft": 3,
+"booked": 34,
+"spacesLeft": 0,
 "waiting": 0
 },
 {
@@ -9199,8 +8874,8 @@
 "end": "4:45pm",
 "instructor": "Lee Tong",
 "capacity": 40,
-"booked": 13,
-"spacesLeft": 27,
+"booked": 14,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -9318,7 +8993,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 11
+"waiting": 12
 },
 {
 "outlet": "Paragon",
@@ -9641,8 +9316,8 @@
 "end": "9:30am",
 "instructor": "Lock",
 "capacity": 37,
-"booked": 10,
-"spacesLeft": 27,
+"booked": 11,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -9680,8 +9355,8 @@
 "end": "10:15am",
 "instructor": "George",
 "capacity": 16,
-"booked": 4,
-"spacesLeft": 12,
+"booked": 5,
+"spacesLeft": 11,
 "waiting": 0
 },
 {
@@ -9719,8 +9394,8 @@
 "end": "10:30am",
 "instructor": "Jaclyn",
 "capacity": 36,
-"booked": 9,
-"spacesLeft": 27,
+"booked": 10,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -9732,8 +9407,8 @@
 "end": "10:25am",
 "instructor": "Ryan Ong",
 "capacity": 36,
-"booked": 10,
-"spacesLeft": 26,
+"booked": 11,
+"spacesLeft": 25,
 "waiting": 0
 },
 {
@@ -9877,7 +9552,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 4
 },
 {
 "outlet": "Fusionopolis",
@@ -10005,8 +9680,8 @@
 "end": "12:45pm",
 "instructor": "Edwin Ko",
 "capacity": 34,
-"booked": 4,
-"spacesLeft": 30,
+"booked": 3,
+"spacesLeft": 31,
 "waiting": 0
 },
 {
@@ -10096,8 +9771,8 @@
 "end": "12:45pm",
 "instructor": "Yvonne Seow",
 "capacity": 26,
-"booked": 9,
-"spacesLeft": 17,
+"booked": 10,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -10111,7 +9786,7 @@
 "capacity": 35,
 "booked": 35,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 9
 },
 {
 "outlet": "AMK Hub",
@@ -10161,8 +9836,8 @@
 "end": "1:00pm",
 "instructor": "Desmond Liew",
 "capacity": 36,
-"booked": 5,
-"spacesLeft": 31,
+"booked": 6,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -10174,8 +9849,8 @@
 "end": "12:45pm",
 "instructor": "Regina Lee",
 "capacity": 20,
-"booked": 19,
-"spacesLeft": 1,
+"booked": 20,
+"spacesLeft": 0,
 "waiting": 0
 },
 {
@@ -10254,7 +9929,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 4
 },
 {
 "outlet": "Capital Tower",
@@ -10291,8 +9966,8 @@
 "end": "1:15pm",
 "instructor": "Nicky",
 "capacity": 34,
-"booked": 9,
-"spacesLeft": 25,
+"booked": 10,
+"spacesLeft": 24,
 "waiting": 0
 },
 {
@@ -10408,8 +10083,8 @@
 "end": "1:15pm",
 "instructor": "Seow Chin Chong",
 "capacity": 8,
-"booked": 3,
-"spacesLeft": 5,
+"booked": 4,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -10460,8 +10135,8 @@
 "end": "2:00pm",
 "instructor": "Fang",
 "capacity": 40,
-"booked": 17,
-"spacesLeft": 23,
+"booked": 18,
+"spacesLeft": 22,
 "waiting": 0
 },
 {
@@ -10512,8 +10187,8 @@
 "end": "1:45pm",
 "instructor": "Dominique Jun Wei Ng",
 "capacity": 10,
-"booked": 1,
-"spacesLeft": 9,
+"booked": 2,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -10694,8 +10369,8 @@
 "end": "6:15pm",
 "instructor": "Lewis",
 "capacity": 34,
-"booked": 4,
-"spacesLeft": 30,
+"booked": 5,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -10733,8 +10408,8 @@
 "end": "6:15pm",
 "instructor": "Yeoh",
 "capacity": 26,
-"booked": 3,
-"spacesLeft": 23,
+"booked": 4,
+"spacesLeft": 22,
 "waiting": 0
 },
 {
@@ -10837,8 +10512,8 @@
 "end": "7:10pm",
 "instructor": "Angelina",
 "capacity": 38,
-"booked": 11,
-"spacesLeft": 27,
+"booked": 12,
+"spacesLeft": 26,
 "waiting": 0
 },
 {
@@ -10850,8 +10525,8 @@
 "end": "7:00pm",
 "instructor": "Serena Tan",
 "capacity": 23,
-"booked": 7,
-"spacesLeft": 16,
+"booked": 8,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -10930,7 +10605,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 6
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -11047,7 +10722,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 8
+"waiting": 7
 },
 {
 "outlet": "Fusionopolis",
@@ -11112,7 +10787,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 6
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -11162,8 +10837,8 @@
 "end": "7:15pm",
 "instructor": "Su May",
 "capacity": 37,
-"booked": 27,
-"spacesLeft": 10,
+"booked": 29,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -11201,8 +10876,8 @@
 "end": "7:35pm",
 "instructor": "Alan Tan",
 "capacity": 15,
-"booked": 8,
-"spacesLeft": 7,
+"booked": 9,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -11268,7 +10943,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 5
 },
 {
 "outlet": "Junction 10",
@@ -11281,7 +10956,7 @@
 "capacity": 10,
 "booked": 10,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 4
 },
 {
 "outlet": "One Raffles Quay",
@@ -11292,8 +10967,8 @@
 "end": "7:55pm",
 "instructor": "Jia Yean",
 "capacity": 26,
-"booked": 18,
-"spacesLeft": 8,
+"booked": 19,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -11333,7 +11008,7 @@
 "capacity": 36,
 "booked": 36,
 "spacesLeft": 0,
-"waiting": 4
+"waiting": 5
 },
 {
 "outlet": "Paya Lebar",
@@ -11370,8 +11045,8 @@
 "end": "8:20pm",
 "instructor": "Jimmy Tan",
 "capacity": 32,
-"booked": 7,
-"spacesLeft": 25,
+"booked": 8,
+"spacesLeft": 24,
 "waiting": 0
 },
 {
@@ -11461,8 +11136,8 @@
 "end": "8:35pm",
 "instructor": "Vivi Woon",
 "capacity": 27,
-"booked": 11,
-"spacesLeft": 16,
+"booked": 12,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -11474,8 +11149,8 @@
 "end": "8:35pm",
 "instructor": "Dawn Tan",
 "capacity": 18,
-"booked": 16,
-"spacesLeft": 2,
+"booked": 15,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -11500,8 +11175,8 @@
 "end": "8:40pm",
 "instructor": "Fang",
 "capacity": 24,
-"booked": 23,
-"spacesLeft": 1,
+"booked": 24,
+"spacesLeft": 0,
 "waiting": 0
 },
 {
@@ -11526,8 +11201,8 @@
 "end": "8:45pm",
 "instructor": "Heather",
 "capacity": 40,
-"booked": 26,
-"spacesLeft": 14,
+"booked": 27,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -11630,8 +11305,8 @@
 "end": "9:30pm",
 "instructor": "Bertram",
 "capacity": 34,
-"booked": 3,
-"spacesLeft": 31,
+"booked": 4,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -11643,8 +11318,8 @@
 "end": "9:30pm",
 "instructor": "Jacky Tan",
 "capacity": 38,
-"booked": 2,
-"spacesLeft": 36,
+"booked": 3,
+"spacesLeft": 35,
 "waiting": 0
 },
 {
@@ -11656,8 +11331,8 @@
 "end": "9:30pm",
 "instructor": "Katherine",
 "capacity": 50,
-"booked": 12,
-"spacesLeft": 38,
+"booked": 13,
+"spacesLeft": 37,
 "waiting": 0
 },
 {
@@ -11760,8 +11435,8 @@
 "end": "7:45am",
 "instructor": "Fernie Ng",
 "capacity": 26,
-"booked": 3,
-"spacesLeft": 23,
+"booked": 5,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -11812,8 +11487,8 @@
 "end": "8:00am",
 "instructor": "Rachel Soh",
 "capacity": 26,
-"booked": 4,
-"spacesLeft": 22,
+"booked": 5,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -11838,8 +11513,8 @@
 "end": "7:45am",
 "instructor": "Karel",
 "capacity": 30,
-"booked": 24,
-"spacesLeft": 6,
+"booked": 27,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -11903,8 +11578,8 @@
 "end": "8:00am",
 "instructor": "Nicolas",
 "capacity": 31,
-"booked": 2,
-"spacesLeft": 29,
+"booked": 3,
+"spacesLeft": 28,
 "waiting": 0
 },
 {
@@ -11957,7 +11632,7 @@
 "capacity": 8,
 "booked": 8,
 "spacesLeft": 0,
-"waiting": 0
+"waiting": 1
 },
 {
 "outlet": "Paya Lebar",
@@ -12033,8 +11708,8 @@
 "end": "9:30am",
 "instructor": "Fiona Kwan",
 "capacity": 25,
-"booked": 8,
-"spacesLeft": 17,
+"booked": 9,
+"spacesLeft": 16,
 "waiting": 0
 },
 {
@@ -12085,8 +11760,8 @@
 "end": "9:30am",
 "instructor": "Yeoh",
 "capacity": 26,
-"booked": 4,
-"spacesLeft": 22,
+"booked": 5,
+"spacesLeft": 21,
 "waiting": 0
 },
 {
@@ -12124,8 +11799,8 @@
 "end": "10:15am",
 "instructor": "Josephine Lim",
 "capacity": 40,
-"booked": 6,
-"spacesLeft": 34,
+"booked": 7,
+"spacesLeft": 33,
 "waiting": 0
 },
 {
@@ -12137,8 +11812,8 @@
 "end": "10:15am",
 "instructor": "Molly",
 "capacity": 18,
-"booked": 14,
-"spacesLeft": 4,
+"booked": 16,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -12176,8 +11851,8 @@
 "end": "10:30am",
 "instructor": "Dawn Tan",
 "capacity": 30,
-"booked": 20,
-"spacesLeft": 10,
+"booked": 22,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -12202,8 +11877,8 @@
 "end": "10:45am",
 "instructor": "Yeoh",
 "capacity": 34,
-"booked": 2,
-"spacesLeft": 32,
+"booked": 3,
+"spacesLeft": 31,
 "waiting": 0
 },
 {
@@ -12228,8 +11903,8 @@
 "end": "10:30am",
 "instructor": "Edwin Ko",
 "capacity": 24,
-"booked": 17,
-"spacesLeft": 7,
+"booked": 18,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -12280,8 +11955,8 @@
 "end": "11:00am",
 "instructor": "George",
 "capacity": 12,
-"booked": 8,
-"spacesLeft": 4,
+"booked": 9,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -12306,8 +11981,8 @@
 "end": "11:30am",
 "instructor": "Naila",
 "capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
+"booked": 10,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -12321,7 +11996,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 8
+"waiting": 7
 },
 {
 "outlet": "AMK Hub",
@@ -12358,8 +12033,8 @@
 "end": "11:45am",
 "instructor": "Jeffrey Chua",
 "capacity": 18,
-"booked": 17,
-"spacesLeft": 1,
+"booked": 15,
+"spacesLeft": 3,
 "waiting": 0
 },
 {
@@ -12384,8 +12059,8 @@
 "end": "12:00pm",
 "instructor": "Ming Fei",
 "capacity": 27,
-"booked": 14,
-"spacesLeft": 13,
+"booked": 15,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -12397,8 +12072,8 @@
 "end": "12:00pm",
 "instructor": "Jasmine Liew",
 "capacity": 34,
-"booked": 19,
-"spacesLeft": 15,
+"booked": 20,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -12410,8 +12085,8 @@
 "end": "12:00pm",
 "instructor": "Joanna",
 "capacity": 24,
-"booked": 9,
-"spacesLeft": 15,
+"booked": 10,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -12488,8 +12163,8 @@
 "end": "12:30pm",
 "instructor": "Naila",
 "capacity": 40,
-"booked": 9,
-"spacesLeft": 31,
+"booked": 10,
+"spacesLeft": 30,
 "waiting": 0
 },
 {
@@ -12540,8 +12215,8 @@
 "end": "12:45pm",
 "instructor": "Yeoh",
 "capacity": 38,
-"booked": 21,
-"spacesLeft": 17,
+"booked": 24,
+"spacesLeft": 14,
 "waiting": 0
 },
 {
@@ -12566,8 +12241,8 @@
 "end": "12:45pm",
 "instructor": "Christine Tan",
 "capacity": 20,
-"booked": 11,
-"spacesLeft": 9,
+"booked": 13,
+"spacesLeft": 7,
 "waiting": 0
 },
 {
@@ -12605,8 +12280,8 @@
 "end": "1:00pm",
 "instructor": "Jeffrey Chua",
 "capacity": 18,
-"booked": 11,
-"spacesLeft": 7,
+"booked": 12,
+"spacesLeft": 6,
 "waiting": 0
 },
 {
@@ -12618,8 +12293,8 @@
 "end": "12:45pm",
 "instructor": "Sherlin",
 "capacity": 12,
-"booked": 7,
-"spacesLeft": 5,
+"booked": 8,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -12644,8 +12319,8 @@
 "end": "12:45pm",
 "instructor": "Jennifer Chen",
 "capacity": 30,
-"booked": 20,
-"spacesLeft": 10,
+"booked": 21,
+"spacesLeft": 9,
 "waiting": 0
 },
 {
@@ -12683,8 +12358,8 @@
 "end": "12:50pm",
 "instructor": "Linda",
 "capacity": 22,
-"booked": 7,
-"spacesLeft": 15,
+"booked": 9,
+"spacesLeft": 13,
 "waiting": 0
 },
 {
@@ -12722,8 +12397,8 @@
 "end": "1:00pm",
 "instructor": "Jasper Mak",
 "capacity": 30,
-"booked": 21,
-"spacesLeft": 9,
+"booked": 22,
+"spacesLeft": 8,
 "waiting": 0
 },
 {
@@ -12761,8 +12436,8 @@
 "end": "1:00pm",
 "instructor": "Alvan Chan",
 "capacity": 23,
-"booked": 10,
-"spacesLeft": 13,
+"booked": 11,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -12815,7 +12490,7 @@
 "capacity": 37,
 "booked": 37,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 5
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -12826,8 +12501,8 @@
 "end": "1:00pm",
 "instructor": "Marcus Yong Sheng Ong",
 "capacity": 14,
-"booked": 11,
-"spacesLeft": 3,
+"booked": 12,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -12930,8 +12605,8 @@
 "end": "1:30pm",
 "instructor": "Kelvin Tan",
 "capacity": 26,
-"booked": 1,
-"spacesLeft": 25,
+"booked": 2,
+"spacesLeft": 24,
 "waiting": 0
 },
 {
@@ -12995,8 +12670,8 @@
 "end": "2:00pm",
 "instructor": "Linda",
 "capacity": 20,
-"booked": 4,
-"spacesLeft": 16,
+"booked": 5,
+"spacesLeft": 15,
 "waiting": 0
 },
 {
@@ -13008,8 +12683,8 @@
 "end": "1:55pm",
 "instructor": "Julian",
 "capacity": 33,
-"booked": 3,
-"spacesLeft": 30,
+"booked": 4,
+"spacesLeft": 29,
 "waiting": 0
 },
 {
@@ -13023,7 +12698,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 4
 },
 {
 "outlet": "Bugis Junction",
@@ -13190,8 +12865,8 @@
 "end": "6:30pm",
 "instructor": "Vivi Woon",
 "capacity": 16,
-"booked": 6,
-"spacesLeft": 10,
+"booked": 7,
+"spacesLeft": 9,
 "waiting": 0
 },
 {
@@ -13244,7 +12919,7 @@
 "capacity": 35,
 "booked": 35,
 "spacesLeft": 0,
-"waiting": 7
+"waiting": 10
 },
 {
 "outlet": "One Raffles Quay",
@@ -13257,7 +12932,7 @@
 "capacity": 20,
 "booked": 20,
 "spacesLeft": 0,
-"waiting": 2
+"waiting": 5
 },
 {
 "outlet": "Junction 10",
@@ -13283,7 +12958,7 @@
 "capacity": 25,
 "booked": 25,
 "spacesLeft": 0,
-"waiting": 9
+"waiting": 8
 },
 {
 "outlet": "George Street",
@@ -13346,8 +13021,8 @@
 "end": "7:15pm",
 "instructor": "Lucas",
 "capacity": 36,
-"booked": 7,
-"spacesLeft": 29,
+"booked": 8,
+"spacesLeft": 28,
 "waiting": 0
 },
 {
@@ -13595,7 +13270,7 @@
 "capacity": 18,
 "booked": 18,
 "spacesLeft": 0,
-"waiting": 1
+"waiting": 2
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -13634,7 +13309,7 @@
 "capacity": 44,
 "booked": 44,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 6
 },
 {
 "outlet": "Junction 10",
@@ -13762,8 +13437,8 @@
 "end": "7:45pm",
 "instructor": "Jasmin",
 "capacity": 10,
-"booked": 4,
-"spacesLeft": 6,
+"booked": 6,
+"spacesLeft": 4,
 "waiting": 0
 },
 {
@@ -13829,7 +13504,7 @@
 "capacity": 30,
 "booked": 30,
 "spacesLeft": 0,
-"waiting": 3
+"waiting": 5
 },
 {
 "outlet": "George Street",
@@ -13855,7 +13530,7 @@
 "capacity": 27,
 "booked": 27,
 "spacesLeft": 0,
-"waiting": 12
+"waiting": 14
 },
 {
 "outlet": "Paragon",
@@ -13866,8 +13541,8 @@
 "end": "8:15pm",
 "instructor": "Ryan Ong",
 "capacity": 40,
-"booked": 16,
-"spacesLeft": 24,
+"booked": 17,
+"spacesLeft": 23,
 "waiting": 0
 },
 {
@@ -13918,8 +13593,8 @@
 "end": "8:15pm",
 "instructor": "Pao Pao",
 "capacity": 36,
-"booked": 24,
-"spacesLeft": 12,
+"booked": 26,
+"spacesLeft": 10,
 "waiting": 0
 },
 {
@@ -13931,8 +13606,8 @@
 "end": "8:30pm",
 "instructor": "Eunice Ler",
 "capacity": 20,
-"booked": 5,
-"spacesLeft": 15,
+"booked": 8,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -13946,7 +13621,7 @@
 "capacity": 26,
 "booked": 26,
 "spacesLeft": 0,
-"waiting": 13
+"waiting": 14
 },
 {
 "outlet": "Bugis Junction",
@@ -14011,7 +13686,7 @@
 "capacity": 27,
 "booked": 27,
 "spacesLeft": 0,
-"waiting": 15
+"waiting": 14
 },
 {
 "outlet": "100AM (Tanjong Pagar)",
@@ -14022,8 +13697,8 @@
 "end": "8:35pm",
 "instructor": "Amy Seow",
 "capacity": 18,
-"booked": 14,
-"spacesLeft": 4,
+"booked": 16,
+"spacesLeft": 2,
 "waiting": 0
 },
 {
@@ -14035,8 +13710,8 @@
 "end": "8:40pm",
 "instructor": "Leo",
 "capacity": 20,
-"booked": 7,
-"spacesLeft": 13,
+"booked": 8,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -14074,8 +13749,8 @@
 "end": "8:45pm",
 "instructor": "Edwin Ko",
 "capacity": 34,
-"booked": 5,
-"spacesLeft": 29,
+"booked": 7,
+"spacesLeft": 27,
 "waiting": 0
 },
 {
@@ -14139,8 +13814,8 @@
 "end": "8:45pm",
 "instructor": "Shu Ting",
 "capacity": 23,
-"booked": 9,
-"spacesLeft": 14,
+"booked": 11,
+"spacesLeft": 12,
 "waiting": 0
 },
 {
@@ -14154,7 +13829,7 @@
 "capacity": 50,
 "booked": 50,
 "spacesLeft": 0,
-"waiting": 5
+"waiting": 6
 },
 {
 "outlet": "One Raffles Quay",
@@ -14165,8 +13840,8 @@
 "end": "9:20pm",
 "instructor": "Alwin",
 "capacity": 35,
-"booked": 4,
-"spacesLeft": 31,
+"booked": 3,
+"spacesLeft": 32,
 "waiting": 0
 },
 {
@@ -14284,6 +13959,2450 @@
 "capacity": 34,
 "booked": 2,
 "spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX POWER",
+"start": "6:30am",
+"end": "7:15am",
+"instructor": "Hairul",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Shumin",
+"capacity": 32,
+"booked": 0,
+"spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Christine Tan",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae HEAVY",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Yin Shi",
+"capacity": 35,
+"booked": 0,
+"spacesLeft": 35,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRCUIT",
+"start": "7:00am",
+"end": "7:45am",
+"instructor": "Jay",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Priscilla",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Ray",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "AERIAL FLOW YOGA",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "George",
+"capacity": 7,
+"booked": 0,
+"spacesLeft": 7,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Mervyn Lau",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYATTACK\u00ae",
+"start": "7:00am",
+"end": "8:00am",
+"instructor": "Eric",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HOT FLOW YOGA",
+"start": "7:15am",
+"end": "8:15am",
+"instructor": "Christopher Lim",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "7:30am",
+"end": "8:30am",
+"instructor": "Chandran",
+"capacity": 31,
+"booked": 0,
+"spacesLeft": 31,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "8:00am",
+"end": "9:00am",
+"instructor": "Haley",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "8:00am",
+"end": "9:00am",
+"instructor": "Benjamin Lai",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "8:10am",
+"end": "8:55am",
+"instructor": "Fang",
+"capacity": 38,
+"booked": 0,
+"spacesLeft": 38,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Les Mills YOGA\u2122 YIN",
+"start": "8:15am",
+"end": "9:00am",
+"instructor": "Benji",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "8:15am",
+"end": "9:15am",
+"instructor": "Amy Seow",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CORE CONDITIONING",
+"start": "8:20am",
+"end": "9:20am",
+"instructor": "Jj",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "8:30am",
+"end": "9:30am",
+"instructor": "Desmond Liew",
+"capacity": 27,
+"booked": 0,
+"spacesLeft": 27,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRQHIIT TRANSFORM",
+"start": "8:45am",
+"end": "9:30am",
+"instructor": "Yeoh",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "8:45am",
+"end": "9:30am",
+"instructor": "Angie Tion",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "8:45am",
+"end": "9:45am",
+"instructor": "Julian",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "YIN YOGA",
+"start": "9:15am",
+"end": "10:15am",
+"instructor": "Jeffrey Chua",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS TONE\u2122",
+"start": "9:15am",
+"end": "10:00am",
+"instructor": "Benjamin Lai",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "NAK MUAY",
+"start": "9:30am",
+"end": "10:15am",
+"instructor": "Fang",
+"capacity": 6,
+"booked": 0,
+"spacesLeft": 6,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "PILATES",
+"start": "9:30am",
+"end": "10:30am",
+"instructor": "Jasmine Liew",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS DANCE\u2122",
+"start": "9:30am",
+"end": "10:15am",
+"instructor": "Ryan Ong",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "9:40am",
+"end": "10:40am",
+"instructor": "Ming Fei",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "9:45am",
+"end": "10:45am",
+"instructor": "Yeoh",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "YIN YOGA",
+"start": "9:45am",
+"end": "10:45am",
+"instructor": "Yvonne Seow",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRCUIT",
+"start": "9:45am",
+"end": "10:30am",
+"instructor": "Karel",
+"capacity": 31,
+"booked": 0,
+"spacesLeft": 31,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "9:45am",
+"end": "10:30am",
+"instructor": "Robyn",
+"capacity": 28,
+"booked": 0,
+"spacesLeft": 28,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Les Mills BREATH\u2122",
+"start": "9:45am",
+"end": "10:30am",
+"instructor": "Kester",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX FOUNDATIONAL",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Rusli",
+"capacity": 4,
+"booked": 0,
+"spacesLeft": 4,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CORE",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Fong Lum",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Jennifer Chen",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYSTEP\u00ae",
+"start": "10:30am",
+"end": "11:30am",
+"instructor": "Zaki A",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "DYNAMIC FLOW YOGA",
+"start": "10:30am",
+"end": "11:30am",
+"instructor": "Serena Tan",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "10:45am",
+"end": "11:30am",
+"instructor": "Bryan Wong",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "10:45am",
+"end": "11:45am",
+"instructor": "Joanna",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "George",
+"capacity": 40,
+"booked": 0,
+"spacesLeft": 40,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Yeoh",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "PILATES",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Alvan Chan",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYATTACK\u00ae",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Benji",
+"capacity": 38,
+"booked": 0,
+"spacesLeft": 38,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Glenn",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "POWER YOGA",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Paul",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Karel",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX COMPLETE",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Kester",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Christine Tan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "SUSPENSION EXERCISE CLASS",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Fong Lum",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX FOUNDATIONAL",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Kenneth Chin Wei Tan",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae HEAVY",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Nicky",
+"capacity": 25,
+"booked": 0,
+"spacesLeft": 25,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "11:45am",
+"end": "12:45pm",
+"instructor": "Desmond Ong",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "ZUMBA\u00ae",
+"start": "11:45am",
+"end": "12:45pm",
+"instructor": "Angie Tion",
+"capacity": 40,
+"booked": 0,
+"spacesLeft": 40,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Kelvin Tan",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Adeline Goh",
+"capacity": 16,
+"booked": 0,
+"spacesLeft": 16,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X RUSH",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Hung Pan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BOOM",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Ming Fei",
+"capacity": 6,
+"booked": 0,
+"spacesLeft": 6,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Adeline Tay",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RESTORATIVE YOGA",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Yvonne Seow",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Gavin",
+"capacity": 35,
+"booked": 0,
+"spacesLeft": 35,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BURN",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Xuan Hao Tan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS GRIT\u2122 STRENGTH",
+"start": "12:00pm",
+"end": "12:30pm",
+"instructor": "Glenn",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RESTORATIVE YOGA",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Jo Lim",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRCUIT",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Sherlin",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Bhas",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HOT FLOW YOGA",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Julian",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "ZUMBA\u00ae",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Mus",
+"capacity": 33,
+"booked": 0,
+"spacesLeft": 33,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Linda",
+"capacity": 22,
+"booked": 0,
+"spacesLeft": 22,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "ZUMBA\u00ae",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Timothy Zhuo",
+"capacity": 50,
+"booked": 0,
+"spacesLeft": 50,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "12:00pm",
+"end": "1:00pm",
+"instructor": "Nicky",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX ENGINE",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Hafiz Ahmad",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CORE CONDITIONING",
+"start": "12:10pm",
+"end": "12:55pm",
+"instructor": "Christopher Lim",
+"capacity": 32,
+"booked": 0,
+"spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HOT FLOW YOGA",
+"start": "12:15pm",
+"end": "1:00pm",
+"instructor": "Serena Tan",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS DANCE\u2122",
+"start": "12:15pm",
+"end": "1:00pm",
+"instructor": "George",
+"capacity": 40,
+"booked": 0,
+"spacesLeft": 40,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX POWER",
+"start": "12:15pm",
+"end": "1:00pm",
+"instructor": "Berwyn Tan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX ENGINE",
+"start": "12:15pm",
+"end": "1:00pm",
+"instructor": "Dave",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RESTORATIVE YOGA",
+"start": "12:15pm",
+"end": "1:15pm",
+"instructor": "Paul",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "12:15pm",
+"end": "1:15pm",
+"instructor": "Karel",
+"capacity": 31,
+"booked": 0,
+"spacesLeft": 31,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "12:15pm",
+"end": "1:15pm",
+"instructor": "Vivi Kusuma",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRQHIIT TRANSFORM",
+"start": "12:15pm",
+"end": "1:00pm",
+"instructor": "Jasmine Liew",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X STRENGTH",
+"start": "12:30pm",
+"end": "1:15pm",
+"instructor": "Mohamed Hamid Shah Mohammed Thayir",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BURN",
+"start": "12:30pm",
+"end": "1:15pm",
+"instructor": "Zhe Wei Wong",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS CORE\u2122",
+"start": "12:35pm",
+"end": "1:05pm",
+"instructor": "Glenn",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Kelvin Tan",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Christopher Lim",
+"capacity": 32,
+"booked": 0,
+"spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X STRENGTH",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Sarvindran",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Naila",
+"capacity": 38,
+"booked": 0,
+"spacesLeft": 38,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Yvonne Seow",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Sherlin",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS CORE\u2122",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Bhas",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X STRENGTH",
+"start": "1:00pm",
+"end": "1:45pm",
+"instructor": "Muhammad Ariq Noorzehan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X STRENGTH",
+"start": "1:10pm",
+"end": "1:55pm",
+"instructor": "Sirhan Muhammad",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "FITBALL",
+"start": "1:10pm",
+"end": "1:55pm",
+"instructor": "Julian",
+"capacity": 16,
+"booked": 0,
+"spacesLeft": 16,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "PILATES",
+"start": "1:10pm",
+"end": "1:55pm",
+"instructor": "Jasmine Liew",
+"capacity": 28,
+"booked": 0,
+"spacesLeft": 28,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "1:15pm",
+"end": "2:00pm",
+"instructor": "Linda",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "1:15pm",
+"end": "2:00pm",
+"instructor": "Jo Tan",
+"capacity": 25,
+"booked": 0,
+"spacesLeft": 25,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "3:30pm",
+"end": "4:15pm",
+"instructor": "Jo Tan",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "3:45pm",
+"end": "4:45pm",
+"instructor": "Ming Fei",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRQHIIT TRANSFORM",
+"start": "4:30pm",
+"end": "5:15pm",
+"instructor": "Jo Tan",
+"capacity": 25,
+"booked": 0,
+"spacesLeft": 25,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS SHAPES\u2122",
+"start": "5:00pm",
+"end": "5:45pm",
+"instructor": "Bhas",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "5:00pm",
+"end": "6:00pm",
+"instructor": "Ming Fei",
+"capacity": 27,
+"booked": 0,
+"spacesLeft": 27,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRCUIT",
+"start": "5:00pm",
+"end": "5:45pm",
+"instructor": "Fernie Ng",
+"capacity": 35,
+"booked": 0,
+"spacesLeft": 35,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "DYNAMIC FLOW YOGA",
+"start": "5:00pm",
+"end": "6:00pm",
+"instructor": "George",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "TOTAL BODY CONDITIONING",
+"start": "5:00pm",
+"end": "5:45pm",
+"instructor": "Mervyn Jin",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Les Mills PILATES\u2122",
+"start": "5:00pm",
+"end": "5:45pm",
+"instructor": "Benji",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "5:15pm",
+"end": "6:15pm",
+"instructor": "Alan Shin",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "AERIAL FLOW YOGA",
+"start": "5:15pm",
+"end": "6:15pm",
+"instructor": "Joanna",
+"capacity": 7,
+"booked": 0,
+"spacesLeft": 7,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX ENGINE",
+"start": "5:30pm",
+"end": "6:15pm",
+"instructor": "Iman Zulhakeem",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX POWER",
+"start": "5:30pm",
+"end": "6:15pm",
+"instructor": "Muhammad Hanafi Bin Rosley",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "5:30pm",
+"end": "6:30pm",
+"instructor": "Hung Pan",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "6:00pm",
+"end": "7:00pm",
+"instructor": "Lewis",
+"capacity": 38,
+"booked": 0,
+"spacesLeft": 38,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "6:00pm",
+"end": "7:00pm",
+"instructor": "Serena Tan",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "6:00pm",
+"end": "6:45pm",
+"instructor": "Fernie Ng",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "6:00pm",
+"end": "7:00pm",
+"instructor": "Adeline Goh",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYATTACK\u00ae",
+"start": "6:10pm",
+"end": "7:10pm",
+"instructor": "Glenn",
+"capacity": 38,
+"booked": 0,
+"spacesLeft": 38,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HOT FLOW YOGA",
+"start": "6:15pm",
+"end": "7:15pm",
+"instructor": "Christine Tan",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYSTEP\u00ae",
+"start": "6:15pm",
+"end": "7:15pm",
+"instructor": "Heather",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X RUSH",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Xiaobin Guo",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX COMPLETE",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Zen Ong",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "6:15pm",
+"end": "7:15pm",
+"instructor": "Christina Chin",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX POWER",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Dave",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX FOUNDATIONAL",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Emil",
+"capacity": 4,
+"booked": 0,
+"spacesLeft": 4,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "6:15pm",
+"end": "7:15pm",
+"instructor": "Benji",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX FOUNDATIONAL",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Christopher Sim",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "SUSPENSION EXERCISE CLASS",
+"start": "6:15pm",
+"end": "7:00pm",
+"instructor": "Christine Chiam",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "6:15pm",
+"end": "7:15pm",
+"instructor": "Jacky Tan",
+"capacity": 50,
+"booked": 0,
+"spacesLeft": 50,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "6:25pm",
+"end": "7:25pm",
+"instructor": "Soo Chee",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "6:25pm",
+"end": "7:25pm",
+"instructor": "Vivi Woon",
+"capacity": 27,
+"booked": 0,
+"spacesLeft": 27,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "AQUA FIT",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Han Yue",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HIIT X STRENGTH",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Khairil Anwar Bin Jasman",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Monica",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "STEP MOVES",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Fiona Kwan",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "GENTLE FLOW YOGA",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Cindy",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "AQUA FIT",
+"start": "6:30pm",
+"end": "7:20pm",
+"instructor": "Shirley C",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Jenny",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae HEAVY",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Priya",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "6:30pm",
+"end": "7:30pm",
+"instructor": "Amy Seow",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Shu Ting",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "H2O HIIT",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Sherlin",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX COMPLETE",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Yangkai, Xavier Soh",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Katherine",
+"capacity": 44,
+"booked": 0,
+"spacesLeft": 44,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HYROX ENGINE",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Alvin Ong Wl",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BOOM",
+"start": "6:30pm",
+"end": "7:15pm",
+"instructor": "Jo Tan",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "6:40pm",
+"end": "7:25pm",
+"instructor": "Ian Chan",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "6:45pm",
+"end": "7:30pm",
+"instructor": "Bryan Wong",
+"capacity": 16,
+"booked": 0,
+"spacesLeft": 16,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "6:45pm",
+"end": "7:30pm",
+"instructor": "Jennifer Chen",
+"capacity": 15,
+"booked": 0,
+"spacesLeft": 15,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "NAK MUAY",
+"start": "6:45pm",
+"end": "7:30pm",
+"instructor": "Fang",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "6:45pm",
+"end": "7:30pm",
+"instructor": "Karel",
+"capacity": 31,
+"booked": 0,
+"spacesLeft": 31,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "Reformer Pilates - Fundamentals",
+"start": "6:45pm",
+"end": "7:45pm",
+"instructor": "Yuan Jing",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "7:00pm",
+"end": "7:45pm",
+"instructor": "Yeoh",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "7:00pm",
+"end": "7:45pm",
+"instructor": "Willie",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "PILATES",
+"start": "7:10pm",
+"end": "8:10pm",
+"instructor": "Serena Tan",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "ZUMBA\u00ae",
+"start": "7:10pm",
+"end": "8:10pm",
+"instructor": "Julian",
+"capacity": 45,
+"booked": 0,
+"spacesLeft": 45,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "7:10pm",
+"end": "8:10pm",
+"instructor": "Jimmy Lee",
+"capacity": 26,
+"booked": 0,
+"spacesLeft": 26,
+"waiting": 0
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "ANIMAL FLOW",
+"start": "7:15pm",
+"end": "8:00pm",
+"instructor": "Christine Chiam",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:15pm",
+"end": "8:15pm",
+"instructor": "Albert Sukiyanto",
+"capacity": 25,
+"booked": 0,
+"spacesLeft": 25,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:20pm",
+"end": "8:20pm",
+"instructor": "Glenn",
+"capacity": 32,
+"booked": 0,
+"spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:25pm",
+"end": "8:25pm",
+"instructor": "Lennart",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "7:30pm",
+"end": "8:30pm",
+"instructor": "Ryan Haryadi",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "7:30pm",
+"end": "8:30pm",
+"instructor": "Christine Tan",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYATTACK\u00ae",
+"start": "7:30pm",
+"end": "8:30pm",
+"instructor": "Jacky Poea",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "H2O FLOW",
+"start": "7:30pm",
+"end": "8:15pm",
+"instructor": "Sherlin",
+"capacity": 12,
+"booked": 0,
+"spacesLeft": 12,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "7:30pm",
+"end": "8:30pm",
+"instructor": "Jaclyn",
+"capacity": 36,
+"booked": 0,
+"spacesLeft": 36,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "CIRCUIT",
+"start": "7:30pm",
+"end": "8:15pm",
+"instructor": "Jay",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "7:30pm",
+"end": "8:15pm",
+"instructor": "Daniel Ang",
+"capacity": 23,
+"booked": 0,
+"spacesLeft": 23,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "NAK MUAY",
+"start": "7:30pm",
+"end": "8:15pm",
+"instructor": "Jo Tan",
+"capacity": 10,
+"booked": 0,
+"spacesLeft": 10,
+"waiting": 0
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "HATHA YOGA",
+"start": "7:35pm",
+"end": "8:35pm",
+"instructor": "Chandran",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "VINYASA YOGA",
+"start": "7:35pm",
+"end": "8:35pm",
+"instructor": "Soo Chee",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "7:35pm",
+"end": "8:35pm",
+"instructor": "Janice",
+"capacity": 33,
+"booked": 0,
+"spacesLeft": 33,
+"waiting": 0
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "7:40pm",
+"end": "8:40pm",
+"instructor": "Priscilla",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYATTACK\u00ae",
+"start": "7:45pm",
+"end": "8:45pm",
+"instructor": "Donovan",
+"capacity": 19,
+"booked": 0,
+"spacesLeft": 19,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "7:45pm",
+"end": "8:45pm",
+"instructor": "Ben Tang",
+"capacity": 18,
+"booked": 0,
+"spacesLeft": 18,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS DANCE\u2122",
+"start": "7:45pm",
+"end": "8:30pm",
+"instructor": "Anita",
+"capacity": 40,
+"booked": 0,
+"spacesLeft": 40,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "VINYASA YOGA",
+"start": "7:45pm",
+"end": "8:45pm",
+"instructor": "David",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "7:45pm",
+"end": "8:45pm",
+"instructor": "Amy Seow",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "RPM\u2122",
+"start": "7:45pm",
+"end": "8:30pm",
+"instructor": "Bernie",
+"capacity": 28,
+"booked": 0,
+"spacesLeft": 28,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BOOM",
+"start": "7:45pm",
+"end": "8:30pm",
+"instructor": "Fang",
+"capacity": 8,
+"booked": 0,
+"spacesLeft": 8,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "8:20pm",
+"end": "9:20pm",
+"instructor": "Julian",
+"capacity": 20,
+"booked": 0,
+"spacesLeft": 20,
+"waiting": 0
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "DANCE MOVES",
+"start": "8:20pm",
+"end": "9:20pm",
+"instructor": "Louis Shen",
+"capacity": 28,
+"booked": 0,
+"spacesLeft": 28,
+"waiting": 0
+},
+{
+"outlet": "George Street",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "LES MILLS CORE\u2122",
+"start": "8:30pm",
+"end": "9:15pm",
+"instructor": "Glenn",
+"capacity": 32,
+"booked": 0,
+"spacesLeft": 32,
+"waiting": 0
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "8:30pm",
+"end": "9:30pm",
+"instructor": "Benjamin Lai",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
+"waiting": 0
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYBALANCE\u00ae",
+"start": "8:30pm",
+"end": "9:30pm",
+"instructor": "Joel Wong",
+"capacity": 24,
+"booked": 0,
+"spacesLeft": 24,
+"waiting": 0
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "8:35pm",
+"end": "9:35pm",
+"instructor": "Joanne Chua",
+"capacity": 50,
+"booked": 0,
+"spacesLeft": 50,
+"waiting": 0
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae HEAVY",
+"start": "8:45pm",
+"end": "9:30pm",
+"instructor": "Bhas",
+"capacity": 34,
+"booked": 0,
+"spacesLeft": 34,
+"waiting": 0
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYJAM\u00ae",
+"start": "8:45pm",
+"end": "9:45pm",
+"instructor": "Anita",
+"capacity": 40,
+"booked": 0,
+"spacesLeft": 40,
+"waiting": 0
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYPUMP\u00ae",
+"start": "8:45pm",
+"end": "9:45pm",
+"instructor": "Benji",
+"capacity": 30,
+"booked": 0,
+"spacesLeft": 30,
+"waiting": 0
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"date": "2026-09-23",
+"class": "BODYCOMBAT\u00ae",
+"start": "9:00pm",
+"end": "9:45pm",
+"instructor": "Fang",
+"capacity": 37,
+"booked": 0,
+"spacesLeft": 37,
 "waiting": 0
 }
 ]
