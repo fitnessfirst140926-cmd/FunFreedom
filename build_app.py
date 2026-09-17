@@ -7,6 +7,14 @@ script_dir = Path(__file__).parent
 with open(script_dir / 'classes_min.json') as f:
     data_json = f.read()
 
+capacity_lookup_path = script_dir / 'capacity_lookup.json'
+if capacity_lookup_path.exists():
+    with open(capacity_lookup_path) as f:
+        capacity_lookup_json = f.read()
+else:
+    capacity_lookup_json = '{}'
+    print(f"WARNING: {capacity_lookup_path} not found; capacity badges will be empty.", file=sys.stderr)
+
 html = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -257,6 +265,83 @@ html = r"""<!DOCTYPE html>
     background: rgba(138, 145, 163, 0.15);
     color: var(--muted);
   }
+  .avail-cap {
+    background: rgba(138, 145, 163, 0.12);
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* Live availability login */
+  .live-status-line {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .live-error {
+    font-size: 12px;
+    color: #f87171;
+    margin-bottom: 8px;
+    display: none;
+  }
+  .live-disclaimer {
+    font-size: 11.5px;
+    color: var(--muted);
+    background: rgba(251, 191, 36, 0.08);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .live-field {
+    margin-bottom: 8px;
+  }
+  .live-field label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .live-remember-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .live-btn {
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: var(--chip-active);
+    color: #06231a;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  .live-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .live-secondary-btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--chip-bg);
+    color: var(--text);
+    font-size: 12.5px;
+    font-weight: 600;
+    border: 1px solid var(--card-border);
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  .live-loggedin-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
   .empty-state {
     text-align: center;
     color: var(--muted);
@@ -462,6 +547,43 @@ html = r"""<!DOCTYPE html>
   </div>
 </div>
 
+<div class="section no-print">
+  <div class="section-title">Live availability</div>
+  <div class="live-status-line" id="liveStatus">Not logged in — showing total class capacity only (may be out of date).</div>
+  <div class="live-error" id="liveErrorLine"></div>
+
+  <div id="liveLoginFormWrap">
+    <div class="live-disclaimer">
+      Logging in fetches real-time spaces-left / waitlist numbers directly from Fitness First's member booking system, using your own account — this app never sees or stores your credentials on any server. If you check "remember me", your email and password are saved in this browser's local storage in plain text so you don't have to log in again — only do this on a device you trust, and log out on shared/public devices.
+    </div>
+    <form id="liveLoginForm">
+      <div class="live-field">
+        <label for="liveEmail">Email</label>
+        <input type="email" id="liveEmail" autocomplete="username" required>
+      </div>
+      <div class="live-field">
+        <label for="livePassword">Password</label>
+        <input type="password" id="livePassword" autocomplete="current-password" required>
+      </div>
+      <div class="live-remember-row">
+        <input type="checkbox" id="liveRemember" checked>
+        <label for="liveRemember" style="margin:0;">Remember me on this device</label>
+      </div>
+      <button type="submit" class="live-btn" id="liveLoginBtn">Log in for live availability</button>
+    </form>
+  </div>
+
+  <div id="liveLoggedInWrap" style="display:none;">
+    <div class="live-loggedin-row">
+      <span id="liveUpdatedText"></span>
+      <span>
+        <button class="live-secondary-btn" id="liveRefreshBtn">Refresh now</button>
+        <button class="live-secondary-btn" id="liveLogoutBtn">Log out &amp; forget password</button>
+      </span>
+    </div>
+  </div>
+</div>
+
 <div class="section" id="daySection">
   <div class="ms-header">
     <div class="section-title" style="margin-bottom:0;">Day</div>
@@ -546,6 +668,13 @@ html = r"""<!DOCTYPE html>
 
 <script>
 const DATA = __DATA__;
+const CAPACITY_LOOKUP = __CAPACITY_LOOKUP__;
+
+const EXERP_BASE = 'https://fitnessfirst.exerp.site';
+const EXERP_AUTH_URL = EXERP_BASE + '/api/user/authenticate';
+const EXERP_SEARCH_URL = EXERP_BASE + '/api/classes/search-booking-participations';
+const EXERP_CENTER_IDS = [110, 117, 109, 111, 121, 103, 105, 123, 108, 104, 124, 112, 118, 115];
+const LIVE_CREDS_KEY = 'ff_live_creds_v1';
 
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const TIME_BUCKETS = [
@@ -584,7 +713,12 @@ let state = {
   types: new Set(),
   instructors: new Set(),
   plan: new Set(),
-  sort: 'time'
+  sort: 'time',
+  liveToken: null,
+  liveMap: {},
+  liveError: null,
+  liveUpdatedAt: null,
+  liveBusy: false,
 };
 
 const CENTER_COLORS = ['#f4c542','#38bdf8','#a78bfa','#34d399','#fb923c','#f472b6','#facc15','#4ade80','#60a5fa','#f87171','#c084fc','#2dd4bf','#fbbf24','#94a3b8'];
@@ -846,18 +980,40 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function minutesToHHMM(min) {
+  if (min === null || min === undefined) return null;
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
+}
+
+// The public schedule has no specific date, only a recurring weekday —
+// so every lookup (static capacity, and live availability) is keyed by
+// outlet + class + weekday + 24h start time, not by date or an ID.
+function classKey(outlet, className, dayShort, hhmm24) {
+  return [outlet, className, dayShort, hhmm24].join('|');
+}
+
+function dataRowKey(d) {
+  const hhmm = minutesToHHMM(d._startMin);
+  if (!hhmm) return null;
+  return classKey(d.outlet, d.class, d.day, hhmm);
+}
+
 function availabilityBadge(d) {
-  if (typeof d.spacesLeft !== 'number' || typeof d.capacity !== 'number') return '';
-  if (d.spacesLeft > 3) {
-    return `<span class="avail-badge avail-ok">${d.spacesLeft} left</span>`;
+  const key = dataRowKey(d);
+  const live = key ? state.liveMap[key] : null;
+  if (live) {
+    if (live.spacesLeft > 3) return `<span class="avail-badge avail-ok">${live.spacesLeft} left</span>`;
+    if (live.spacesLeft > 0) return `<span class="avail-badge avail-low">${live.spacesLeft} left</span>`;
+    if (live.waiting > 0) return `<span class="avail-badge avail-wait">Waitlist: ${live.waiting}</span>`;
+    return `<span class="avail-badge avail-full">Full</span>`;
   }
-  if (d.spacesLeft > 0) {
-    return `<span class="avail-badge avail-low">${d.spacesLeft} left</span>`;
+  const cap = key ? CAPACITY_LOOKUP[key] : undefined;
+  if (typeof cap === 'number') {
+    return `<span class="avail-badge avail-cap">Cap ${cap}</span>`;
   }
-  if (d.waiting > 0) {
-    return `<span class="avail-badge avail-wait">Waitlist: ${d.waiting}</span>`;
-  }
-  return `<span class="avail-badge avail-full">Full</span>`;
+  return '';
 }
 
 function sortResults(arr) {
@@ -1103,8 +1259,187 @@ function render() {
   }
 }
 
+// ---- Live availability (client-side login + fetch, optional) ----
+function saveLiveCreds(email, password) {
+  try {
+    localStorage.setItem(LIVE_CREDS_KEY, JSON.stringify({ email, password }));
+  } catch (e) { /* best effort */ }
+}
+function loadLiveCreds() {
+  try {
+    const raw = localStorage.getItem(LIVE_CREDS_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) { return null; }
+}
+function clearLiveCreds() {
+  try { localStorage.removeItem(LIVE_CREDS_KEY); } catch (e) { /* best effort */ }
+}
+
+async function liveLogin(email, password) {
+  state.liveError = null;
+  try {
+    const resp = await fetch(EXERP_AUTH_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, sessionTimeoutOneMonth: false }),
+    });
+    if (!resp.ok) throw new Error('login rejected (HTTP ' + resp.status + ') — check email/password');
+    const data = await resp.json();
+    if (!data.token) throw new Error('no token in login response');
+    state.liveToken = data.token;
+    return true;
+  } catch (e) {
+    state.liveToken = null;
+    state.liveError = 'Live login failed: ' + e.message + '. This can also happen if Fitness First blocks browser-based requests to this endpoint — the scraper-based capacity numbers still work either way.';
+    return false;
+  }
+}
+
+function todayPlusDays(n) {
+  const d = new Date();
+  d.setDate(d.getDate() + n);
+  return d;
+}
+
+function isoDate(d) {
+  return d.toISOString().slice(0, 10);
+}
+
+async function fetchLiveAvailability() {
+  if (!state.liveToken) return;
+  state.liveBusy = true;
+  const newMap = {};
+  let anyError = null;
+  for (let i = 0; i < 7; i++) {
+    const dateObj = todayPlusDays(i);
+    const date = isoDate(dateObj);
+    const dayShort = DAYS[dateObj.getDay()];
+    try {
+      const resp = await fetch(EXERP_SEARCH_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + state.liveToken,
+        },
+        body: JSON.stringify({
+          activityGroupIds: [],
+          activityIds: [],
+          centers: EXERP_CENTER_IDS,
+          dateFrom: date,
+          dateTo: date,
+        }),
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const items = await resp.json();
+      items.forEach(item => {
+        const b = item.booking;
+        if (!b) return;
+        const capacity = b.classCapacity ?? 0;
+        const booked = b.bookedCount ?? 0;
+        const rec = {
+          spacesLeft: Math.max(capacity - booked, 0),
+          waiting: b.waitingListCount ?? 0,
+          capacity, booked,
+        };
+        const key = classKey(item.centerName || '', b.name || '', dayShort, b.startTime || '');
+        newMap[key] = rec;
+      });
+    } catch (e) {
+      anyError = e;
+    }
+  }
+  state.liveMap = newMap;
+  state.liveUpdatedAt = new Date();
+  state.liveBusy = false;
+  if (anyError) {
+    state.liveError = 'Some live data failed to refresh (' + anyError.message + '); showing what loaded.';
+  }
+  render();
+}
+
+function renderLiveStatus() {
+  const statusEl = document.getElementById('liveStatus');
+  const errEl = document.getElementById('liveErrorLine');
+  const formWrap = document.getElementById('liveLoginFormWrap');
+  const loggedInWrap = document.getElementById('liveLoggedInWrap');
+
+  if (state.liveToken) {
+    formWrap.style.display = 'none';
+    loggedInWrap.style.display = 'block';
+    statusEl.style.display = 'none';
+    document.getElementById('liveUpdatedText').textContent = state.liveBusy
+      ? 'Refreshing live availability…'
+      : (state.liveUpdatedAt ? 'Live availability updated ' + state.liveUpdatedAt.toLocaleTimeString() : 'Logged in.');
+  } else {
+    formWrap.style.display = 'block';
+    loggedInWrap.style.display = 'none';
+    statusEl.style.display = 'block';
+    statusEl.textContent = 'Not logged in — showing total class capacity only (may be out of date).';
+  }
+
+  if (state.liveError) {
+    errEl.textContent = state.liveError;
+    errEl.style.display = 'block';
+  } else {
+    errEl.style.display = 'none';
+  }
+}
+
+document.getElementById('liveLoginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('liveEmail').value.trim();
+  const password = document.getElementById('livePassword').value;
+  const remember = document.getElementById('liveRemember').checked;
+  const btn = document.getElementById('liveLoginBtn');
+  btn.disabled = true;
+  btn.textContent = 'Logging in…';
+  const ok = await liveLogin(email, password);
+  if (ok) {
+    if (remember) saveLiveCreds(email, password);
+    else clearLiveCreds();
+    renderLiveStatus();
+    await fetchLiveAvailability();
+  }
+  btn.disabled = false;
+  btn.textContent = 'Log in for live availability';
+  renderLiveStatus();
+  render();
+});
+
+document.getElementById('liveRefreshBtn').onclick = async () => {
+  renderLiveStatus();
+  await fetchLiveAvailability();
+  renderLiveStatus();
+};
+
+document.getElementById('liveLogoutBtn').onclick = () => {
+  state.liveToken = null;
+  state.liveMap = {};
+  state.liveError = null;
+  state.liveUpdatedAt = null;
+  clearLiveCreds();
+  document.getElementById('liveEmail').value = '';
+  document.getElementById('livePassword').value = '';
+  renderLiveStatus();
+  render();
+};
+
+async function initLive() {
+  const creds = loadLiveCreds();
+  if (creds && creds.email && creds.password) {
+    document.getElementById('liveEmail').value = creds.email;
+    document.getElementById('liveRemember').checked = true;
+    const ok = await liveLogin(creds.email, creds.password);
+    renderLiveStatus();
+    if (ok) await fetchLiveAvailability();
+  }
+  renderLiveStatus();
+  render();
+}
+
 render();
 loadPlan();
+initLive();
 </script>
 </body>
 </html>
@@ -1113,6 +1448,7 @@ loadPlan();
 import datetime
 build_date = datetime.date.today().strftime("%d %b %Y")
 html = html.replace("__DATA__", data_json)
+html = html.replace("__CAPACITY_LOOKUP__", capacity_lookup_json)
 html = html.replace("__BUILD_DATE__", build_date)
 
 out_path = script_dir / 'docs' / 'index.html'

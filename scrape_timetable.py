@@ -1,173 +1,106 @@
 #!/usr/bin/env python3
 """
-Fitness First Singapore timetable + availability scraper.
+Fitness First Singapore timetable scraper.
 
-Unlike the previous version, this pulls from the Exerp member booking
-platform (fitnessfirst.exerp.site), which requires an authenticated
-session but returns real-time class availability: how many people are
-booked, total capacity, and waiting-list count.
+Pulls the public (no-login-required) timetable API for every club and
+writes out classes.json / classes_min.json in the same schema the
+Class Finder app expects:
 
-Because this uses a real member login, credentials are read from
-environment variables (set as GitHub Secrets in the workflow) rather
-than hardcoded. Be mindful this runs against a personal account on a
-schedule — if FF ever rate-limits or flags automated logins, this
-script is the first thing to check.
+    {"outlet": str, "day": "Mon".."Sun", "class": str,
+     "start": "07:15am", "end": "08:15am", "instructor": str}
 
-Output schema (classes.json / classes_min.json), same shape as before
-plus three new fields:
+The endpoint is public — viewing the timetable never requires a member
+session. Booking a class does, but we're only reading the schedule.
 
-    {"outlet": str, "day": "Mon".."Sun", "date": "YYYY-MM-DD",
-     "class": str, "start": "07:15am", "end": "08:15am",
-     "instructor": str, "capacity": int, "booked": int, "waiting": int}
-
-Run locally:
+Run:
     pip install requests
-    FF_EMAIL=you@example.com FF_PASSWORD=yourpassword python3 scrape_timetable.py
+    python3 scrape_timetable.py
 """
 
 import json
-import os
-import sys
+import re
 import time
-from datetime import datetime, timedelta
+import sys
 from pathlib import Path
 
 import requests
 
-BASE_URL = "https://fitnessfirst.exerp.site"
-AUTH_URL = f"{BASE_URL}/api/user/authenticate"
-SEARCH_URL = f"{BASE_URL}/api/classes/search-booking-participations"
+API_BASE = (
+    "https://www.fitnessfirst.com/fitness-first/api/v2/"
+    "%7BFAEC351B-47C0-4759-843F-EB7D6F5DB568%7D/timetable"
+)
 
-# All 14 SG clubs (centerId values, confirmed via captured traffic).
+# exerpCenterIds for every SG club (confirmed against the live site).
+# clubName is filled in from the API response itself, so this list only
+# needs to stay in sync if Fitness First adds/removes a club.
 CENTER_IDS = [
-    110, 117, 109, 111, 121, 103, 105,
-    123, 108, 104, 124, 112, 118, 115,
+    "117", "109", "111", "121", "103", "110",
+    "123", "118", "105", "108", "104", "124",
+    "112", "115",
 ]
-
-DAYS_AHEAD = 7  # pull today + next 6 days (one week)
 
 HEADERS = {
     "Accept": "application/json, text/plain, */*",
-    "Content-Type": "application/json",
-    "Origin": BASE_URL,
-    "x-referer": f"{BASE_URL}/booking",
+    "Referer": "https://www.fitnessfirst.com/sg/en/timetable",
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ),
+    "culture": "en",
 }
 
-DAY_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+def clean_instructor(name):
+    """API returns names like 'Ian Fung .' — strip the trailing marker."""
+    if not name:
+        return ""
+    return re.sub(r"\s*\.\s*$", "", name).strip()
 
 
-def authenticate(email, password, retries=3):
-    """Log in and return the bearer token."""
-    body = {
-        "email": email,
-        "password": password,
-        "sessionTimeoutOneMonth": False,
-    }
+def fetch_center(center_id, timezone=8, retries=3):
+    url = f"{API_BASE}?exerpCenterIds={center_id}&searchTerm=&timezone={timezone}"
     last_err = None
     for attempt in range(retries):
         try:
-            resp = requests.post(AUTH_URL, headers=HEADERS, json=body, timeout=20)
+            resp = requests.get(url, headers=HEADERS, timeout=20)
             resp.raise_for_status()
             data = resp.json()
-            token = data.get("token")
-            if not token:
-                raise RuntimeError("Login response had no token")
-            return token
+            if not data.get("isSuccess"):
+                raise RuntimeError(f"API returned isSuccess=false for center {center_id}")
+            return data["data"]["timetable"]
         except Exception as e:  # noqa: BLE001
             last_err = e
             time.sleep(1.5 * (attempt + 1))
-    raise RuntimeError(f"Login failed: {last_err}")
+    raise RuntimeError(f"Failed to fetch center {center_id}: {last_err}")
 
 
-def fetch_day(token, date_str, retries=3):
-    """Fetch every class across all centers for a single date."""
-    body = {
-        "activityGroupIds": [],
-        "activityIds": [],
-        "centers": CENTER_IDS,
-        "dateFrom": date_str,
-        "dateTo": date_str,
-    }
-    headers = {**HEADERS, "Authorization": f"Bearer {token}"}
-    last_err = None
-    for attempt in range(retries):
-        try:
-            resp = requests.post(SEARCH_URL, headers=headers, json=body, timeout=30)
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:  # noqa: BLE001
-            last_err = e
-            time.sleep(1.5 * (attempt + 1))
-    raise RuntimeError(f"Failed to fetch {date_str}: {last_err}")
-
-
-def to_12h(hhmm):
-    """'07:15' -> '7:15am'; '' / None -> ''"""
-    if not hhmm:
-        return ""
-    try:
-        return datetime.strptime(hhmm, "%H:%M").strftime("%I:%M%p").lstrip("0").lower()
-    except ValueError:
-        return hhmm
-
-
-def parse_day(raw_items, date_str):
-    """Flatten one day's response into our row schema."""
-    weekday_idx = datetime.strptime(date_str, "%Y-%m-%d").weekday()
-    day_short = DAY_SHORT[weekday_idx]
-
+def parse_timetable(timetable_days):
+    """Flatten one center's timetable payload into our row schema."""
     rows = []
-    for item in raw_items:
-        booking = item.get("booking")
-        if not booking:
-            continue  # entries without a booking block aren't classes
-
-        capacity = booking.get("classCapacity", 0)
-        booked = booking.get("bookedCount", 0)
-        instructors = booking.get("instructorNames") or []
-        instructor = ", ".join(
-            name.rstrip(" .") for name in instructors if name
-        )
-
-        rows.append({
-            "outlet": item.get("centerName", "").strip(),
-            "day": day_short,
-            "date": date_str,
-            "class": booking.get("name", "").strip(),
-            "start": to_12h(booking.get("startTime")),
-            "end": to_12h(booking.get("endTime")),
-            "instructor": instructor,
-            "capacity": capacity,
-            "booked": booked,
-            "spacesLeft": max(capacity - booked, 0),
-            "waiting": booking.get("waitingListCount", 0),
-        })
+    for day_entry in timetable_days:
+        day_short = day_entry["dayShort"]  # "Mon".."Sun"
+        for session_block in ("morning", "afternoon", "evening"):
+            for session in day_entry.get(session_block, []):
+                time_text = session.get("timeText") or ""
+                parts = [p.strip() for p in time_text.split(" - ")]
+                start, end = (parts[0], parts[1]) if len(parts) == 2 else (None, None)
+                rows.append({
+                    "outlet": session.get("clubName", "").strip(),
+                    "day": day_short,
+                    "class": session.get("title", "").strip(),
+                    "start": start,
+                    "end": end,
+                    "instructor": clean_instructor(session.get("instructor")),
+                })
     return rows
 
 
 def main():
-    email = os.environ.get("FF_EMAIL")
-    password = os.environ.get("FF_PASSWORD")
-    if not email or not password:
-        print("ERROR: FF_EMAIL and FF_PASSWORD must be set as environment variables.",
-              file=sys.stderr)
-        sys.exit(1)
-
-    print("Logging in...", file=sys.stderr)
-    token = authenticate(email, password)
-    print("Login OK.", file=sys.stderr)
-
     all_rows = []
-    today = datetime.now().date()
-    for i in range(DAYS_AHEAD):
-        date_str = (today + timedelta(days=i)).isoformat()
-        print(f"[{i + 1}/{DAYS_AHEAD}] fetching {date_str}...", file=sys.stderr)
-        raw_items = fetch_day(token, date_str)
-        rows = parse_day(raw_items, date_str)
+    for i, center_id in enumerate(CENTER_IDS, 1):
+        print(f"[{i}/{len(CENTER_IDS)}] fetching center {center_id}...", file=sys.stderr)
+        timetable = fetch_center(center_id)
+        rows = parse_timetable(timetable)
         all_rows.extend(rows)
         print(f"    -> {len(rows)} sessions", file=sys.stderr)
         time.sleep(0.5)  # be a polite scraper
@@ -180,8 +113,9 @@ def main():
 
     outlets = sorted(set(r["outlet"] for r in all_rows))
     classes = sorted(set(r["class"] for r in all_rows))
+    instructors = sorted(set(r["instructor"] for r in all_rows if r["instructor"]))
     print(f"\nDone: {len(all_rows)} sessions across {len(outlets)} centers, "
-          f"{len(classes)} class types, {DAYS_AHEAD} days.", file=sys.stderr)
+          f"{len(classes)} class types, {len(instructors)} instructors.", file=sys.stderr)
 
 
 if __name__ == "__main__":
