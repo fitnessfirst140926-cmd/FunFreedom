@@ -2,7 +2,7 @@ name: Update Fitness First timetable
 
 on:
   schedule:
-    - cron: '30 0 * * *'   # 8:30am SGT daily
+    - cron: '0 22 * * *'   # 22:00 UTC = 6:00am SGT daily
   workflow_dispatch:        # lets you trigger it manually too
 
 permissions:
@@ -23,10 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Scrape timetable
-        env:
-          FF_EMAIL: ${{ secrets.FF_EMAIL }}
-          FF_PASSWORD: ${{ secrets.FF_PASSWORD }}
+      - name: Scrape timetable (public endpoint, no login required)
         run: python3 scrape_timetable.py
 
       - name: Rebuild app
