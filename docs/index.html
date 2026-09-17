@@ -108,6 +108,44 @@
     color: var(--text);
     font-size: 14px;
   }
+  input[type=number].ab-time {
+    padding: 8px 6px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    background: var(--chip-bg);
+    color: var(--text);
+    font-size: 14px;
+    text-align: center;
+  }
+  .ab-row {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .ab-sep {
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .ab-result-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: var(--chip-bg);
+    border: 1px solid var(--card-border);
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .ab-result-row.ok { border-color: var(--accent2); }
+  .ab-result-row.fail { border-color: #f87171; }
+  .ab-result-row.skip { opacity: 0.65; }
+  .ab-status-tag {
+    font-weight: 700;
+    flex: 0 0 auto;
+  }
   .filter-toggle {
     display: flex;
     justify-content: space-between;
@@ -668,6 +706,23 @@
 </div>
 
 <div id="planViewWrap" style="display:none;">
+  <div class="section no-print" id="autoBookSection">
+    <div class="section-title">Auto-book (6 days out)</div>
+    <div class="live-status-line">At the exact time below, books everything in My Plan whose weekday is exactly 6 days from today — the day whose booking window opens at that moment. Requires live login, and this tab open and awake at trigger time. Re-arm manually each time you want it to run.</div>
+    <div class="ab-row">
+      <input type="number" id="abH" class="ab-time" min="0" max="23" value="18" style="width:52px;">
+      <span class="ab-sep">:</span>
+      <input type="number" id="abM" class="ab-time" min="0" max="59" value="0" style="width:52px;">
+      <span class="ab-sep">:</span>
+      <input type="number" id="abS" class="ab-time" min="0" max="59" value="0" style="width:52px;">
+      <span class="ab-sep">.</span>
+      <input type="number" id="abMs" class="ab-time" min="0" max="999" value="0" style="width:60px;">
+      <button class="live-btn" id="autoBookArmBtn">Arm auto-book</button>
+    </div>
+    <div class="live-status-line" id="autoBookStatus"></div>
+    <div id="autoBookPanel"></div>
+  </div>
+
   <div class="print-title" id="printTitle"></div>
   <div class="results-header">
     <div class="results-count" id="planResultsCount">--</div>
@@ -750,6 +805,10 @@ let state = {
   myBookingsError: null,
   myBookingsFetchedAt: null,
   cancelBusy: new Set(),
+  autoBookArmed: false,
+  autoBookTargetTime: null,
+  autoBookResults: null,
+  autoBookTimers: [],
 };
 
 const CENTER_COLORS = ['#f4c542','#38bdf8','#a78bfa','#34d399','#fb923c','#f472b6','#facc15','#4ade80','#60a5fa','#f87171','#c084fc','#2dd4bf','#fbbf24','#94a3b8'];
@@ -857,6 +916,9 @@ function exportPlanCsv() {
 }
 
 document.getElementById('planExportCsv').onclick = (e) => { e.stopPropagation(); exportPlanCsv(); };
+document.getElementById('autoBookArmBtn').onclick = () => {
+  if (state.autoBookArmed) { disarmAutoBook(); } else { armAutoBook(); }
+};
 document.getElementById('planPrint').onclick = (e) => {
   e.stopPropagation();
   const today = new Date().toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -1025,8 +1087,20 @@ function minutesToHHMM(min) {
 // The public schedule has no specific date, only a recurring weekday —
 // so every lookup (static capacity, and live availability) is keyed by
 // outlet + class + weekday + 24h start time, not by date or an ID.
+// Fitness First's public site and its Exerp booking system don't always
+// agree on outlet names (e.g. "One George Street" vs "George Street",
+// "Tampines (CPF building)" vs "Tampines") — normalize before matching.
+function normalizeOutlet(name) {
+  return (name || '')
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    .replace(/^\s*one\s+/i, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
 function classKey(outlet, className, dayShort, hhmm24) {
-  return [outlet, className, dayShort, hhmm24].join('|');
+  return [normalizeOutlet(outlet), className, dayShort, hhmm24].join('|');
 }
 
 function dataRowKey(d) {
@@ -1267,6 +1341,8 @@ function render() {
   weekViewWrap.style.display = state.view === 'week' ? 'block' : 'none';
   planViewWrap.style.display = state.view === 'plan' ? 'block' : 'none';
   bookingsViewWrap.style.display = state.view === 'bookings' ? 'block' : 'none';
+  renderAutoBookStatus();
+  renderAutoBookPanel();
 
   // day chips active state
   [...dayRow.children].forEach(c => c.classList.toggle('active', state.days.has(c.dataset.day)));
@@ -1406,20 +1482,29 @@ async function fetchLiveAvailability() {
 }
 
 // ---- Booking (live login required) ----
-async function bookClass(d) {
-  const key = dataRowKey(d);
-  const live = key ? state.liveMap[key] : null;
-  if (!live || !live.bookingId || !live.bookingCenterId) {
-    alert("Can't book this class right now — no live session data for it. Try Refresh, or it may be outside the next 7 days.");
-    return;
+function nextOccurrenceDateTime(d) {
+  for (let i = 0; i < 7; i++) {
+    const dt = todayPlusDays(i);
+    if (DAYS[dt.getDay()] === d.day) {
+      const startMin = d._startMin ?? 0;
+      dt.setHours(Math.floor(startMin / 60), startMin % 60, 0, 0);
+      return dt;
+    }
   }
-  if (!state.liveUserId || !state.liveUserCenterId) {
-    alert('Missing your member ID from login — try logging out and back in.');
-    return;
-  }
-  const confirmMsg = `Book ${d.class} at ${d.outlet}, ${d.day} ${d.start}\u2013${d.end}?\n\nThis submits a real booking on your Fitness First account.`;
-  if (!confirm(confirmMsg)) return;
+  return null;
+}
 
+function hoursUntilClass(d) {
+  const dt = nextOccurrenceDateTime(d);
+  if (!dt) return Infinity;
+  return (dt - new Date()) / 3600000;
+}
+
+// Core booking call — no confirm dialog, no alert. Returns a result object
+// so both the interactive Book button and the silent auto-book batch can
+// use the same logic and present it their own way.
+async function doBookRequest(d, live) {
+  const key = dataRowKey(d);
   state.bookingBusy.add(key);
   render();
   try {
@@ -1445,14 +1530,35 @@ async function bookClass(d) {
       throw new Error('Unexpected response state: ' + result.state);
     }
     state.bookedThisSession.add(key);
-    alert(`Booked: ${d.class} at ${d.outlet}, ${d.day} ${d.start}.`);
-    await fetchLiveAvailability();
+    return { status: 'booked', message: `Booked: ${d.class} at ${d.outlet}, ${d.day} ${d.start}.` };
   } catch (e) {
-    alert('Booking failed: ' + e.message);
+    return { status: 'error', message: 'Booking failed: ' + e.message };
   } finally {
     state.bookingBusy.delete(key);
     render();
   }
+}
+
+// Interactive Book button handler. No confirmation needed unless the class
+// starts within 2 hours, in which case we ask once before firing.
+async function bookClass(d) {
+  const key = dataRowKey(d);
+  const live = key ? state.liveMap[key] : null;
+  if (!live || !live.bookingId || !live.bookingCenterId) {
+    alert("Can't book this class right now — no live session data for it. Try Refresh, or it may be outside the next 7 days.");
+    return;
+  }
+  if (!state.liveUserId || !state.liveUserCenterId) {
+    alert('Missing your member ID from login — try logging out and back in.');
+    return;
+  }
+  if (hoursUntilClass(d) < 2) {
+    const confirmMsg = `${d.class} at ${d.outlet} starts in under 2 hours (${d.day} ${d.start}). Book anyway?`;
+    if (!confirm(confirmMsg)) return;
+  }
+  const result = await doBookRequest(d, live);
+  alert(result.message);
+  await fetchLiveAvailability();
 }
 
 function bookButtonHtml(d) {
@@ -1530,11 +1636,10 @@ async function cancelBooking(item) {
   const b = item.booking;
   const dt = bookingDateTime(b);
   const hoursUntil = (dt - new Date()) / 3600000;
-  const lateCancelNote = hoursUntil < 2
-    ? '\n\n\u26A0 This is within 2 hours of the class \u2014 cancelling now may count as a late cancel toward your 30-day no-show/late-cancel limit.'
-    : '';
-  const confirmMsg = `Cancel ${b.name} at ${item.centerName}, ${b.date} ${b.startTime}?${lateCancelNote}`;
-  if (!confirm(confirmMsg)) return;
+  if (hoursUntil < 2) {
+    const confirmMsg = `Cancel ${b.name} at ${item.centerName}, ${b.date} ${b.startTime}?\n\n\u26A0 This is within 2 hours of the class \u2014 cancelling now may count as a late cancel toward your 30-day no-show/late-cancel limit.`;
+    if (!confirm(confirmMsg)) return;
+  }
 
   state.cancelBusy.add(item.id);
   render();
@@ -1618,6 +1723,140 @@ function renderBookingsView() {
     }
     list.appendChild(row);
   });
+}
+
+// ---- Auto-book: fire everything in My Plan for the weekday that's
+// exactly 6 days out, at a precise time. Manual arm each time by design. ----
+function computeEligibleDay() {
+  return DAYS[todayPlusDays(6).getDay()];
+}
+
+function getPlanRows() {
+  return DATA.filter(d => state.plan.has(d.key));
+}
+
+function clearAutoBookTimers() {
+  state.autoBookTimers.forEach(t => clearTimeout(t));
+  state.autoBookTimers = [];
+}
+
+function armAutoBook() {
+  const h = parseInt(document.getElementById('abH').value, 10) || 0;
+  const m = parseInt(document.getElementById('abM').value, 10) || 0;
+  const s = parseInt(document.getElementById('abS').value, 10) || 0;
+  const ms = parseInt(document.getElementById('abMs').value, 10) || 0;
+  const target = new Date();
+  target.setHours(h, m, s, ms);
+  if (target <= new Date()) {
+    alert('That time has already passed today. Pick a future time.');
+    return;
+  }
+  if (!state.liveToken) {
+    alert('Log in under "Live availability" first \u2014 auto-book needs an active session.');
+    return;
+  }
+  state.autoBookArmed = true;
+  state.autoBookTargetTime = target;
+  state.autoBookResults = null;
+  clearAutoBookTimers();
+
+  const msUntilTarget = target - new Date();
+  const preFetchDelay = Math.max(msUntilTarget - 5000, 0);
+  const t1 = setTimeout(() => { fetchLiveAvailability(); }, preFetchDelay);
+  const t2 = setTimeout(() => { runAutoBook(); }, msUntilTarget);
+  state.autoBookTimers = [t1, t2];
+  render();
+}
+
+function disarmAutoBook() {
+  clearAutoBookTimers();
+  state.autoBookArmed = false;
+  state.autoBookTargetTime = null;
+  render();
+}
+
+async function runAutoBook() {
+  state.autoBookArmed = false;
+  const eligibleDay = computeEligibleDay();
+  const planRows = getPlanRows();
+  const results = [];
+  const toFire = [];
+
+  planRows.forEach(d => {
+    if (d.day !== eligibleDay) {
+      results.push({ d, status: 'skip', message: `Not today's 6-day-out day (this is ${d.day}, today opens ${eligibleDay})` });
+      return;
+    }
+    const key = dataRowKey(d);
+    const live = key ? state.liveMap[key] : null;
+    if (!live || !live.bookingId || !live.bookingCenterId) {
+      results.push({ d, status: 'skip', message: 'No live match for this class (booking window may not be open yet, or center name mismatch)' });
+      return;
+    }
+    if (live.spacesLeft <= 0 && live.waiting <= 0) {
+      results.push({ d, status: 'fail', message: 'Full, no waitlist available' });
+      return;
+    }
+    toFire.push({ d, live });
+  });
+
+  // Safety net matching manual-booking rules: confirm individually if a
+  // class somehow starts within 2 hours (should never happen 6 days out).
+  const immediate = [];
+  for (const { d, live } of toFire) {
+    if (hoursUntilClass(d) < 2) {
+      const ok = confirm(`${d.class} at ${d.outlet} starts in under 2 hours. Book anyway?`);
+      if (!ok) {
+        results.push({ d, status: 'skip', message: 'Skipped \u2014 under 2 hours, not confirmed' });
+        continue;
+      }
+    }
+    immediate.push({ d, live });
+  }
+
+  const outcomes = await Promise.allSettled(immediate.map(({ d, live }) => doBookRequest(d, live)));
+  outcomes.forEach((outcome, i) => {
+    const { d } = immediate[i];
+    if (outcome.status === 'fulfilled') {
+      results.push({ d, status: outcome.value.status === 'booked' ? 'ok' : 'fail', message: outcome.value.message });
+    } else {
+      results.push({ d, status: 'fail', message: 'Booking failed: ' + outcome.reason });
+    }
+  });
+
+  state.autoBookResults = results;
+  await fetchLiveAvailability();
+  render();
+}
+
+function renderAutoBookStatus() {
+  const statusEl = document.getElementById('autoBookStatus');
+  const btn = document.getElementById('autoBookArmBtn');
+  if (!statusEl || !btn) return;
+  if (state.autoBookArmed && state.autoBookTargetTime) {
+    const t = state.autoBookTargetTime;
+    const hh = String(t.getHours()).padStart(2, '0');
+    const mm = String(t.getMinutes()).padStart(2, '0');
+    const ss = String(t.getSeconds()).padStart(2, '0');
+    const mmm = String(t.getMilliseconds()).padStart(3, '0');
+    statusEl.textContent = `Armed \u2014 will fire at ${hh}:${mm}:${ss}.${mmm} for ${computeEligibleDay()} classes in My Plan. Keep this tab open and awake.`;
+    btn.textContent = 'Disarm';
+  } else {
+    statusEl.textContent = '';
+    btn.textContent = 'Arm auto-book';
+  }
+}
+
+function renderAutoBookPanel() {
+  const panel = document.getElementById('autoBookPanel');
+  if (!panel) return;
+  if (!state.autoBookResults) { panel.innerHTML = ''; return; }
+  panel.innerHTML = state.autoBookResults.map(r => {
+    const cls = r.status === 'ok' ? 'ok' : (r.status === 'fail' ? 'fail' : 'skip');
+    const tag = r.status === 'ok' ? '\u2713 Booked' : (r.status === 'fail' ? '\u2717 Failed' : '\u2014 Skipped');
+    return `<div class="ab-result-row ${cls}"><span>${escapeHtml(r.d.class)} \u00b7 ${escapeHtml(r.d.outlet)} \u00b7 ${r.d.day} ${r.d.start}</span><span class="ab-status-tag">${tag}</span></div>` +
+      `<div style="font-size:11px; color:var(--muted); margin:-4px 0 6px 4px;">${escapeHtml(r.message)}</div>`;
+  }).join('');
 }
 
 function renderLiveStatus() {
