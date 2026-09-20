@@ -650,6 +650,9 @@ html = r"""<!DOCTYPE html>
         <button class="live-secondary-btn" id="liveLogoutBtn">Log out &amp; forget password</button>
       </span>
     </div>
+    <div class="chip-wrap" style="margin-top:8px;">
+      <div class="chip small" id="availOnlyToggle">Available to book only</div>
+    </div>
   </div>
 </div>
 
@@ -808,6 +811,7 @@ let state = {
   instructors: new Set(),
   plan: new Set(),
   sort: 'time',
+  availableOnly: false,
   liveToken: null,
   liveMap: {},
   liveError: null,
@@ -1056,6 +1060,7 @@ function formatActiveFilters() {
   if (state.centers.size) parts.push(state.centers.size + ' center' + (state.centers.size > 1 ? 's' : ''));
   if (state.types.size) parts.push(state.types.size + ' class type' + (state.types.size > 1 ? 's' : ''));
   if (state.instructors.size) parts.push(state.instructors.size + ' instructor' + (state.instructors.size > 1 ? 's' : ''));
+  if (state.availableOnly) parts.push('available to book only');
   const line = document.getElementById('activeFiltersLine');
   if (parts.length) {
     line.style.display = 'block';
@@ -1065,6 +1070,8 @@ function formatActiveFilters() {
       state.centers.clear();
       state.types.clear();
       state.instructors.clear();
+      state.availableOnly = false;
+      document.getElementById('availOnlyToggle').classList.remove('active');
       render();
     };
   } else {
@@ -1084,6 +1091,13 @@ function matchesCommonFilters(d) {
       if (d._startMin >= b.start && d._startMin < b.end) { ok = true; break; }
     }
     if (!ok) return false;
+  }
+  if (state.availableOnly && state.liveToken) {
+    const key = dataRowKey(d);
+    const live = key ? state.liveMap[key] : null;
+    // No live match means we can't confirm it's bookable right now — leave it
+    // out of "available only" rather than risk showing a full/waitlisted class.
+    if (!live || live.spacesLeft <= 0) return false;
   }
   return true;
 }
@@ -1894,7 +1908,11 @@ function renderLiveStatus() {
     loggedInWrap.style.display = 'none';
     statusEl.style.display = 'block';
     statusEl.textContent = 'Not logged in — showing total class capacity only (may be out of date).';
+    // Without a live session there's no spaces-left/waitlist signal to filter
+    // on, so drop back to showing everything.
+    state.availableOnly = false;
   }
+  document.getElementById('availOnlyToggle').classList.toggle('active', state.availableOnly);
 
   if (state.liveError) {
     errEl.textContent = state.liveError;
@@ -1924,6 +1942,12 @@ document.getElementById('liveLoginForm').addEventListener('submit', async (e) =>
   renderLiveStatus();
   render();
 });
+
+document.getElementById('availOnlyToggle').onclick = (e) => {
+  state.availableOnly = !state.availableOnly;
+  e.currentTarget.classList.toggle('active', state.availableOnly);
+  render();
+};
 
 document.getElementById('liveRefreshBtn').onclick = async () => {
   renderLiveStatus();
