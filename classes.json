@@ -4754,14 +4754,6 @@
 {
 "outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "Yin Shi"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
 "class": "BODYATTACK\u00ae",
 "start": "11:00am",
 "end": "11:45am",
@@ -4938,7 +4930,7 @@
 {
 "outlet": "One Raffles Quay",
 "day": "Thu",
-"class": "CORE FLOW YOGA",
+"class": "GENTLE FLOW YOGA",
 "start": "05:00pm",
 "end": "05:45pm",
 "instructor": "Christine Tan"
