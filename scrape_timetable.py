@@ -103,11 +103,25 @@ def parse_timetable(timetable_days):
     return rows
 
 
+def log_day_summary(center_id, timetable_days):
+    """Debug aid: print exactly what days/dates the API handed back for this
+    center, before any parsing/filtering happens on our side. This is what
+    tells us whether a missing day is the API's problem or ours."""
+    summary = [
+        f"{d.get('dayShort')}({d.get('formattedDate')}"
+        f"{',today' if d.get('isToday') else ''}:"
+        f"{len(d.get('morning', []))}m/{len(d.get('afternoon', []))}a/{len(d.get('evening', []))}e)"
+        for d in timetable_days
+    ]
+    print(f"    [debug] center {center_id} days: {' '.join(summary)}", file=sys.stderr)
+
+
 def main():
     all_rows = []
     for i, center_id in enumerate(CENTER_IDS, 1):
         print(f"[{i}/{len(CENTER_IDS)}] fetching center {center_id}...", file=sys.stderr)
         timetable = fetch_center(center_id)
+        log_day_summary(center_id, timetable)
         rows = parse_timetable(timetable)
         all_rows.extend(rows)
         print(f"    -> {len(rows)} sessions", file=sys.stderr)
