@@ -635,7 +635,9 @@
     </div>
     <div class="chip-wrap" style="margin-top:8px;">
       <div class="chip small" id="availOnlyToggle">Available to book only</div>
+      <div class="chip small" id="matchCheckBtn">Match check</div>
     </div>
+    <pre id="matchCheckOut" style="display:none;white-space:pre-wrap;font-size:11px;line-height:1.35;margin:8px 0 0;padding:8px;border-radius:8px;background:rgba(255,255,255,0.05);max-height:320px;overflow:auto;"></pre>
   </div>
 </div>
 
@@ -1445,6 +1447,8 @@ async function fetchLiveAvailability() {
   if (!state.liveToken) return;
   state.liveBusy = true;
   const newMap = {};
+  const dayCounts = {};
+  const dayErrors = {};
   let anyError = null;
   for (let i = 0; i < 7; i++) {
     const dateObj = todayPlusDays(i);
@@ -1467,6 +1471,7 @@ async function fetchLiveAvailability() {
       });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const items = await resp.json();
+      dayCounts[date + ' ' + dayShort] = items.length;
       items.forEach(item => {
         const b = item.booking;
         if (!b) return;
@@ -1478,14 +1483,19 @@ async function fetchLiveAvailability() {
           capacity, booked,
           bookingId: b.id,
           bookingCenterId: item.centerId,
+          name: b.name || '', start: b.startTime || '',
+          outlet: item.centerName || '', day: dayShort, date: date,
         };
         const key = classKey(item.centerName || '', b.name || '', dayShort, b.startTime || '');
         newMap[key] = rec;
       });
     } catch (e) {
       anyError = e;
+      dayErrors[date + ' ' + dayShort] = e.message;
     }
   }
+  state.liveCounts = dayCounts;
+  state.liveErrors = dayErrors;
   state.liveMap = newMap;
   state.liveUpdatedAt = new Date();
   state.liveBusy = false;
@@ -1925,6 +1935,57 @@ document.getElementById('liveLoginForm').addEventListener('submit', async (e) =>
   renderLiveStatus();
   render();
 });
+
+function runMatchCheck() {
+  const out = [];
+  const counts = state.liveCounts || {};
+  const errs = state.liveErrors || {};
+  out.push('Live sessions returned per day:');
+  Object.keys(counts).forEach(k => out.push('  ' + k + ': ' + counts[k]));
+  Object.keys(errs).forEach(k => out.push('  ' + k + ': FAILED ' + errs[k]));
+  const liveDays = new Set(Object.keys(counts).map(k => k.split(' ')[1]));
+  const byTime = {}, byClass = {};
+  Object.values(state.liveMap).forEach(v => {
+    const o = normalizeOutlet(v.outlet);
+    byTime[[o, v.day, v.start].join('|')] = v;
+    const ck = [o, v.name, v.day].join('|');
+    (byClass[ck] = byClass[ck] || []).push(v);
+  });
+  let total = 0, matched = 0;
+  const why = { name: 0, time: 0, none: 0 };
+  const perDay = {};
+  const samples = [];
+  DATA.forEach(d => {
+    if (!liveDays.has(d.day)) return;
+    total++;
+    perDay[d.day] = perDay[d.day] || { t: 0, m: 0 };
+    perDay[d.day].t++;
+    const key = dataRowKey(d);
+    if (key && state.liveMap[key]) { matched++; perDay[d.day].m++; return; }
+    const hhmm = minutesToHHMM(d._startMin);
+    const o = normalizeOutlet(d.outlet);
+    const sameTime = byTime[[o, d.day, hhmm].join('|')];
+    const sameClass = byClass[[o, d.class, d.day].join('|')];
+    let reason;
+    if (sameTime) { why.name++; reason = 'NAME differs, live says "' + sameTime.name + '"'; }
+    else if (sameClass) { why.time++; reason = 'TIME differs, live at ' + sameClass.map(v => v.start).join('/'); }
+    else { why.none++; reason = 'no live session'; }
+    if (samples.length < 25) samples.push('  ' + d.day + ' ' + hhmm + ' ' + d.outlet + ' · ' + d.class + ' -> ' + reason);
+  });
+  out.push('');
+  out.push('Scraped rows in live window: ' + total + ' | matched: ' + matched);
+  out.push('Unmatched: name differs ' + why.name + ', time differs ' + why.time + ', no live session ' + why.none);
+  out.push('Per day (matched/total): ' + Object.keys(perDay).map(k => k + ' ' + perDay[k].m + '/' + perDay[k].t).join(', '));
+  if (samples.length) { out.push(''); out.push('First unmatched:'); samples.forEach(x => out.push(x)); }
+  return out.join('\n');
+}
+
+document.getElementById('matchCheckBtn').onclick = () => {
+  const el = document.getElementById('matchCheckOut');
+  if (el.style.display === 'block') { el.style.display = 'none'; return; }
+  el.textContent = runMatchCheck();
+  el.style.display = 'block';
+};
 
 document.getElementById('availOnlyToggle').onclick = (e) => {
   state.availableOnly = !state.availableOnly;
