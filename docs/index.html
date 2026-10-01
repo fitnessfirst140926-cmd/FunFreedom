@@ -1955,6 +1955,10 @@ function runMatchCheck() {
   const why = { name: 0, time: 0, none: 0 };
   const perDay = {};
   const samples = [];
+  // Examples are limited to what's currently on screen (centers/types/
+  // instructors/time filters + the List view's day chips), so the reasons
+  // listed are for the exact rows being looked at.
+  const inView = d => matchesCommonFilters(d) && (state.days.size === 0 || state.days.has(d.day));
   DATA.forEach(d => {
     if (!liveDays.has(d.day)) return;
     total++;
@@ -1970,13 +1974,13 @@ function runMatchCheck() {
     if (sameTime) { why.name++; reason = 'NAME differs, live says "' + sameTime.name + '"'; }
     else if (sameClass) { why.time++; reason = 'TIME differs, live at ' + sameClass.map(v => v.start).join('/'); }
     else { why.none++; reason = 'no live session'; }
-    if (samples.length < 25) samples.push('  ' + d.day + ' ' + hhmm + ' ' + d.outlet + ' · ' + d.class + ' -> ' + reason);
+    if (samples.length < 40 && inView(d)) samples.push('  ' + d.day + ' ' + hhmm + ' ' + d.outlet + ' · ' + d.class + ' -> ' + reason);
   });
   out.push('');
   out.push('Scraped rows in live window: ' + total + ' | matched: ' + matched);
   out.push('Unmatched: name differs ' + why.name + ', time differs ' + why.time + ', no live session ' + why.none);
   out.push('Per day (matched/total): ' + Object.keys(perDay).map(k => k + ' ' + perDay[k].m + '/' + perDay[k].t).join(', '));
-  if (samples.length) { out.push(''); out.push('First unmatched:'); samples.forEach(x => out.push(x)); }
+  if (samples.length) { out.push(''); out.push('Unmatched in the current view:'); samples.forEach(x => out.push(x)); }
   return out.join('\n');
 }
 
