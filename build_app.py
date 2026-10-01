@@ -1457,7 +1457,25 @@ function todayPlusDays(n) {
 }
 
 function isoDate(d) {
-  return d.toISOString().slice(0, 10);
+  // Local calendar date. (toISOString() is UTC, which is a day behind the
+  // local date for the first hours after local midnight — e.g. before 9am
+  // in Japan — and silently shifted every live session onto the wrong day.)
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return d.getFullYear() + '-' + m + '-' + day;
+}
+
+// Singapore calendar date n days from today, independent of the phone's
+// timezone. Classes and the 9am-SGT booking window are all Singapore time,
+// so the live fetch must ask Exerp for Singapore dates and label each with
+// that same date's weekday.
+function sgDay(n) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Singapore', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(new Date());
+  const get = t => Number(parts.find(p => p.type === t).value);
+  const dt = new Date(Date.UTC(get('year'), get('month') - 1, get('day') + n));
+  return { iso: dt.toISOString().slice(0, 10), dayShort: DAYS[dt.getUTCDay()] };
 }
 
 async function fetchLiveAvailability() {
@@ -1468,9 +1486,9 @@ async function fetchLiveAvailability() {
   const dayErrors = {};
   let anyError = null;
   for (let i = 0; i < 7; i++) {
-    const dateObj = todayPlusDays(i);
-    const date = isoDate(dateObj);
-    const dayShort = DAYS[dateObj.getDay()];
+    const sg = sgDay(i);
+    const date = sg.iso;
+    const dayShort = sg.dayShort;
     try {
       const resp = await fetch(EXERP_SEARCH_URL, {
         method: 'POST',
@@ -1769,7 +1787,7 @@ function renderBookingsView() {
 // ---- Auto-book: fire everything in My Plan for the weekday that's
 // exactly 6 days out, at a precise time. Manual arm each time by design. ----
 function computeEligibleDay() {
-  return DAYS[todayPlusDays(6).getDay()];
+  return sgDay(6).dayShort;
 }
 
 function getPlanRows() {
