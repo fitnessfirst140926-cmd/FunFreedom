@@ -730,7 +730,7 @@ html = r"""<!DOCTYPE html>
     <div class="section-title">Auto-book (6 days out)</div>
     <div class="live-status-line">At the exact time below, books everything in My Plan whose weekday is exactly 6 days from today — the day whose booking window opens at that moment. Requires live login, and this tab open and awake at trigger time. Re-arm manually each time you want it to run.</div>
     <div class="ab-row">
-      <input type="number" id="abH" class="ab-time" min="0" max="23" value="18" style="width:52px;">
+      <input type="number" id="abH" class="ab-time" min="0" max="23" value="10" style="width:52px;">
       <span class="ab-sep">:</span>
       <input type="number" id="abM" class="ab-time" min="0" max="59" value="0" style="width:52px;">
       <span class="ab-sep">:</span>

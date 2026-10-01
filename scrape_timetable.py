@@ -103,10 +103,11 @@ def parse_timetable(timetable_days):
     return rows
 
 
+ALL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
 def log_day_summary(center_id, timetable_days):
-    """Debug aid: print exactly what days/dates the API handed back for this
-    center, before any parsing/filtering happens on our side. This is what
-    tells us whether a missing day is the API's problem or ours."""
+    """Debug: what days/dates the API returned for this center, pre-parsing."""
     summary = [
         f"{d.get('dayShort')}({d.get('formattedDate')}"
         f"{',today' if d.get('isToday') else ''}:"
@@ -116,7 +117,32 @@ def log_day_summary(center_id, timetable_days):
     print(f"    [debug] center {center_id} days: {' '.join(summary)}", file=sys.stderr)
 
 
+def carry_over_empty_days(new_rows, prev_rows):
+    """The public API's 7-day window is inconsistent: sometimes it starts
+    yesterday, and sometimes it returns a day with every session stripped.
+    Since the app shows a recurring weekly template, any weekday that comes
+    back with zero sessions across ALL centers keeps its rows from the
+    previous classes.json instead of being wiped."""
+    present = {r["day"] for r in new_rows}
+    merged = list(new_rows)
+    for day in ALL_DAYS:
+        if day in present:
+            continue
+        carried = [r for r in prev_rows if r.get("day") == day]
+        merged.extend(carried)
+        print(f"[carry-over] {day}: API returned 0 sessions; kept "
+              f"{len(carried)} rows from previous classes.json", file=sys.stderr)
+    return merged
+
+
 def main():
+    out_dir = Path(__file__).parent
+    prev_path = out_dir / "classes.json"
+    try:
+        prev_rows = json.loads(prev_path.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001 - first run or unreadable file
+        prev_rows = []
+
     all_rows = []
     for i, center_id in enumerate(CENTER_IDS, 1):
         print(f"[{i}/{len(CENTER_IDS)}] fetching center {center_id}...", file=sys.stderr)
@@ -127,7 +153,8 @@ def main():
         print(f"    -> {len(rows)} sessions", file=sys.stderr)
         time.sleep(0.5)  # be a polite scraper
 
-    out_dir = Path(__file__).parent
+    all_rows = carry_over_empty_days(all_rows, prev_rows)
+
     (out_dir / "classes.json").write_text(json.dumps(all_rows, indent=0), encoding="utf-8")
     (out_dir / "classes_min.json").write_text(
         json.dumps(all_rows, separators=(",", ":")), encoding="utf-8"
