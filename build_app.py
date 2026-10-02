@@ -1139,7 +1139,81 @@ function classKey(outlet, className, dayShort, hhmm24) {
 function dataRowKey(d) {
   const hhmm = minutesToHHMM(d._startMin);
   if (!hhmm) return null;
-  return classKey(d.outlet, d.class, d.day, hhmm);
+  const exact = classKey(d.outlet, d.class, d.day, hhmm);
+  if (!state.liveIdx || state.liveMap[exact]) return exact;
+  // The public timetable and the booking system sometimes disagree by a few
+  // minutes on the same session — accept the closest live session of the
+  // same class/center/day within 15 minutes.
+  const cands = state.liveIdx[[normalizeOutlet(d.outlet), d.class, d.day].join('|')];
+  if (cands) {
+    let best = null, bestDiff = 16;
+    cands.forEach(c => {
+      const diff = Math.abs(c.min - d._startMin);
+      if (diff < bestDiff) { best = c; bestDiff = diff; }
+    });
+    if (best) return best.key;
+  }
+  return exact;
+}
+
+function buildLiveIdx() {
+  const idx = {};
+  Object.keys(state.liveMap).forEach(k => {
+    const r = state.liveMap[k];
+    const [h, m] = (r.start || '').split(':').map(Number);
+    if (isNaN(h) || isNaN(m)) return;
+    const ik = [normalizeOutlet(r.outlet), r.name, r.day].join('|');
+    (idx[ik] = idx[ik] || []).push({ key: k, min: h * 60 + m });
+  });
+  state.liveIdx = idx;
+}
+
+function hhmmToAmPm(t) {
+  const [h, m] = (t || '').split(':').map(Number);
+  if (isNaN(h) || isNaN(m)) return '';
+  const ap = h >= 12 ? 'pm' : 'am';
+  return String(h % 12 || 12).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ap;
+}
+
+function refreshFilterLists() {
+  const c = [...new Set(DATA.map(d => d.outlet))].sort();
+  const t = [...new Set(DATA.map(d => d.class))].sort();
+  const i = [...new Set(DATA.map(d => d.instructor).filter(Boolean))].sort();
+  centers.length = 0; centers.push(...c);
+  types.length = 0; types.push(...t);
+  instructors.length = 0; instructors.push(...i);
+  renderCenterChips(); renderTypeChips(); renderInstructorChips();
+}
+
+// Fitness First's public timetable leaves out some programmes entirely
+// (HYROX COMPLETE/POWER/ENGINE, H2O HEAT, workshops...) even though they are
+// bookable in Exerp. While logged in, any live session that no public row
+// accounts for is added to the schedule as a live-only row.
+function syncLiveOnlyRows() {
+  for (let i = DATA.length - 1; i >= 0; i--) if (DATA[i].live) DATA.splice(i, 1);
+  if (state.liveToken && state.liveIdx) {
+    const outletByNorm = {};
+    DATA.forEach(d => { outletByNorm[normalizeOutlet(d.outlet)] = d.outlet; });
+    const claimed = new Set();
+    DATA.forEach(d => { const k = dataRowKey(d); if (k && state.liveMap[k]) claimed.add(k); });
+    let nextId = DATA.reduce((mx, d) => Math.max(mx, d.id), -1) + 1;
+    Object.keys(state.liveMap).forEach(k => {
+      if (claimed.has(k)) return;
+      const r = state.liveMap[k];
+      if (!r.name || !r.start) return;
+      const start = hhmmToAmPm(r.start);
+      const row = {
+        outlet: outletByNorm[normalizeOutlet(r.outlet)] || r.outlet,
+        day: r.day, class: r.name, start, end: hhmmToAmPm(r.end),
+        instructor: r.instructor || '', live: true,
+      };
+      row._startMin = parseTimeToMinutes(start);
+      row.id = nextId++;
+      row.key = planKey(row);
+      DATA.push(row);
+    });
+  }
+  refreshFilterLists();
 }
 
 function availabilityBadge(d) {
@@ -1518,7 +1592,8 @@ async function fetchLiveAvailability() {
           capacity, booked,
           bookingId: b.id,
           bookingCenterId: item.centerId,
-          name: b.name || '', start: b.startTime || '',
+          name: b.name || '', start: b.startTime || '', end: b.endTime || '',
+          instructor: (b.instructorNames || []).map(n => n.replace(/\s*\.\s*$/, '').trim()).filter(Boolean).join(', '),
           outlet: item.centerName || '', day: dayShort, date: date,
         };
         const key = classKey(item.centerName || '', b.name || '', dayShort, b.startTime || '');
@@ -1532,6 +1607,8 @@ async function fetchLiveAvailability() {
   state.liveCounts = dayCounts;
   state.liveErrors = dayErrors;
   state.liveMap = newMap;
+  buildLiveIdx();
+  syncLiveOnlyRows();
   state.liveUpdatedAt = new Date();
   state.liveBusy = false;
   if (anyError) {
@@ -1994,8 +2071,9 @@ function runMatchCheck() {
   // instructors/time filters + the List view's day chips), so the reasons
   // listed are for the exact rows being looked at.
   const inView = d => matchesCommonFilters(d) && (state.days.size === 0 || state.days.has(d.day));
+  const injected = DATA.filter(d => d.live).length;
   DATA.forEach(d => {
-    if (!liveDays.has(d.day)) return;
+    if (d.live || !liveDays.has(d.day)) return;
     total++;
     perDay[d.day] = perDay[d.day] || { t: 0, m: 0 };
     perDay[d.day].t++;
@@ -2013,6 +2091,7 @@ function runMatchCheck() {
   });
   out.push('');
   out.push('Scraped rows in live window: ' + total + ' | matched: ' + matched);
+  out.push('Live-only sessions added (not on public timetable): ' + injected);
   out.push('Unmatched: name differs ' + why.name + ', time differs ' + why.time + ', no live session ' + why.none);
   out.push('Per day (matched/total): ' + Object.keys(perDay).map(k => k + ' ' + perDay[k].m + '/' + perDay[k].t).join(', '));
   if (samples.length) { out.push(''); out.push('Unmatched in the current view:'); samples.forEach(x => out.push(x)); }
@@ -2041,6 +2120,8 @@ document.getElementById('liveRefreshBtn').onclick = async () => {
 document.getElementById('liveLogoutBtn').onclick = () => {
   state.liveToken = null;
   state.liveMap = {};
+  state.liveIdx = null;
+  syncLiveOnlyRows();
   state.liveError = null;
   state.liveUpdatedAt = null;
   state.liveUserId = null;
