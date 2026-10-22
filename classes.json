@@ -1,78 +1,6 @@
 [
 {
 "outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "HOT FLOW YOGA",
-"start": "07:15am",
-"end": "08:15am",
-"instructor": "Dawn Tan"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "HOT FLOW YOGA",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Julian"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "ZUMBA\u00ae",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Mus"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "HIIT X STRENGTH",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Muhammad Ariq Noorzehan"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "FITBALL",
-"start": "01:10pm",
-"end": "01:55pm",
-"instructor": "Julian"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "AERIAL FLOW YOGA",
-"start": "05:15pm",
-"end": "06:15pm",
-"instructor": "Joanna"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "HATHA YOGA",
-"start": "06:25pm",
-"end": "07:25pm",
-"instructor": "Soo Chee"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "06:25pm",
-"end": "07:25pm",
-"instructor": "Vivi Woon"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "07:35pm",
-"end": "08:35pm",
-"instructor": "Janice"
-},
-{
-"outlet": "100AM (Tanjong Pagar)",
 "day": "Thu",
 "class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
 "start": "07:15am",
@@ -552,124 +480,76 @@
 "instructor": "Amy Seow"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "CIRCUIT",
-"start": "07:00am",
-"end": "07:45am",
-"instructor": "Jay"
+"class": "HOT FLOW YOGA",
+"start": "07:15am",
+"end": "08:15am",
+"instructor": "Christopher Lim"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "08:00am",
-"end": "09:00am",
-"instructor": "Haley"
+"class": "HOT FLOW YOGA",
+"start": "12:00pm",
+"end": "01:00pm",
+"instructor": "Julian"
 },
 {
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "08:00am",
-"end": "09:00am",
-"instructor": "Natalie"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "LES MILLS TONE\u2122",
-"start": "09:15am",
-"end": "10:00am",
-"instructor": "Edwin Ko"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "BODYSTEP\u00ae",
-"start": "10:30am",
-"end": "11:30am",
-"instructor": "Edwin Ko"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "DYNAMIC FLOW YOGA",
-"start": "10:30am",
-"end": "11:30am",
-"instructor": "Serena Tan"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "11:45am",
-"end": "12:45pm",
-"instructor": "Haley"
-},
-{
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
 "class": "ZUMBA\u00ae",
-"start": "11:45am",
-"end": "12:45pm",
-"instructor": "Angie Tion"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "BURN",
 "start": "12:00pm",
-"end": "12:45pm",
-"instructor": "Xuan Hao Tan"
+"end": "01:00pm",
+"instructor": "Mus"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
+"class": "HIIT X STRENGTH",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Muhammad Ariq Noorzehan"
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"class": "FITBALL",
+"start": "01:10pm",
+"end": "01:55pm",
+"instructor": "Julian"
+},
+{
+"outlet": "100AM (Tanjong Pagar)",
+"day": "Wed",
+"class": "AERIAL FLOW YOGA",
 "start": "05:15pm",
 "end": "06:15pm",
-"instructor": "Alan Shin"
+"instructor": "Lester Low"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "06:30pm",
-"end": "07:30pm",
-"instructor": "Alison"
+"class": "HATHA YOGA",
+"start": "06:25pm",
+"end": "07:25pm",
+"instructor": "Soo Chee"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "06:45pm",
-"end": "07:30pm",
-"instructor": "Jennifer Chen"
+"class": "BODYPUMP\u00ae",
+"start": "06:25pm",
+"end": "07:25pm",
+"instructor": "Vivi Woon"
 },
 {
-"outlet": "AMK Hub",
+"outlet": "100AM (Tanjong Pagar)",
 "day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "07:45pm",
-"end": "08:45pm",
-"instructor": "Ben Tang"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "LES MILLS DANCE\u2122",
-"start": "07:45pm",
-"end": "08:30pm",
-"instructor": "Shawn Ng"
-},
-{
-"outlet": "AMK Hub",
-"day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "08:45pm",
-"end": "09:45pm",
-"instructor": "Vivi Kusuma"
+"class": "BODYCOMBAT\u00ae",
+"start": "07:35pm",
+"end": "08:35pm",
+"instructor": "Janice"
 },
 {
 "outlet": "AMK Hub",
@@ -1181,7 +1061,7 @@
 "class": "BODYPUMP\u00ae",
 "start": "08:00am",
 "end": "09:00am",
-"instructor": "Jojo"
+"instructor": "Glenn"
 },
 {
 "outlet": "AMK Hub",
@@ -1432,28 +1312,124 @@
 "instructor": "Edwin Ko"
 },
 {
-"outlet": "Alexandra (Mapletree Business City)",
+"outlet": "AMK Hub",
 "day": "Wed",
 "class": "CIRCUIT",
-"start": "12:00pm",
-"end": "12:45pm",
-"instructor": "Sherlin"
+"start": "07:00am",
+"end": "07:45am",
+"instructor": "Jay"
 },
 {
-"outlet": "Alexandra (Mapletree Business City)",
+"outlet": "AMK Hub",
 "day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Sherlin"
+"class": "BODYBALANCE\u00ae",
+"start": "08:00am",
+"end": "09:00am",
+"instructor": "Haley"
 },
 {
-"outlet": "Alexandra (Mapletree Business City)",
+"outlet": "AMK Hub",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "07:40pm",
-"end": "08:40pm",
-"instructor": "Priscilla"
+"start": "08:00am",
+"end": "09:00am",
+"instructor": "Natalie"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "LES MILLS TONE\u2122",
+"start": "09:15am",
+"end": "10:00am",
+"instructor": "Edwin Ko"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "BODYSTEP\u00ae",
+"start": "10:30am",
+"end": "11:30am",
+"instructor": "Edwin Ko"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "DYNAMIC FLOW YOGA",
+"start": "10:30am",
+"end": "11:30am",
+"instructor": "Serena Tan"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "GENTLE FLOW YOGA",
+"start": "11:45am",
+"end": "12:45pm",
+"instructor": "Desmond Ong"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "ZUMBA\u00ae",
+"start": "11:45am",
+"end": "12:45pm",
+"instructor": "Angie Tion"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "BURN",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Xuan Hao Tan"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "05:15pm",
+"end": "06:15pm",
+"instructor": "Alan Shin"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "GENTLE FLOW YOGA",
+"start": "06:30pm",
+"end": "07:30pm",
+"instructor": "Cindy"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "06:45pm",
+"end": "07:30pm",
+"instructor": "Jennifer Chen"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "07:45pm",
+"end": "08:45pm",
+"instructor": "Ben Tang"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "LES MILLS DANCE\u2122",
+"start": "07:45pm",
+"end": "08:30pm",
+"instructor": "Shawn Ng"
+},
+{
+"outlet": "AMK Hub",
+"day": "Wed",
+"class": "BODYJAM\u00ae",
+"start": "08:45pm",
+"end": "09:45pm",
+"instructor": "Vivi Kusuma"
 },
 {
 "outlet": "Alexandra (Mapletree Business City)",
@@ -1522,6 +1498,14 @@
 {
 "outlet": "Alexandra (Mapletree Business City)",
 "day": "Sat",
+"class": "AQUA FIT",
+"start": "01:00pm",
+"end": "02:00pm",
+"instructor": "Han Yue"
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Sat",
 "class": "HATHA YOGA",
 "start": "01:15pm",
 "end": "02:15pm",
@@ -1568,76 +1552,28 @@
 "instructor": "Bhas"
 },
 {
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "Reformer Pilates - Fundamentals",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "Mervyn Lau"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "Reformer Pilates - Fundamentals",
-"start": "08:15am",
-"end": "09:15am",
-"instructor": "Amy Seow"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "Reformer Pilates - Fundamentals",
-"start": "12:15pm",
-"end": "01:15pm",
-"instructor": "Vivi Kusuma"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "PILATES",
-"start": "01:10pm",
-"end": "01:55pm",
-"instructor": "Jasmine Liew"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "Reformer Pilates - Fundamentals",
-"start": "05:30pm",
-"end": "06:30pm",
-"instructor": "Hung Pan"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "06:30pm",
-"end": "07:15pm",
-"instructor": "Katherine"
-},
-{
-"outlet": "Bugis Junction",
-"day": "Wed",
-"class": "Reformer Pilates - Fundamentals",
-"start": "06:45pm",
-"end": "07:45pm",
-"instructor": "Edwin Ko"
-},
-{
-"outlet": "Bugis Junction",
+"outlet": "Alexandra (Mapletree Business City)",
 "day": "Wed",
 "class": "CIRCUIT",
-"start": "07:30pm",
-"end": "08:15pm",
-"instructor": "Jay"
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Sherlin"
 },
 {
-"outlet": "Bugis Junction",
+"outlet": "Alexandra (Mapletree Business City)",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "08:30pm",
-"end": "09:30pm",
-"instructor": "Benjamin Lai"
+"class": "GENTLE FLOW YOGA",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Sherlin"
+},
+{
+"outlet": "Alexandra (Mapletree Business City)",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "07:40pm",
+"end": "08:40pm",
+"instructor": "Priscilla"
 },
 {
 "outlet": "Bugis Junction",
@@ -2192,68 +2128,76 @@
 "instructor": "Nathaniel"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "12:00pm",
-"end": "12:45pm",
-"instructor": "von"
+"class": "Reformer Pilates - Fundamentals",
+"start": "07:00am",
+"end": "08:00am",
+"instructor": "Mervyn Lau"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Shirley Tan"
+"class": "Reformer Pilates - Fundamentals",
+"start": "08:15am",
+"end": "09:15am",
+"instructor": "Amy Seow"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "HIIT X STRENGTH",
+"class": "Reformer Pilates - Fundamentals",
+"start": "12:15pm",
+"end": "01:15pm",
+"instructor": "Vivi Kusuma"
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"class": "PILATES",
 "start": "01:10pm",
 "end": "01:55pm",
-"instructor": "Sirhan Muhammad"
+"instructor": "Jasmine Liew"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "HIIT X STRENGTH",
+"class": "Reformer Pilates - Fundamentals",
+"start": "05:30pm",
+"end": "06:30pm",
+"instructor": "Hung Pan"
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
 "start": "06:30pm",
 "end": "07:15pm",
-"instructor": "Meera"
+"instructor": "Louis Quah"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "06:30pm",
-"end": "07:15pm",
-"instructor": "Monica"
-},
-{
-"outlet": "Capital Tower",
-"day": "Wed",
-"class": "AQUA FIT",
-"start": "06:30pm",
-"end": "07:30pm",
-"instructor": "Han Yue"
-},
-{
-"outlet": "Capital Tower",
-"day": "Wed",
-"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"class": "Reformer Pilates - Fundamentals",
 "start": "06:45pm",
-"end": "07:30pm",
-"instructor": "Bryan Wong"
+"end": "07:45pm",
+"instructor": "Edwin Ko"
 },
 {
-"outlet": "Capital Tower",
+"outlet": "Bugis Junction",
 "day": "Wed",
-"class": "BODYATTACK\u00ae",
-"start": "07:45pm",
-"end": "08:45pm",
-"instructor": "Donovan"
+"class": "CIRCUIT",
+"start": "07:30pm",
+"end": "08:15pm",
+"instructor": "Jay"
+},
+{
+"outlet": "Bugis Junction",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "08:30pm",
+"end": "09:30pm",
+"instructor": "Benjamin Lai"
 },
 {
 "outlet": "Capital Tower",
@@ -2528,124 +2472,76 @@
 "instructor": "Leo"
 },
 {
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Kelvin Tan"
+},
+{
+"outlet": "Capital Tower",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "Priscilla"
+"start": "12:00pm",
+"end": "01:00pm",
+"instructor": "Shirley Tan"
 },
 {
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
 "day": "Wed",
-"class": "CORE CONDITIONING",
-"start": "08:20am",
-"end": "09:20am",
-"instructor": "Jj"
+"class": "RPM\u2122",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Kelvin Tan"
 },
 {
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
 "day": "Wed",
-"class": "PILATES",
-"start": "09:30am",
-"end": "10:30am",
-"instructor": "Jasmine Liew"
+"class": "HIIT X STRENGTH",
+"start": "01:10pm",
+"end": "01:55pm",
+"instructor": "Sirhan Muhammad"
 },
 {
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
 "day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "09:40am",
-"end": "10:40am",
-"instructor": "Ming Fei"
+"class": "AQUA FIT",
+"start": "06:30pm",
+"end": "07:30pm",
+"instructor": "Han Yue"
 },
 {
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
+"day": "Wed",
+"class": "HIIT X STRENGTH",
+"start": "06:30pm",
+"end": "07:15pm",
+"instructor": "Meera"
+},
+{
+"outlet": "Capital Tower",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "06:30pm",
+"end": "07:15pm",
+"instructor": "Monica"
+},
+{
+"outlet": "Capital Tower",
 "day": "Wed",
 "class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
-"start": "10:45am",
-"end": "11:30am",
+"start": "06:45pm",
+"end": "07:30pm",
 "instructor": "Bryan Wong"
 },
 {
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "11:00am",
-"end": "11:45am",
-"instructor": "Glenn"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "LES MILLS GRIT\u2122 STRENGTH",
-"start": "12:00pm",
-"end": "12:30pm",
-"instructor": "Glenn"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "HIIT X STRENGTH",
-"start": "12:30pm",
-"end": "01:15pm",
-"instructor": "Mohamed Hamid Shah Mohammed Thayir"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "LES MILLS CORE\u2122",
-"start": "12:35pm",
-"end": "01:05pm",
-"instructor": "Glenn"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "DYNAMIC FLOW YOGA",
-"start": "05:20pm",
-"end": "06:20pm",
-"instructor": "George"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "06:15pm",
-"end": "07:15pm",
-"instructor": "Rachel Yeo"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "06:30pm",
-"end": "07:30pm",
-"instructor": "Jenny"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "07:00pm",
-"end": "07:45pm",
-"instructor": "Randy"
-},
-{
-"outlet": "Fusionopolis",
+"outlet": "Capital Tower",
 "day": "Wed",
 "class": "BODYATTACK\u00ae",
-"start": "07:30pm",
-"end": "08:30pm",
-"instructor": "Zaki A"
-},
-{
-"outlet": "Fusionopolis",
-"day": "Wed",
-"class": "HATHA YOGA",
-"start": "07:35pm",
-"end": "08:35pm",
-"instructor": "Chandran"
+"start": "07:45pm",
+"end": "08:45pm",
+"instructor": "Donovan"
 },
 {
 "outlet": "Fusionopolis",
@@ -3272,84 +3168,132 @@
 "instructor": "Yuan Jing"
 },
 {
-"outlet": "Junction 10",
-"day": "Wed",
-"class": "HATHA YOGA",
-"start": "07:30am",
-"end": "08:30am",
-"instructor": "Chandran"
-},
-{
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "08:45am",
-"end": "09:45am",
-"instructor": "Nicky"
+"start": "07:00am",
+"end": "08:00am",
+"instructor": "Priscilla"
 },
 {
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
-"class": "CORE",
-"start": "10:00am",
-"end": "10:45am",
-"instructor": "Fong Lum"
+"class": "CORE CONDITIONING",
+"start": "08:20am",
+"end": "09:20am",
+"instructor": "Jj"
 },
 {
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "10:00am",
-"end": "10:45am",
-"instructor": "Jennifer Chen"
+"class": "PILATES",
+"start": "09:30am",
+"end": "10:30am",
+"instructor": "Jasmine Liew"
 },
 {
-"outlet": "Junction 10",
-"day": "Wed",
-"class": "HIIT X STRENGTH",
-"start": "11:00am",
-"end": "11:45am",
-"instructor": "Muhammad Firdaus Ibrahim"
-},
-{
-"outlet": "Junction 10",
-"day": "Wed",
-"class": "ZUMBA\u00ae",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Timothy Zhuo"
-},
-{
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "06:15pm",
-"end": "07:15pm",
-"instructor": "Jacky Tan"
+"start": "09:40am",
+"end": "10:40am",
+"instructor": "Ming Fei"
 },
 {
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "07:25pm",
-"end": "08:25pm",
-"instructor": "Gerald Ng"
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "10:45am",
+"end": "11:30am",
+"instructor": "Bryan Wong"
 },
 {
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
 "class": "RPM\u2122",
-"start": "07:30pm",
-"end": "08:15pm",
-"instructor": "Daniel Ang"
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Glenn"
 },
 {
-"outlet": "Junction 10",
+"outlet": "Fusionopolis",
 "day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "08:35pm",
-"end": "09:35pm",
-"instructor": "Joanne Chua"
+"class": "LES MILLS GRIT\u2122 STRENGTH",
+"start": "12:00pm",
+"end": "12:30pm",
+"instructor": "Glenn"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "HIIT X STRENGTH",
+"start": "12:30pm",
+"end": "01:15pm",
+"instructor": "Mohamed Hamid Shah Mohammed Thayir"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "LES MILLS CORE\u2122",
+"start": "12:35pm",
+"end": "01:05pm",
+"instructor": "Glenn"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "DYNAMIC FLOW YOGA",
+"start": "05:20pm",
+"end": "06:20pm",
+"instructor": "George"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "06:15pm",
+"end": "07:15pm",
+"instructor": "Christina Chin"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "06:30pm",
+"end": "07:30pm",
+"instructor": "Jenny"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "AQUA FIT",
+"start": "06:30pm",
+"end": "07:20pm",
+"instructor": "Shirley C"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "07:00pm",
+"end": "07:45pm",
+"instructor": "Willie"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "BODYATTACK\u00ae",
+"start": "07:30pm",
+"end": "08:30pm",
+"instructor": "Jacky Poea"
+},
+{
+"outlet": "Fusionopolis",
+"day": "Wed",
+"class": "HATHA YOGA",
+"start": "07:35pm",
+"end": "08:35pm",
+"instructor": "Chandran"
 },
 {
 "outlet": "Junction 10",
@@ -3800,60 +3744,84 @@
 "instructor": "Albert Sukiyanto"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "George"
+"class": "HATHA YOGA",
+"start": "07:30am",
+"end": "08:30am",
+"instructor": "Chandran"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Linda"
+"start": "08:45am",
+"end": "09:45am",
+"instructor": "Nicky"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
-"class": "BURN",
-"start": "12:30pm",
-"end": "01:15pm",
-"instructor": "Zhe Wei Wong"
+"class": "CORE",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Fong Lum"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "01:15pm",
-"end": "02:00pm",
-"instructor": "Linda"
+"class": "RPM\u2122",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Jennifer Chen"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
 "class": "HYROX FOUNDATIONAL",
-"start": "06:15pm",
-"end": "07:00pm",
-"instructor": "Christopher Sim"
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Kenneth Chin Wei Tan"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
+"day": "Wed",
+"class": "ZUMBA\u00ae",
+"start": "12:00pm",
+"end": "01:00pm",
+"instructor": "Timothy Zhuo"
+},
+{
+"outlet": "Junction 10",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "07:10pm",
-"end": "08:10pm",
-"instructor": "Jimmy Lee"
+"start": "06:15pm",
+"end": "07:15pm",
+"instructor": "Jacky Tan"
 },
 {
-"outlet": "The Metropolis",
+"outlet": "Junction 10",
 "day": "Wed",
-"class": "ANIMAL FLOW",
-"start": "07:15pm",
-"end": "08:00pm",
-"instructor": "Brian Chooi"
+"class": "BODYPUMP\u00ae",
+"start": "07:25pm",
+"end": "08:25pm",
+"instructor": "Gerald Ng"
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "07:30pm",
+"end": "08:15pm",
+"instructor": "Daniel Ang"
+},
+{
+"outlet": "Junction 10",
+"day": "Wed",
+"class": "BODYJAM\u00ae",
+"start": "08:35pm",
+"end": "09:35pm",
+"instructor": "Joanne Chua"
 },
 {
 "outlet": "The Metropolis",
@@ -4080,84 +4048,52 @@
 "instructor": "Wyatt"
 },
 {
-"outlet": "One George Street",
+"outlet": "The Metropolis",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
+"class": "GENTLE FLOW YOGA",
 "start": "07:00am",
 "end": "08:00am",
-"instructor": "Shumin"
+"instructor": "George"
 },
 {
-"outlet": "One George Street",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "08:10am",
-"end": "08:55am",
-"instructor": "Fang"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "NAK MUAY",
-"start": "09:30am",
-"end": "10:15am",
-"instructor": "Fang"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "BOOM",
-"start": "12:00pm",
-"end": "12:45pm",
-"instructor": "Ming Fei"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "CORE FLOW YOGA",
-"start": "12:10pm",
-"end": "12:55pm",
-"instructor": "Ian Fung"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "HATHA YOGA",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Ian Fung"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "HIIT X STRENGTH",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Sarvindran"
-},
-{
-"outlet": "One George Street",
-"day": "Wed",
-"class": "BODYATTACK\u00ae",
-"start": "06:10pm",
-"end": "07:10pm",
-"instructor": "Glenn"
-},
-{
-"outlet": "One George Street",
+"outlet": "The Metropolis",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "07:20pm",
-"end": "08:20pm",
-"instructor": "Glenn"
+"start": "12:00pm",
+"end": "01:00pm",
+"instructor": "Linda"
 },
 {
-"outlet": "One George Street",
+"outlet": "The Metropolis",
 "day": "Wed",
-"class": "LES MILLS CORE\u2122",
-"start": "08:30pm",
-"end": "09:15pm",
-"instructor": "Glenn"
+"class": "BURN",
+"start": "12:30pm",
+"end": "01:15pm",
+"instructor": "Zhe Wei Wong"
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"class": "GENTLE FLOW YOGA",
+"start": "01:15pm",
+"end": "02:00pm",
+"instructor": "Linda"
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "07:10pm",
+"end": "08:10pm",
+"instructor": "Gavin"
+},
+{
+"outlet": "The Metropolis",
+"day": "Wed",
+"class": "ANIMAL FLOW",
+"start": "07:15pm",
+"end": "08:00pm",
+"instructor": "Brian Chooi"
 },
 {
 "outlet": "One George Street",
@@ -4552,132 +4488,84 @@
 "instructor": "Vivi Kusuma"
 },
 {
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "Ian Fung"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "BODYATTACK\u00ae",
-"start": "11:00am",
-"end": "11:45am",
-"instructor": "Benji"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "12:00pm",
-"end": "12:45pm",
-"instructor": "Adeline Tay"
-},
-{
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
+"start": "07:00am",
+"end": "08:00am",
+"instructor": "Shumin"
+},
+{
+"outlet": "One George Street",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "08:10am",
+"end": "08:55am",
+"instructor": "Fang"
+},
+{
+"outlet": "One George Street",
+"day": "Wed",
+"class": "NAK MUAY",
+"start": "09:30am",
+"end": "10:15am",
+"instructor": "Fang"
+},
+{
+"outlet": "One George Street",
+"day": "Wed",
+"class": "BOOM",
 "start": "12:00pm",
 "end": "12:45pm",
-"instructor": "Gavin"
+"instructor": "Ming Fei"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Naila"
+"class": "CORE CONDITIONING",
+"start": "12:10pm",
+"end": "12:55pm",
+"instructor": "Christopher Lim"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
 "class": "HATHA YOGA",
 "start": "01:00pm",
 "end": "01:45pm",
-"instructor": "Yvonne Seow"
+"instructor": "Christopher Lim"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
-"class": "CIRCUIT",
-"start": "05:00pm",
-"end": "05:45pm",
-"instructor": "Fernie Ng"
+"class": "HIIT X STRENGTH",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Sarvindran"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "06:00pm",
-"end": "07:00pm",
-"instructor": "Lewis"
+"class": "BODYATTACK\u00ae",
+"start": "06:10pm",
+"end": "07:10pm",
+"instructor": "Glenn"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "06:00pm",
-"end": "07:00pm",
-"instructor": "Serena Tan"
+"class": "BODYPUMP\u00ae",
+"start": "07:20pm",
+"end": "08:20pm",
+"instructor": "Glenn"
 },
 {
-"outlet": "One Raffles Quay",
+"outlet": "One George Street",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "06:00pm",
-"end": "06:45pm",
-"instructor": "Fernie Ng"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "HIIT X RUSH",
-"start": "06:15pm",
-"end": "07:00pm",
-"instructor": "Xiaobin Guo"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "07:00pm",
-"end": "07:45pm",
-"instructor": "Yeoh"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "PILATES",
-"start": "07:10pm",
-"end": "08:10pm",
-"instructor": "Serena Tan"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "ZUMBA\u00ae",
-"start": "07:10pm",
-"end": "08:10pm",
-"instructor": "Julian"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "08:20pm",
-"end": "09:20pm",
-"instructor": "Julian"
-},
-{
-"outlet": "One Raffles Quay",
-"day": "Wed",
-"class": "DANCE MOVES",
-"start": "08:20pm",
-"end": "09:20pm",
-"instructor": "Louis Shen"
+"class": "LES MILLS CORE\u2122",
+"start": "08:30pm",
+"end": "09:15pm",
+"instructor": "Glenn"
 },
 {
 "outlet": "One Raffles Quay",
@@ -5344,132 +5232,132 @@
 "instructor": "Alwin"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "RPM\u2122",
-"start": "07:15am",
+"class": "GENTLE FLOW YOGA",
+"start": "07:00am",
 "end": "08:00am",
-"instructor": "Glenn"
+"instructor": "Christine Tan"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "08:30am",
-"end": "09:30am",
-"instructor": "Gary Tan"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "09:45am",
-"end": "10:45am",
-"instructor": "Yeoh"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "11:00am",
-"end": "12:00pm",
-"instructor": "George"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "RPM\u2122",
+"class": "BODYATTACK\u00ae",
 "start": "11:00am",
 "end": "11:45am",
-"instructor": "Yeoh"
+"instructor": "Benji"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "PILATES",
-"start": "11:00am",
-"end": "12:00pm",
-"instructor": "Alvan Chan"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "HIIT X RUSH",
+"class": "RPM\u2122",
 "start": "12:00pm",
 "end": "12:45pm",
-"instructor": "Hung Pan"
+"instructor": "Adeline Tay"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "ZUMBA\u00ae",
-"start": "12:15pm",
-"end": "01:00pm",
-"instructor": "Crystal"
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Gavin"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "HOT FLOW YOGA",
-"start": "12:15pm",
-"end": "01:00pm",
+"class": "BODYJAM\u00ae",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Naila"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "HATHA YOGA",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Yvonne Seow"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "CIRCUIT",
+"start": "05:00pm",
+"end": "05:45pm",
+"instructor": "Fernie Ng"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "06:00pm",
+"end": "07:00pm",
+"instructor": "Lewis"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "GENTLE FLOW YOGA",
+"start": "06:00pm",
+"end": "07:00pm",
 "instructor": "Serena Tan"
 },
 {
-"outlet": "Paragon",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "03:45pm",
-"end": "04:45pm",
-"instructor": "Ming Fei"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "05:00pm",
-"end": "06:00pm",
-"instructor": "Ming Fei"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "HOT FLOW YOGA",
-"start": "06:15pm",
-"end": "07:15pm",
-"instructor": "Kelvin Chai"
-},
-{
-"outlet": "Paragon",
-"day": "Wed",
-"class": "BODYSTEP\u00ae",
-"start": "06:15pm",
-"end": "07:15pm",
-"instructor": "Jaswin"
-},
-{
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
 "class": "RPM\u2122",
-"start": "06:40pm",
-"end": "07:25pm",
-"instructor": "Andy Seah"
+"start": "06:00pm",
+"end": "06:45pm",
+"instructor": "Fernie Ng"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "07:30pm",
-"end": "08:30pm",
-"instructor": "Ryan Haryadi"
+"class": "HIIT X RUSH",
+"start": "06:15pm",
+"end": "07:00pm",
+"instructor": "Xiaobin Guo"
 },
 {
-"outlet": "Paragon",
+"outlet": "One Raffles Quay",
 "day": "Wed",
-"class": "HATHA YOGA",
-"start": "07:30pm",
-"end": "08:30pm",
-"instructor": "Kelvin Chai"
+"class": "RPM\u2122",
+"start": "07:00pm",
+"end": "07:45pm",
+"instructor": "Yeoh"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "PILATES",
+"start": "07:10pm",
+"end": "08:10pm",
+"instructor": "Serena Tan"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "ZUMBA\u00ae",
+"start": "07:10pm",
+"end": "08:10pm",
+"instructor": "Julian"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "08:20pm",
+"end": "09:20pm",
+"instructor": "Julian"
+},
+{
+"outlet": "One Raffles Quay",
+"day": "Wed",
+"class": "DANCE MOVES",
+"start": "08:20pm",
+"end": "09:20pm",
+"instructor": "Louis Shen"
 },
 {
 "outlet": "Paragon",
@@ -5869,7 +5757,7 @@
 "class": "BODYPUMP\u00ae",
 "start": "04:30pm",
 "end": "05:30pm",
-"instructor": "Timothy Teoh"
+"instructor": "Leo"
 },
 {
 "outlet": "Paragon",
@@ -6296,76 +6184,132 @@
 "instructor": "Clarence Chan"
 },
 {
-"outlet": "Paya Lebar",
+"outlet": "Paragon",
 "day": "Wed",
-"class": "BODYATTACK\u00ae",
-"start": "07:00am",
+"class": "RPM\u2122",
+"start": "07:15am",
 "end": "08:00am",
-"instructor": "Eric"
+"instructor": "Jiamin"
 },
 {
-"outlet": "Paya Lebar",
+"outlet": "Paragon",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "12:00pm",
-"end": "01:00pm",
-"instructor": "Natalie"
+"start": "08:30am",
+"end": "09:30am",
+"instructor": "Desmond Liew"
 },
 {
-"outlet": "Paya Lebar",
-"day": "Wed",
-"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
-"start": "01:15pm",
-"end": "02:00pm",
-"instructor": "Natalie"
-},
-{
-"outlet": "Paya Lebar",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "03:30pm",
-"end": "04:15pm",
-"instructor": "Jo Tan"
-},
-{
-"outlet": "Paya Lebar",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "06:00pm",
-"end": "07:00pm",
-"instructor": "Adeline Goh"
-},
-{
-"outlet": "Paya Lebar",
-"day": "Wed",
-"class": "BOOM",
-"start": "06:30pm",
-"end": "07:15pm",
-"instructor": "Jo Tan"
-},
-{
-"outlet": "Paya Lebar",
+"outlet": "Paragon",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "07:15pm",
-"end": "08:15pm",
-"instructor": "Albert Sukiyanto"
+"start": "09:45am",
+"end": "10:45am",
+"instructor": "Yeoh"
 },
 {
-"outlet": "Paya Lebar",
+"outlet": "Paragon",
 "day": "Wed",
-"class": "NAK MUAY",
+"class": "BODYJAM\u00ae",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "George"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "11:00am",
+"end": "11:45am",
+"instructor": "Yeoh"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "PILATES",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Alvan Chan"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "HIIT X RUSH",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Hung Pan"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "ZUMBA\u00ae",
+"start": "12:15pm",
+"end": "01:00pm",
+"instructor": "Crystal"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "HOT FLOW YOGA",
+"start": "12:15pm",
+"end": "01:00pm",
+"instructor": "Serena Tan"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "03:45pm",
+"end": "04:45pm",
+"instructor": "Ming Fei"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "05:00pm",
+"end": "06:00pm",
+"instructor": "Ming Fei"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "HOT FLOW YOGA",
+"start": "06:15pm",
+"end": "07:15pm",
+"instructor": "Christine Tan"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "BODYSTEP\u00ae",
+"start": "06:15pm",
+"end": "07:15pm",
+"instructor": "Heather"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "06:40pm",
+"end": "07:25pm",
+"instructor": "Andy Seah"
+},
+{
+"outlet": "Paragon",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
 "start": "07:30pm",
-"end": "08:15pm",
-"instructor": "Jo Tan"
+"end": "08:30pm",
+"instructor": "Ryan Haryadi"
 },
 {
-"outlet": "Paya Lebar",
+"outlet": "Paragon",
 "day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "08:30pm",
-"end": "09:30pm",
-"instructor": "Joel Wong"
+"class": "HATHA YOGA",
+"start": "07:30pm",
+"end": "08:30pm",
+"instructor": "Christine Tan"
 },
 {
 "outlet": "Paya Lebar",
@@ -6741,7 +6685,7 @@
 "class": "BODYPUMP\u00ae",
 "start": "11:00am",
 "end": "11:45am",
-"instructor": "Benedict Sim"
+"instructor": "Adeline Goh"
 },
 {
 "outlet": "Paya Lebar",
@@ -6800,100 +6744,76 @@
 "instructor": "Kelvin Tay"
 },
 {
-"outlet": "Tampines (CPF building)",
+"outlet": "Paya Lebar",
 "day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "08:45am",
-"end": "09:30am",
-"instructor": "Angie Tion"
+"class": "BODYATTACK\u00ae",
+"start": "07:00am",
+"end": "08:00am",
+"instructor": "Eric"
 },
 {
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "CIRCUIT",
-"start": "09:45am",
-"end": "10:30am",
-"instructor": "Karel"
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "09:45am",
-"end": "10:30am",
-"instructor": "Robyn"
-},
-{
-"outlet": "Tampines (CPF building)",
+"outlet": "Paya Lebar",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "11:00am",
-"end": "12:00pm",
-"instructor": "Karel"
+"start": "12:00pm",
+"end": "01:00pm",
+"instructor": "Natalie"
 },
 {
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "12:15pm",
-"end": "01:15pm",
-"instructor": "Karel"
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "06:30pm",
-"end": "07:30pm",
-"instructor": "Amy Seow"
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "NAK MUAY",
-"start": "06:45pm",
-"end": "07:30pm",
-"instructor": "Fang"
-},
-{
-"outlet": "Tampines (CPF building)",
+"outlet": "Paya Lebar",
 "day": "Wed",
 "class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
-"start": "06:45pm",
-"end": "07:30pm",
-"instructor": "Karel"
+"start": "01:15pm",
+"end": "02:00pm",
+"instructor": "Natalie"
 },
 {
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "BODYJAM\u00ae",
-"start": "07:45pm",
-"end": "08:45pm",
-"instructor": "Amy Seow"
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "07:45pm",
-"end": "08:30pm",
-"instructor": "Bernie"
-},
-{
-"outlet": "Tampines (CPF building)",
-"day": "Wed",
-"class": "BOOM",
-"start": "07:45pm",
-"end": "08:30pm",
-"instructor": "Fang"
-},
-{
-"outlet": "Tampines (CPF building)",
+"outlet": "Paya Lebar",
 "day": "Wed",
 "class": "BODYCOMBAT\u00ae",
-"start": "09:00pm",
-"end": "09:45pm",
-"instructor": "Fang"
+"start": "03:30pm",
+"end": "04:15pm",
+"instructor": "Jo Tan"
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "06:00pm",
+"end": "07:00pm",
+"instructor": "Adeline Goh"
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"class": "BOOM",
+"start": "06:30pm",
+"end": "07:15pm",
+"instructor": "Jo Tan"
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "07:15pm",
+"end": "08:15pm",
+"instructor": "Albert Sukiyanto"
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"class": "NAK MUAY",
+"start": "07:30pm",
+"end": "08:15pm",
+"instructor": "Jo Tan"
+},
+{
+"outlet": "Paya Lebar",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "08:30pm",
+"end": "09:30pm",
+"instructor": "Joel Wong"
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -6989,7 +6909,7 @@
 "class": "GENTLE FLOW YOGA",
 "start": "11:00am",
 "end": "12:00pm",
-"instructor": "Christine Tan"
+"instructor": "Yuan Jing"
 },
 {
 "outlet": "Tampines (CPF building)",
@@ -7432,100 +7352,108 @@
 "instructor": "Ashley Leong"
 },
 {
-"outlet": "Westgate",
-"day": "Wed",
-"class": "BODYCOMBAT\u00ae",
-"start": "07:00am",
-"end": "08:00am",
-"instructor": "Ray"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "LES MILLS DANCE\u2122",
-"start": "09:30am",
-"end": "10:15am",
-"instructor": "Joanna"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "HYROX FOUNDATIONAL",
-"start": "10:00am",
-"end": "10:45am",
-"instructor": "Shiuh Shyong"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "GENTLE FLOW YOGA",
-"start": "10:45am",
-"end": "11:45am",
-"instructor": "Joanna"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "BODYPUMP\u00ae",
-"start": "12:00pm",
-"end": "12:45pm",
-"instructor": "Bhas"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "LES MILLS CORE\u2122",
-"start": "01:00pm",
-"end": "01:45pm",
-"instructor": "Bhas"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "HYROX FOUNDATIONAL",
-"start": "06:15pm",
-"end": "07:00pm",
-"instructor": "Emil"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "BODYBALANCE\u00ae",
-"start": "06:15pm",
-"end": "07:15pm",
-"instructor": "Benji"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "RPM\u2122",
-"start": "06:30pm",
-"end": "07:15pm",
-"instructor": "Shu Ting"
-},
-{
-"outlet": "Westgate",
-"day": "Wed",
-"class": "H2O HIIT",
-"start": "06:30pm",
-"end": "07:15pm",
-"instructor": "Sherlin"
-},
-{
-"outlet": "Westgate",
+"outlet": "Tampines (CPF building)",
 "day": "Wed",
 "class": "BODYJAM\u00ae",
-"start": "07:30pm",
-"end": "08:30pm",
-"instructor": "Angelina"
+"start": "08:45am",
+"end": "09:30am",
+"instructor": "Angie Tion"
 },
 {
-"outlet": "Westgate",
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "CIRCUIT",
+"start": "09:45am",
+"end": "10:30am",
+"instructor": "Karel"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "09:45am",
+"end": "10:30am",
+"instructor": "Robyn"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "YOGA",
+"start": "09:45am",
+"end": "10:45am",
+"instructor": "Ian Fung"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "11:00am",
+"end": "12:00pm",
+"instructor": "Karel"
+},
+{
+"outlet": "Tampines (CPF building)",
 "day": "Wed",
 "class": "BODYPUMP\u00ae",
-"start": "08:45pm",
+"start": "12:15pm",
+"end": "01:15pm",
+"instructor": "Karel"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "06:30pm",
+"end": "07:30pm",
+"instructor": "Amy Seow"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "NAK MUAY",
+"start": "06:45pm",
+"end": "07:30pm",
+"instructor": "Fang"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "LES MILLS STRENGTH DEVELOPMENT\u2122",
+"start": "06:45pm",
+"end": "07:30pm",
+"instructor": "Karel"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "BODYJAM\u00ae",
+"start": "07:45pm",
+"end": "08:45pm",
+"instructor": "Amy Seow"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "07:45pm",
+"end": "08:30pm",
+"instructor": "Bernie"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "BOOM",
+"start": "07:45pm",
+"end": "08:30pm",
+"instructor": "Fang"
+},
+{
+"outlet": "Tampines (CPF building)",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "09:00pm",
 "end": "09:45pm",
-"instructor": "Benji"
+"instructor": "Fang"
 },
 {
 "outlet": "Westgate",
@@ -7982,5 +7910,101 @@
 "start": "08:45pm",
 "end": "09:45pm",
 "instructor": "Gordon"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "BODYCOMBAT\u00ae",
+"start": "07:00am",
+"end": "08:00am",
+"instructor": "Ray"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "LES MILLS DANCE\u2122",
+"start": "09:30am",
+"end": "10:15am",
+"instructor": "Eugene Ng"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "HYROX FOUNDATIONAL",
+"start": "10:00am",
+"end": "10:45am",
+"instructor": "Bernard Koh"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "GENTLE FLOW YOGA",
+"start": "10:45am",
+"end": "11:45am",
+"instructor": "Lester Low"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "12:00pm",
+"end": "12:45pm",
+"instructor": "Bhas"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "LES MILLS CORE\u2122",
+"start": "01:00pm",
+"end": "01:45pm",
+"instructor": "Bhas"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "HYROX FOUNDATIONAL",
+"start": "06:15pm",
+"end": "07:00pm",
+"instructor": "Shiuh Shyong"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "BODYBALANCE\u00ae",
+"start": "06:15pm",
+"end": "07:15pm",
+"instructor": "Benji"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "RPM\u2122",
+"start": "06:30pm",
+"end": "07:15pm",
+"instructor": "Shu Ting"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "H2O HIIT",
+"start": "06:30pm",
+"end": "07:15pm",
+"instructor": "Sherlin"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "BODYJAM\u00ae",
+"start": "07:30pm",
+"end": "08:30pm",
+"instructor": "Jaclyn"
+},
+{
+"outlet": "Westgate",
+"day": "Wed",
+"class": "BODYPUMP\u00ae",
+"start": "08:45pm",
+"end": "09:45pm",
+"instructor": "Benji"
 }
 ]
